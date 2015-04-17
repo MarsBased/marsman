@@ -1,0 +1,77 @@
+// Variables
+
+// $c-text: #666666
+
+// Z-index
+
+// $z0: 0
+// $z1: 9
+// $z2: 99
+// $z3: 999
+// $z4: 9999
+// $z5: 99999
+// $z6: 999999
+// $z7: 9999999
+// $z8: 99999999
+
+// Bootstrap Variables
+
+// $font-family-sans-serif: 'Gotham', Helvetica, Arial, sans-serif
+
+// Mixins
+
+=font-face($family,$url,$weight,$style: normal)
+  @font-face
+    font-family: $family
+    font-weight: $weight
+    src: font-url('#{$url}.eot')
+    font-style: $style
+  @font-face
+    font-family: $family
+    font-weight: $weight
+    src: font-url('#{$url}.svg')
+    font-style: $style
+  @font-face
+    font-family: $family
+    font-weight: $weight
+    src: font-url('#{$url}.woff')
+    font-style: $style
+  @font-face
+    font-family: $family
+    font-weight: $weight
+    src: font-url('#{$url}.ttf')
+    font-style: $style
+
+// Media queries, based on: http://alwaystwisted.com/post.php?s=2013-04-01-my-media-query-mixin
+
+=mq($point, $query1: min, $query2: width)
+  @media (#{$query1}-#{$query2}: $point)
+    @content
+
+// Centered elements
+
+=centered
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+// Drop Overlays
+
+=drop-overlay()
+  content: ''
+  position: absolute
+  z-index: $z2
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  background: rgba(#27353B, .6)
+
+// Fonts
+
+// +font-face('Gotham', 'Gotham-Book', 300)
+// +font-face('Gotham', 'Gotham-Book', 400)
+// +font-face('Gotham', 'Gotham-Bold', 500)
+// +font-face('Gotham', 'Gotham-Bold', 600)
+

@@ -1,0 +1,11 @@
+{
+  "name": "middleman-template",
+  "version": "0.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-svgmin": "^0.4.0",
+    "grunt-svgstore": "^0.3.6",
+    "load-grunt-tasks": "^0.4.0"
+  }
+}
