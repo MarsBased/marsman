@@ -15,7 +15,7 @@ Then use the new template argument for the middleman init command:
 middleman init new_project --template=marsman
 ```
 
-## Project readme
+## Project README
 
 Developed with Middleman (https://middlemanapp.com/)
 Uses Grunt to automatize SVG inline generation.
