@@ -46,18 +46,18 @@ bundle exec middleman deploy --build-before
 
 **Browser compatibility:**
 
-* Chrome (versión actual)
-* Safari (versión actual)
-* Firefox (versión actual)
-* Internet Explorer 9 (y superior)
-* Android (versión 4.x y superior)
-* iOS (versión actual)
+* Chrome (current version)
+* Safari (current version)
+* Firefox (current version)
+* Internet Explorer 9 (and upwards)
+* Android (version 4.x and upwards)
+* iOS (current version)
 
 **Supported Resolutions:**
 
-* 320px to 480px (landscape and portrait)
-* 500px to 768px (portraits versions)
+* 320px to 480px (Landscape and portrait)
+* 500px to 768px (Portrait versions)
 * 768px to 1024px (Landscape versions)
-* 1024px too anything (Desktop versions)
+* 1024px to anything (Desktop versions)
 
 
