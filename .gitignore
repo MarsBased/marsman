@@ -13,8 +13,9 @@
 # Ignore .DS_store file
 .DS_Store
 
-# Ignore Sublime workspace
+# Ignore SublimeText
 *.sublime-workspace
+*.sublime-project
 
 # Ignore node & grunt related files
 /node_modules
