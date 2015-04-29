@@ -13,7 +13,7 @@ end
 
 # activate :deploy do |deploy|
 #   deploy.method = :rsync
-#   deploy.host   = 'middleman-template.marsbased.com'
-#   deploy.path   = '/home/deploy/apps/middleman-template
+#   deploy.host   = 'marsman.marsbased.com'
+#   deploy.path   = '/home/deploy/apps/marsman
 #   deploy.user  = 'deploy'
 # end
