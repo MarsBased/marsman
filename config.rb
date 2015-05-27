@@ -5,6 +5,7 @@ set :images_dir, 'images'
 set :fonts_dir, 'fonts'
 
 activate :autoprefixer
+activate :livereload
 
 activate :directory_indexes
 configure :build do
@@ -16,4 +17,5 @@ end
 #   deploy.host   = 'marsman.marsbased.com'
 #   deploy.path   = '/home/deploy/apps/marsman
 #   deploy.user  = 'deploy'
+#   deploy.flags = '-avzp --chmod=+r'
 # end
