@@ -1,5 +1,6 @@
 # Ignore bundler config
 /.bundle
+/vendor/bundle
 
 .ruby-version
 
@@ -19,3 +20,6 @@
 
 # Ignore node & grunt related files
 /node_modules
+
+# Ignore Project Files
+/project_files

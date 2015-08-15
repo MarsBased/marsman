@@ -49,8 +49,8 @@ bundle exec middleman deploy --build-before
 * Chrome (current version)
 * Safari (current version)
 * Firefox (current version)
-* Internet Explorer 9 (and upwards)
-* Android (version 4.x and upwards)
+* Internet Explorer 10 (and upwards)
+* Android (current version)
 * iOS (current version)
 
 **Supported Resolutions:**
