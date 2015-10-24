@@ -14,3 +14,7 @@ gem 'middleman-autoprefixer'
 gem 'jquery-middleman'
 
 gem 'middleman-deploy', '~> 1.0'
+
+source 'https://rails-assets.org' do
+  ## gem 'rails-assets-ngDialog'
+end
