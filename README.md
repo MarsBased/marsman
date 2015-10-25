@@ -21,6 +21,7 @@ Developed with Middleman (https://middlemanapp.com/)
 Uses Grunt to automatize SVG inline generation.
 
 ## Development
+
 ```
 npm install
 bundle install
@@ -38,6 +39,7 @@ grunt svg
 
 The deploy is configured to work only with MarsBased servers and MarsBased
 employees credentials.
+
 ```
 bundle exec middleman deploy --build-before
 ```
