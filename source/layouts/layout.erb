@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Middleman Template</title>
     <%= stylesheet_link_tag :application %>
-    <%= javascript_include_tag :modernizr %>
+    <%= javascript_include_tag  :head %>
   </head>
   <body class="<%= page_classes %>">
     <%= partial "partials/shapes" %>
     <%= yield %>
-    <%= javascript_include_tag  :application %>
+    <%= javascript_include_tag  :body %>
   </body>
 </html>
