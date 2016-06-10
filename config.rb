@@ -7,9 +7,14 @@ set :fonts_dir, 'fonts'
 activate :autoprefixer
 activate :livereload
 
+configure :development do
+  set :environment, 'development'
+end
+
 activate :directory_indexes
 configure :build do
   ignore 'shapes/*'
+  set :environment, 'production'
 end
 
 # activate :deploy do |deploy|
