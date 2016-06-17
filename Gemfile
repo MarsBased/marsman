@@ -10,6 +10,7 @@ gem 'modernizr-rails', require: false
 gem 'magnific-popup-rails', require: false
 
 gem 'middleman-autoprefixer'
+gem 'middleman-email', git: "git@github.com:MarsBased/middleman-email.git"
 
 gem 'jquery-middleman'
 
