@@ -1,3 +1,6 @@
+require "lib/helpers"
+helpers Helpers
+
 sprockets.import_asset 'modernizr'
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
