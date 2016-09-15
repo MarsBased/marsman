@@ -1,7 +1,9 @@
 require "lib/helpers"
 helpers Helpers
 
-sprockets.import_asset 'modernizr'
+
+# sprockets.import_asset 'modernizr'
+
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
@@ -40,20 +42,20 @@ configure :build do
 end
 
 activate :deploy do |deploy|
-  deploy.method = :rsync
+  deploy.deploy_method = :rsync
   deploy.host   = 'marsman.marsbased.com'
   deploy.path   = '/home/deploy/apps/marsman'
   deploy.user  = 'deploy'
   deploy.flags = '-avzp --chmod=+r'
 end
 
-activate :email do |email|
-  email.user = 'postmaster@mg.marsbased.com'
-  email.password = 'smtp_pass'
-  email.emails_path= 'emails'
-  email.to_email = 'your.email@whatever.com'
-  email.from_email = 'mailer@mg.marsbased.com'
-  email.port = 587
-  email.domain = 'mg.marsbased.com'
-  email.address = 'smtp.mailgun.org'
-end
+# activate :email do |email|
+#   email.user = 'postmaster@mg.marsbased.com'
+#   email.password = 'smtp_pass'
+#   email.emails_path= 'emails'
+#   email.to_email = 'your.email@whatever.com'
+#   email.from_email = 'mailer@mg.marsbased.com'
+#   email.port = 587
+#   email.domain = 'mg.marsbased.com'
+#   email.address = 'smtp.mailgun.org'
+# end
