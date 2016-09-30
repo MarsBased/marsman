@@ -7,11 +7,11 @@
     <meta name="copyright" content="">
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Middleman Template</title>
+    <title>marsman template | <%= current_page.data.title %></title>
     <%= stylesheet_link_tag :application %>
     <%= javascript_include_tag  :head %>
   </head>
-  <body class="<%= page_classes %>">
+  <body class="<%= current_page.data.css %>">
     <%= partial "partials/shapes" %>
     <%= yield %>
     <%= javascript_include_tag  :body %>
