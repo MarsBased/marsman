@@ -1,0 +1,78 @@
+---
+title: Toolkit
+css: toolkit
+---
+<div class="toolkit__container">
+  <div class="toolkit__item">
+    <h1>Colors</h1>
+    <div class="card-css__container">
+    <% for i in 1..8 %>
+      <div class="card-css--colors-list">
+        <div class="card-css__content">
+          <div class="card-css__block"></div>
+          <div class="card-css__text"></div>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
+  <div class="toolkit__item">
+    <h1>Buttons</h1>
+    <div class="row">
+      <div class="col-xs-4">
+        <h2>Normal</h2>
+        <p><button class="btn-primary">Primary Button</button></p>
+        <p><button class="btn-primary--lighten">Primary Button</button></p>
+        <p><button class="btn-secundary">Primary Button</button></p>
+        <p><button class="btn-secundary--lighten">Primary Button</button></p>
+      </div>
+      <div class="col-xs-4">
+        <h2>Hover/Active</h2>
+        <p><button class="active btn-primary">Primary Button</button></p>
+        <p><button class="active btn-primary--lighten">Primary Button</button></p>
+        <p><button class="active btn-secundary">Primary Button</button></p>
+        <p><button class="active btn-secundary--lighten">Primary Button</button></p>
+      </div>
+      <div class="col-xs-4">
+        <h2>Disabled</h2>
+        <p><button disabled class="btn-primary">Primary Button</button></p>
+        <p><button disabled class="btn-primary--lighten">Primary Button</button></p>
+        <p><button class="disabled btn-secundary">Primary Button</button></p>
+        <p><button class="disabled btn-secundary--lighten">Primary Button</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="toolkit__item">
+    <h1>Typography</h1>
+    <div class="row">
+      <div class="card-css--typography">
+        <div class="card-css__content">
+          <div class="card-css__block">Aa</div>
+          <div class="card-css__text">
+            <div class="card-css__title">Karla</div>
+            <div class="card-css__subtitle">Google Font</div>
+          </div>
+        </div>
+      </div>
+      <div class="typography__container">
+        <p class="typography__h1">
+          <span class="typography__title">h1, 24px</span>
+          Tousled food truck polaroid
+        </p>
+        <p class="typography__h2">
+          <span class="typography__title">h2, 16px</span>
+          Tousled food truck polaroid
+        </p>
+        <p class="typography__base">
+          <span class="typography__title">Text, inputs, links, 14px</span>
+          Tousled food truck polaroid
+        </p>
+        <p class="typography__small">
+          <span class="typography__title">Text, inputs, links, 14px</span>
+          Tousled food truck polaroid
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+

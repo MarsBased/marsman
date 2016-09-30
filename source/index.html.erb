@@ -1,6 +1,6 @@
 ---
 title: Welcome to Middleman
-modify: button
+modify: button, toolkit
 ---
 
 <div class="welcome">
@@ -9,6 +9,8 @@ modify: button
     <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
   </p>
 </div>
-<% if modify('button') %>
-<a href="#" class="btn <%= modify('button','btn-primary') %>">Test</a>
+<a href="#" class="btn <%= modify('button','btn--primary') %>">Test</a>
+
+<% if modify('toolkit') %>
+<a href="/toolkit"">Toolkit</a>
 <% end %>

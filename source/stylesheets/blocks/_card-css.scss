@@ -1,0 +1,116 @@
+$colors-list:  "Brand primary" $brand-primary,
+					      "Brand primary light" $brand-primary--light,
+					      "Status complete" $status-complete,
+					      "Background primary" $background-primary,
+					      "Brand secundary" $brand-secundary,
+					      "Brand secundary light" $brand-secundary--light,
+					      "Status error" $status-error,
+					      "Background secundary" $background-secundary;
+
+@mixin card-css--color($content, $color){
+	.card-css__block{ background-color: $color;}
+
+	.card-css__text{
+		&::before{ content: '#{$color}'}
+		&::after{ content: '#{$content}';}
+	}
+}
+
+.card-css{
+	&__container{
+		@include make-row;
+		margin-bottom: -$gutter;
+	}
+
+	&__item{
+		@include make-xs-column(3);
+		@include make-xs-clear(4);
+		@include make-sm-column(4);
+		@include make-sm-clear(3, 4);
+		@include make-md-column(3);
+		@include make-md-clear(4, 3);
+		@media (max-width: 600px){
+			@include make-column(4);
+			@include make-clear(3, 4);
+		}
+		@media (max-width: 480px){
+			@include make-column(6);
+			@include make-clear(2, 3);
+		}
+
+		margin-bottom: $gutter;
+	}
+
+	&__content{
+		box-shadow: $shadow;
+		border: 1px solid $gray-lighten;
+	}
+
+	&__block{
+		height: 9rem;
+		position: relative;
+		background-color: white;
+		color: $gray;
+	}
+
+	&__title{
+		color: $gray-dark;
+		display: block;
+	}
+
+	&__subtitle{
+		color: $gray-light;
+		display: block;
+		font-size: .7em;
+		@include ellipsis;
+	}
+
+	&__text{
+		padding: .5rem 1rem;
+		height: 5rem;
+		width: 100%;
+		background-color: white;
+		border-top: 1px solid $gray-lighten;
+		font-size: $fs-small;
+		line-height: 1.4;
+		display: flex;
+	  flex-direction: column;
+	  flex-wrap: nowrap;
+	  justify-content: center;
+	  align-content: flex-start;
+	}
+
+	&--colors-list{
+		@extend .card-css__item;
+
+		.card-css__text{
+			&::before{
+				content: 'Title';
+				@extend .card-css__title;
+			}
+			&::after{
+				content: 'Subtitle';
+				@extend .card-css__subtitle;
+			}
+		}
+
+		@each $color in $colors-list {
+		  $i: index($colors-list, $color);
+		  &:nth-child(#{$i}){
+		  	@include card-css--color(nth($color, 1), nth($color, 2));
+		  }
+		}
+	}
+
+	&--typography{
+		@extend .card-css__item;
+
+		.card-css__block{
+			font-size: 4.1rem;
+			display: flex;
+		  align-items: center;
+		  justify-content: center;
+		}
+	}
+}
+

@@ -1,0 +1,101 @@
+@mixin button($color, $bg, $border: transparent, $color--active: $color,
+ $bg--active: darken($bg, 15%), $border--active: $border) {
+  @extend %btn;
+  color: $color;
+  background-color: $bg;
+  border-color: $border;
+
+  &:hover,
+  &:focus,
+  &.active,
+  &.focus {
+    color: $color--active;
+    background-color: $bg--active;
+    border-color: $border--active;
+  }
+}
+
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size,
+ $line-height, $border-radius) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
+}
+
+.btn-primary{
+  @include button(white,$brand-primary);
+
+  &--lighten{
+    @include button($brand-primary,lighten($brand-primary, 50%), transparent,
+     $brand-primary, lighten($brand-primary, 30%), $brand-primary);
+  }
+}
+
+.btn-secundary{
+  @include button(white, $brand-secundary--light);
+
+  &--lighten{
+    @include button($brand-secundary--light,lighten($brand-secundary--light, 40%), transparent,
+     $brand-secundary--light, lighten($brand-secundary--light, 30%), $brand-secundary--light);
+  }
+}
+
+.link{
+  text-decoration: none;
+  color: $brand-primary;
+  &:hover,
+  &.active,
+  &:focus{
+    outline: 0;
+    text-decoration: underline;
+  }
+}
+
+%btn {
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid transparent;
+  white-space: nowrap;
+  @include button-size(.9rem, 2rem, 1.2rem, 1, 3px);
+  user-select: none;
+  max-width: 100%;
+  @include ellipsis;
+  transition: all .2s ease-out;
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      @include tab-focus;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    background-image: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+    pointer-events: none; // Future-proof disabling of clicks
+    opacity: .65;
+    box-shadow: none;
+  }
+}

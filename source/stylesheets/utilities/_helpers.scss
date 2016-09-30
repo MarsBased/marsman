@@ -1,0 +1,53 @@
+// Helpers
+
+%list-reset{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+%list-inline{
+  > li{
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  > dt{
+    clear: both;
+    margin-right: 0.3em;
+  }
+
+  > dt,
+  > dd{
+    float: left;
+    margin-bottom: 0;
+  }
+}
+
+@mixin tab-focus() {
+  // Default
+  outline: thin dotted;
+  // WebKit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+// Centered elements
+@mixin centered{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Drop Overlays
+@mixin drop-overlay(){
+  content: '';
+  position: absolute;
+  z-index: $z2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(#27353B, .6);
+}
