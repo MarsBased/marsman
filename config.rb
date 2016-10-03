@@ -24,7 +24,7 @@ end
 # activate :deploy do |deploy|
 #   deploy.method = :rsync
 #   deploy.host   = 'marsman.marsbased.com'
-#   deploy.path   = '/home/deploy/apps/marsman
+#   deploy.path   = '/home/deploy/apps/marsman'
 #   deploy.user  = 'deploy'
 #   deploy.flags = '-avzp --chmod=+r'
 # end
