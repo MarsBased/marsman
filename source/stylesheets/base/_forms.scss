@@ -1,0 +1,20 @@
+$input--disabled: .3;
+
+.form-group {
+	margin-bottom: .5em;
+}
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 1em;
+}
+
+input[disabled]{
+  opacity: $input--disabled;
+  pointer-events: none;
+  + label {
+    pointer-events: none;
+    opacity: $input--disabled;
+  }
+}

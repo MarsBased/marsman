@@ -1,11 +1,11 @@
-$colors-list:  "Brand primary" $brand-primary,
-					      "Brand primary light" $brand-primary--light,
-					      "Status complete" $status-complete,
-					      "Background primary" $background-primary,
-					      "Brand secundary" $brand-secundary,
-					      "Brand secundary light" $brand-secundary--light,
-					      "Status error" $status-error,
-					      "Background secundary" $background-secundary;
+$colors-list: "Brand primary" $brand-primary,
+					    "Brand primary light" $brand-primary--light,
+					    "Status complete" $status-complete,
+					    "Background primary" $background-primary,
+					    "Brand secundary" $brand-secundary,
+					    "Brand secundary light" $brand-secundary--light,
+					    "Status error" $status-error,
+					    "Background secundary" $background-secundary;
 
 @mixin card-css--color($content, $color){
 	.card-css__block{ background-color: $color;}
@@ -43,7 +43,7 @@ $colors-list:  "Brand primary" $brand-primary,
 
 	&__content{
 		box-shadow: $shadow;
-		border: 1px solid $gray-lighten;
+		border: 1px solid $gray-lighter;
 	}
 
 	&__block{
@@ -70,7 +70,7 @@ $colors-list:  "Brand primary" $brand-primary,
 		height: 5rem;
 		width: 100%;
 		background-color: white;
-		border-top: 1px solid $gray-lighten;
+		border-top: 1px solid $gray-lighter;
 		font-size: $fs-small;
 		line-height: 1.4;
 		display: flex;

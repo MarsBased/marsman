@@ -1,12 +1,23 @@
 // Helpers
 
-%list-reset{
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.list-reset{
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-%list-inline{
+.list-inline{
   > li{
     display: inline-block;
     vertical-align: top;
@@ -23,6 +34,22 @@
     margin-bottom: 0;
   }
 }
+
+.clearfix {
+  @include clearfix;
+}
+
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+
+.centered{
+  text-align: center;
+}
+
 
 @mixin tab-focus() {
   // Default

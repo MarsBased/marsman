@@ -1,18 +1,39 @@
 body.toolkit{
 	padding-top: 4rem;
+	padding-bottom: 4rem;
 
-	.toolkit__container{
-		@extend .container;
-		@media (min-width: $screen-sm){
-			padding-left: $gutter*3;
-			padding-left: $gutter*3;
+	.toolkit{
+		&__container{
+			@extend .container;
+			@media (min-width: $screen-sm){
+				padding-left: $gutter;
+				padding-right: $gutter;
+			}
 		}
-	}
 
-	.toolkit__item{
-		padding-bottom: 4rem;
-		@include make-sm-column(6, $gutter*3);
-		@include make-sm-clear(2);
+		&__row{
+			@include make-row($gutter*2)
+		}
+
+		&__item{
+			padding-bottom: 4rem;
+			@include make-sm-column(6, $gutter*2);
+		}
+
+		&__table{
+			display: table;
+			width: 100%;
+		}
+		&__cell{
+			display: table-cell;
+			text-align: center;
+			&:first-of-type{
+				text-align: left;
+			}
+			&:last-of-type{
+				text-align: right;
+			}
+		}
 	}
 
 	.typography{

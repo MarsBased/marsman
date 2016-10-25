@@ -8,10 +8,10 @@ $background-secundary:		#FFFFFF;
 $status-complete:					#57BC27;
 $status-error:						#F9B13D;
 
-$gray-dark:								$brand-secundary;
-$gray:										$brand-secundary--light;
-$gray-light:							#84888F;
-$gray-lighten:						#E0E0DD;
+$gray-dark:								lighten(black, 20%);
+$gray:										lighten(black, 40%);
+$gray-light:							lighten(black, 60%);
+$gray-lighter:						lighten(black, 80%);
 
 $brand-success:         	#5cb85c;
 $brand-warning:         	#f0ad4e;
