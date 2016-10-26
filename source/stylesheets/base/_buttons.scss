@@ -24,26 +24,26 @@
 }
 
 .btn-primary{
-  @include button(white,$brand-primary);
+  @include button(white,$primary);
 
   &--lighter{
-    @include button($brand-primary,lighten($brand-primary, 50%), transparent,
-     $brand-primary, lighten($brand-primary, 30%), $brand-primary);
+    @include button($primary,lighten($primary, 50%), transparent,
+     $primary, lighten($primary, 30%), $primary);
   }
 }
 
-.btn-secundary{
-  @include button(white, $brand-secundary-light);
+.btn-secondary{
+  @include button(white, $secondary-light);
 
   &--lighter{
-    @include button($brand-secundary-light,lighten($brand-secundary-light, 40%), transparent,
-     $brand-secundary-light, lighten($brand-secundary-light, 30%), $brand-secundary-light);
+    @include button($secondary-light,lighten($secondary-light, 40%), transparent,
+     $secondary-light, lighten($secondary-light, 30%), $secondary-light);
   }
 }
 
 .link{
   text-decoration: none;
-  color: $brand-primary;
+  color: $primary;
   &:hover,
   &.active,
   &:focus{
