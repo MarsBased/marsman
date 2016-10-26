@@ -9,6 +9,8 @@ input[type="radio"] {
   + label {
     display: inline-block;
     padding-right: .5em;
+    vertical-align: middle;
+    cursor: pointer;
 
     &::before {
       content: '';
@@ -31,7 +33,6 @@ input[type="radio"] {
     }
 
     &:hover::before {
-      cursor: pointer;
       border-width: 2px;
       border-color: $radio--color;
       transform: scale($radio--scale);

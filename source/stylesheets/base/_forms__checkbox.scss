@@ -13,6 +13,7 @@ input[type="checkbox"]{
     display: inline-block;
     padding-right: .5em;
     vertical-align: middle;
+    cursor: pointer;
 
     &::before {
       @extend .fa;
@@ -29,7 +30,6 @@ input[type="checkbox"]{
     }
 
     &:hover::before {
-      cursor: pointer;
       content: $checkbox__icon--hover;
       transform: scale($checkbox--scale);
     }
