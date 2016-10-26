@@ -21,13 +21,13 @@ configure :build do
   set :environment, 'production'
 end
 
-# activate :deploy do |deploy|
-#   deploy.method = :rsync
-#   deploy.host   = 'marsman.marsbased.com'
-#   deploy.path   = '/home/deploy/apps/marsman'
-#   deploy.user  = 'deploy'
-#   deploy.flags = '-avzp --chmod=+r'
-# end
+activate :deploy do |deploy|
+  deploy.method = :rsync
+  deploy.host   = 'marsman.marsbased.com'
+  deploy.path   = '/home/deploy/apps/marsman'
+  deploy.user  = 'deploy'
+  deploy.flags = '-avzp --chmod=+r'
+end
 
 activate :email do |email|
   email.user = 'postmaster@mg.marsbased.com'
