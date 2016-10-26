@@ -1,16 +1,41 @@
 $input--disabled: .3;
-$input--border: $gray-lighter;
+$input--border: 1px solid $gray-lighter;
 $input--border-radius: $border-radius;
+$input--padding: .5em 1em;
+$input--placeholder: $gray-lighter;
 
 .form-group {
-	margin-bottom: .5em;
+	margin-bottom: 1em;
+}
+
+%form-item{
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  border: $input--border;
+  border-radius: $input--border-radius;
+  padding: $input--padding;
+  transition: all .2s ease-out;
+  &:focus{
+    box-shadow: 0 0 8px rgba($primary,.9);
+    outline: none;
+  }
+  &::placeholder {
+    color: $gray-light;
+    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+  }
 }
 
 label {
-  display: inline-block;
+  display: block;
   max-width: 100%;
-  margin-bottom: 1em;
+  line-height: 1.5em;
+
+  + input {
+    margin-top: .5em;
+  }
 }
+
 
 input[disabled]{
   opacity: $input--disabled;
@@ -21,12 +46,34 @@ input[disabled]{
   }
 }
 
+input {
+  @extend %form-item;
+  background-image: none;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-clip: padding-box;
+
+  &:required {
+    background-image: image-url("input-required.svg");
+  }
+
+  &.success {
+    animation: escale10 .5s ease-out;
+    border: 1px solid $success;
+    background-image: image-url("input-success.svg");
+  }
+
+  &.warning {
+    animation: escale10 .5s ease-out;
+    border: 1px solid $warning;
+    background-image: image-url("input-warning.svg");
+  }
+}
+
+
 textarea {
-  width: 100%;
-  border: 1px solid $input--border;
-  border-radius: $input--border-radius;
-  padding: 1em;
-  display: block;
+  @extend %form-item;
 
   &[maxlength] {
     padding-bottom: 1.5em;

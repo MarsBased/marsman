@@ -84,34 +84,51 @@ css: toolkit
 	<div class="box">
 		<div class="toolkit__row">
 			<div class="toolkit__item">
-				<h2>Checkboxes</h2>
-				<div class="toolkit__table">
-					<div class="toolkit__cell">
-					<input type="checkbox" name="checkgroup" id="check1" value="check1">
-					<label for="check1">Checkbox OFF</label>
+				<div class="toolkit__block">
+					<h2>Checkboxes</h2>
+					<div class="toolkit__table form-group">
+						<div class="toolkit__cell">
+						<input type="checkbox" name="checkgroup" id="check1" value="check1">
+						<label for="check1">Checkbox OFF</label>
+						</div>
+						<div class="toolkit__cell">
+						<input type="checkbox" name="checkgroup" id="check2" value="check2" checked>
+						<label for="check2">Checkbox ON</label>
+						</div>
+						<div class="toolkit__cell">
+						<input type="checkbox" name="checkgroup" id="check3" value="check3"
+						 disabled checked>
+						<label for="check3">Checkbox Disabled</label>
+						</div>
 					</div>
-					<div class="toolkit__cell">
-					<input type="checkbox" name="checkgroup" id="check2" value="check2" checked>
-					<label for="check2">Checkbox ON</label>
-					</div>
-					<div class="toolkit__cell">
-					<input type="checkbox" name="checkgroup" id="check3" value="check3"
-					 disabled checked>
-					<label for="check3">Checkbox Disabled</label>
+					<div class="toolkit__table form-group">
+						<div class="toolkit__cell">
+						<input type="radio" name="radiogroup" id="radio1" value="radio1">
+						<label for="radio1">Radio OFF</label>
+						</div>
+						<div class="toolkit__cell">
+						<input type="radio" name="radiogroup" id="radio2" value="radio2" checked>
+						<label for="radio2">Radio ON</label>
+						</div>
+						<div class="toolkit__cell">
+						<input type="radio" name="radiogroup2" id="radio3" value="radio3" checked disabled>
+						<label for="radio3">Radio Disabled</label>
+						</div>
 					</div>
 				</div>
-				<div class="toolkit__table">
-					<div class="toolkit__cell">
-					<input type="radio" name="radiogroup" id="radio1" value="radio1">
-					<label for="radio1">Radio OFF</label>
-					</div>
-					<div class="toolkit__cell">
-					<input type="radio" name="radiogroup" id="radio2" value="radio2" checked>
-					<label for="radio2">Radio ON</label>
-					</div>
-					<div class="toolkit__cell">
-					<input type="radio" name="radiogroup2" id="radio3" value="radio3" checked disabled>
-					<label for="radio3">Radio Disabled</label>
+				<div class="toolkit__block">
+					<h2>Textarea</h2>
+					<textarea name="textareaexample" id="textareaexample"
+					 rows="5" maxlength="200"><%= lorem.words(rand(10..12)) %></textarea>
+				</div>
+				<div class="toolkit__block">
+					<div class="row">
+						<div class="col-sm-6">
+							<h2>Profile picture</h2>
+						</div>
+						<div class="col-sm-6">
+							<h2>Alerts</h2>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -122,29 +139,29 @@ css: toolkit
 				<div class="row">
 					<div class="col-sm-8">
 						<h2>Inputs</h2>
-
+						<div class="form-group">
+							<label for="without-text">Label</label>
+							<input type="text" id="without-text" name="i1" placeholder="Placeholder text" required>
+						</div>
+						<div class="form-group">
+							<input type="text" class="success" name="i1"
+							 placeholder="Placeholder text" value="Input success">
+						</div>
+						<div class="form-group">
+							<input type="text" class="warning" id="without-text"
+							 name="i1" placeholder="Placeholder text" value="Input error">
+						</div>
 					</div>
 					<div class="col-sm-4">
-						
+						<h2>Dropdown</h2>
+
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="toolkit__row">
 			<div class="toolkit__item">
-				<div class="toolkit__block">
-					<h2>Textarea</h2>
-					<textarea name="textareaexample" id="textareaexample"
-					 rows="5" maxlength="200"><%= lorem.words(rand(10..12)) %></textarea>
-				</div>
-				<div class="row">
-					<div class="col-sm-6">
-						<h2>Profile picture</h2>
-					</div>
-					<div class="col-sm-6">
-						<h2>Alerts</h2>
-					</div>
-				</div>
+				
 			</div>
 
 		</div>

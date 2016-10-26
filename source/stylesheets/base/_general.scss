@@ -1,11 +1,11 @@
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body{
 	background-color: $background-primary;
 	min-width: 320px;
 }
+
+::selection { background: lighten($primary,30%); }
 
 a{
 	color: inherit;

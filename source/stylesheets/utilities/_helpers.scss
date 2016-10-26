@@ -42,6 +42,7 @@
 .pull-right {
   float: right !important;
 }
+
 .pull-left {
   float: left !important;
 }
@@ -49,7 +50,6 @@
 .centered{
   text-align: center;
 }
-
 
 @mixin tab-focus() {
   // Default
