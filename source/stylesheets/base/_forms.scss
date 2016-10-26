@@ -1,4 +1,6 @@
 $input--disabled: .3;
+$input--border: $gray-lighter;
+$input--border-radius: $border-radius;
 
 .form-group {
 	margin-bottom: .5em;
@@ -16,5 +18,33 @@ input[disabled]{
   + label {
     pointer-events: none;
     opacity: $input--disabled;
+  }
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid $input--border;
+  border-radius: $input--border-radius;
+  padding: 1em;
+  display: block;
+
+  &[maxlength] {
+    padding-bottom: 1.5em;
+    resize: none;
+  }
+}
+
+.character-counter{
+  position: absolute;
+  transform: translate(-100%,-100%);
+  display: inline-block;
+  pointer-events: none;
+  padding: .5em;
+
+  &.success{
+    color: $success;
+  }
+  &.warning{
+    color: $warning;
   }
 }

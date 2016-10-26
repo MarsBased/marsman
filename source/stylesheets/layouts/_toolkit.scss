@@ -20,6 +20,10 @@ body.toolkit{
 			@include make-sm-column(6, $gutter*2);
 		}
 
+		&__block{
+			padding-bottom: 4rem;
+		}
+
 		&__table{
 			display: table;
 			width: 100%;
