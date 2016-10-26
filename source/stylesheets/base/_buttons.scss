@@ -33,11 +33,11 @@
 }
 
 .btn-secundary{
-  @include button(white, $brand-secundary--light);
+  @include button(white, $brand-secundary-light);
 
   &--lighter{
-    @include button($brand-secundary--light,lighten($brand-secundary--light, 40%), transparent,
-     $brand-secundary--light, lighten($brand-secundary--light, 30%), $brand-secundary--light);
+    @include button($brand-secundary-light,lighten($brand-secundary-light, 40%), transparent,
+     $brand-secundary-light, lighten($brand-secundary-light, 30%), $brand-secundary-light);
   }
 }
 
