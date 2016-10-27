@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var $input = $('[maxlength]'),
+  var $input = $('textarea[maxlength]'),
   		spanClass = 'character-counter';
 
   function chractersCounter($element) {
@@ -51,9 +51,11 @@
   }
 
   function init(){
-  	createCounter($input);
-  	positionCounter($input);
-  	chractersCounter($input);
+    $input.each(function(){
+      createCounter($(this));
+      positionCounter($(this));
+      chractersCounter($(this));
+    })
   }
 
   init();
@@ -62,12 +64,17 @@
   	.keyup(function () {
 	  	chractersCounter($(this));
 		})
+    .keydown(function() {
+      chractersCounter($(this));
+    })
 		.change(function (){
 			chractersCounter($(this));
 		});
 
 	$(window).resize(function(){
-    positionCounter($input);
+    $input.each(function(){
+      positionCounter($(this));
+    });
 	});
 
 })();
