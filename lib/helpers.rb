@@ -1,7 +1,7 @@
 module Helpers
 
-  def class_active(name, class_name = 'active', reverse = false)
-    if(class_active = current_page.data.class_active)
+  def active(name, class_name = 'active', reverse = false)
+    if(class_active = current_page.data.active)
       if(reverse)
         class_name if(!class_active.include?(name))
       else
