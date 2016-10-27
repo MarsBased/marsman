@@ -1,11 +1,11 @@
-$colors-list: "Brand primary" $primary,
-					    "Brand primary light" $primary-light,
+$colors-list: "Primary" $primary,
+					    "Primary light" $primary-light,
 					    "Status complete" $status-complete,
-					    "Background primary" $background-primary,
-					    "Brand secondary" $secondary,
-					    "Brand secondary light" $secondary-light,
+					    "Bg primary" $background-primary,
+					    "Secondary" $secondary,
+					    "Secondary light" $secondary-light,
 					    "Status error" $status-error,
-					    "Background secondary" $background-secondary;
+					    "Bg secondary" $background-secondary;
 
 @mixin card-css--color($content, $color){
 	.card-css__block{ background-color: $color;}
@@ -61,7 +61,7 @@ $colors-list: "Brand primary" $primary,
 	&__subtitle{
 		color: $gray-light;
 		display: block;
-		font-size: .7em;
+		font-size: 1em;
 		@include ellipsis;
 	}
 
