@@ -30,14 +30,12 @@ input[type="checkbox"]{
     }
 
     &:hover::before {
-      content: $checkbox__icon--hover;
       transform: scale($checkbox--scale);
     }
   }
 
   &:focus{
     + label::before {
-      content: $checkbox__icon--hover;
       transform: scale($checkbox--scale);
     }
   }
