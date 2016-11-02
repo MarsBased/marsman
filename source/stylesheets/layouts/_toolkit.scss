@@ -63,11 +63,11 @@ body.toolkit{
 			@include ellipsis;
 			padding-right: $gutter/2;
 			text-align: right;
-			color: $gray-light;
+			color: $secondary-light;
 		}
 
 		&__title{
-			color: $gray;
+			color: $secondary;
 			float: left;
 			margin-right: .3em;
 		}

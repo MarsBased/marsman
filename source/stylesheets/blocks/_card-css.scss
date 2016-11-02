@@ -43,23 +43,23 @@ $colors-list: "Primary" $primary,
 
 	&__content{
 		box-shadow: $shadow;
-		border: 1px solid $gray-lighter;
+		border: 1px solid $secondary-lighter;
 	}
 
 	&__block{
 		height: 9rem;
 		position: relative;
 		background-color: white;
-		color: $gray;
+		color: $secondary-light;
 	}
 
 	&__title{
-		color: $gray-dark;
+		color: $secondary;
 		display: block;
 	}
 
 	&__subtitle{
-		color: $gray-light;
+		color: $secondary-light;
 		display: block;
 		font-size: 1em;
 		@include ellipsis;
@@ -70,7 +70,7 @@ $colors-list: "Primary" $primary,
 		height: 5rem;
 		width: 100%;
 		background-color: white;
-		border-top: 1px solid $gray-lighter;
+		border-top: 1px solid $secondary-lighter;
 		font-size: $fs-small;
 		line-height: 1.4;
 		display: flex;

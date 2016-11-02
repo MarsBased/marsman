@@ -1,8 +1,8 @@
 $input--disabled: .3;
-$input--border: 1px solid $gray-lighter;
+$input--border: 1px solid $secondary-lighter;
 $input--border-radius: $border-radius;
 $input--padding: .5em 1em;
-$input--placeholder: $gray-lighter;
+$input--placeholder: $secondary-light;
 
 .form-group {
 	margin-bottom: 1em;
@@ -23,7 +23,7 @@ $input--placeholder: $gray-lighter;
     outline: none;
   }
   &::placeholder {
-    color: $gray-light;
+    color: $input--placeholder;
     opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
   }
 }
