@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
-    <title>input-success</title>
+    <title>icon-success</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="input-success" fill="#56BC26">
-            <g id="good" transform="translate(4.000000, 5.000000)">
+        <g id="icon-success" fill="#56BC26">
+            <g id="good" transform="translate(2.000000, 3.000000)">
                 <path d="M4.21186467,7.72547431 L9.78182034,1.43954442 C10.072837,1.11101432 10.072837,0.603069348 9.78115689,0.275112675 C9.45758948,-0.0918394725 8.8980184,-0.0918394725 8.57224749,0.275924834 L3.49884033,5.82739258 L1.42765729,3.41798328 C1.10142524,3.05117597 0.543833329,3.05117597 0.218287519,3.41721022 C-0.0725062341,3.74698019 -0.0725062341,4.25311307 0.216752931,4.58115018 L3.00253359,7.72474492 C3.15868465,7.90031794 3.37710041,8 3.6075229,8 C3.83794539,8 4.05636115,7.90031794 4.21186467,7.72547431 Z" id="Icon"></path>
             </g>
         </g>

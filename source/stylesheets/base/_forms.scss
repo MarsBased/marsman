@@ -26,6 +26,7 @@ $input--placeholder: $gray-lighter;
   }
 }
 
+
 label {
   display: block;
   max-width: 100%;
@@ -40,34 +41,41 @@ label {
 input[disabled]{
   opacity: $input--disabled;
   pointer-events: none;
-  + label {
+  + label{
     pointer-events: none;
     opacity: $input--disabled;
   }
+}
+
+%input-state{
+  background-repeat: no-repeat;
+  background-size: 1em;
+  background-position: calc(100% - .5em) center;
+  padding-right: 2em;
 }
 
 input {
   @extend %form-item;
   background-image: none;
   background-color: white;
-  background-repeat: no-repeat;
-  background-position: center right;
-  background-clip: padding-box;
 
   &:required {
-    background-image: image-url("input-required.svg");
+    @extend %input-state;
+    background-image: image-url("icon-required.svg");
   }
 
   &.success {
+    @extend %input-state;
     animation: escale10 .5s ease-out;
     border: 1px solid $success;
-    background-image: image-url("input-success.svg");
+    background-image: image-url("icon-success.svg");
   }
 
   &.warning {
+    @extend %input-state;
     animation: escale10 .5s ease-out;
     border: 1px solid $warning;
-    background-image: image-url("input-warning.svg");
+    background-image: image-url("icon-warning.svg");
   }
 }
 
