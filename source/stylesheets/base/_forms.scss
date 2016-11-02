@@ -16,6 +16,8 @@ $input--placeholder: $gray-lighter;
   border-radius: $input--border-radius;
   padding: $input--padding;
   transition: all .2s ease-out;
+  margin-bottom: .3em;
+
   &:focus{
     box-shadow: 0 0 8px rgba($primary,.9);
     outline: none;
