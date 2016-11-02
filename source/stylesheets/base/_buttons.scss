@@ -26,7 +26,7 @@
 .btn-primary{
   @include button(white,$primary);
 
-  &--lighter{
+  &-light{
     @include button($primary,lighten($primary, 50%), transparent,
      $primary, lighten($primary, 30%), $primary);
   }
@@ -35,7 +35,7 @@
 .btn-secondary{
   @include button(white, $secondary-light);
 
-  &--lighter{
+  &-light{
     @include button($secondary-light,lighten($secondary-light, 40%), transparent,
      $secondary-light, lighten($secondary-light, 30%), $secondary-light);
   }
@@ -98,4 +98,10 @@
     opacity: .65;
     box-shadow: none;
   }
+}
+
+.btn-block{
+  display: block;
+  width: 100%;
+  @include button-size(.9rem, 1rem, 1.2rem, 1, 3px);
 }
