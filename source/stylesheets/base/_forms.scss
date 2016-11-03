@@ -18,6 +18,8 @@ $input--placeholder: $secondary-light;
   padding: $input--padding;
   transition: all .2s ease-out;
   margin-bottom: .5em;
+  background-image: none;
+  background-color: white;
 
   &:focus{
     box-shadow: 0 0 8px rgba($primary,.9);
@@ -28,8 +30,35 @@ $input--placeholder: $secondary-light;
     color: $input--placeholder;
     opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
   }
-}
 
+  &:required,
+  &.required {
+    @extend %input-state;
+    background-image: image-url("icon-required.svg");
+  }
+
+  &.success {
+    @extend %input-state;
+    animation: escale10 .5s ease-out;
+    border: 1px solid $success;
+    background-image: image-url("icon-success.svg");
+
+    + .info-field{
+      color: $success
+    }
+  }
+
+  &.warning {
+    @extend %input-state;
+    animation: escale10 .5s ease-out;
+    border: 1px solid $warning;
+    background-image: image-url("icon-warning.svg");
+
+    + .info-field{
+      color: $warning
+    }
+  }
+}
 
 label {
   display: block;
@@ -67,37 +96,6 @@ input[disabled]{
 
 input {
   @extend %form-item;
-  background-image: none;
-  background-color: white;
-
-  &:required,
-  &.required {
-    @extend %input-state;
-    background-image: image-url("icon-required.svg");
-  }
-
-  &.success {
-    @extend %input-state;
-    animation: escale10 .5s ease-out;
-    border: 1px solid $success;
-    background-image: image-url("icon-success.svg");
-
-    + .info-field{
-      color: $success
-    }
-  }
-
-  &.warning {
-    @extend %input-state;
-    animation: escale10 .5s ease-out;
-    border: 1px solid $warning;
-    background-image: image-url("icon-warning.svg");
-
-    + .info-field{
-      color: $warning
-    }
-  }
-
 }
 
 
