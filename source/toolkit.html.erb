@@ -1,6 +1,6 @@
 ---
 title: Toolkit
-css: toolkit
+body: toolkit
 ---
 <div class="toolkit__container">
 	<div class="toolkit__row">
@@ -140,6 +140,15 @@ css: toolkit
 						</div>
 						<div class="col-sm-6">
 							<h2>Alerts</h2>
+							<% partial "alert" do %>
+								JPEG, PNG, GIF or BMP - 5MB file limit, at least 250x250 pixels.
+							<% end %>
+							<% partial "alert", locals:{css: 'warning', dismissible: true} do %>
+								Something really bad has happened.
+							<% end %>
+							<% partial "alert", locals:{css: 'success'} do %>
+								This is fine and requires notification
+							<% end %>
 						</div>
 					</div>
 				</div>
@@ -174,7 +183,7 @@ css: toolkit
 		</div>
 		<div class="toolkit__row">
 			<div class="toolkit__item">
-				
+
 			</div>
 
 		</div>

@@ -1,0 +1,37 @@
+$alert--padding: .5em 1em;
+$alert--radius: $border-radius;
+
+.alert{
+	border: 1px solid $warning;
+	background-color: rgba($warning, .04);
+	color: $warning;
+	padding: $alert--padding;
+	border-radius: $alert--radius;
+	margin-bottom: 1em;
+
+	&.dismissible{
+		position: relative;
+		padding-right: 2em;
+	}
+
+	&.warning{
+		background-color: $warning;
+		color: white;
+	}
+
+	&.success{
+		background-color: $success;
+		border-color: $success;
+		color: white;
+	}
+
+	&__close{
+		background-color: transparent;
+		border: 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: $alert--padding;
+		color: inherit;
+	}
+}
