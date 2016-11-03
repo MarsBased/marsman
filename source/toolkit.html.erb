@@ -89,6 +89,32 @@ body: toolkit
 				</div>
 			</div>
 		</div>
+		<div class="toolkit__item">
+			<h1>Pills and select</h1>
+			<div class="row">
+				<div class="col-sm-6">
+					<ul class="pills">
+						<li class="pills__item">
+							<a href="#" class="pills__link active success">
+								About you
+							</a>
+						</li>
+						<li class="pills__item">
+							<a href="#" class="pills__link warning">
+								<%= lorem.words(rand(3..10)).humanize %>
+							</a>
+						</li>
+						<% for i in 1...4 %>
+						<li class="pills__item">
+							<a href="#" class="pills__link">
+								<%= lorem.words(rand(3..10)).humanize %>
+							</a>
+						</li>
+						<% end %>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 <div class="toolkit__container">
