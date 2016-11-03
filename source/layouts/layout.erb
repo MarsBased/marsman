@@ -11,7 +11,7 @@
     <%= stylesheet_link_tag :application %>
     <%= javascript_include_tag  :head %>
   </head>
-  <body class="<%= current_page.data.css %>">
+  <body class="<%= current_page.data.body %>">
     <%= partial "partials/shapes" %>
     <%= yield %>
     <%= javascript_include_tag  :body %>
