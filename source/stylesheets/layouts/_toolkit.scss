@@ -12,12 +12,12 @@ body.toolkit{
 		}
 
 		&__row{
-			@include make-row($gutter*2)
+			@include make-row($gutter*4)
 		}
 
 		&__item{
 			padding-bottom: 4rem;
-			@include make-sm-column(6, $gutter*2);
+			@include make-sm-column(6, $gutter*4);
 		}
 
 		&__block{
