@@ -1,0 +1,16 @@
+body.home{
+	.marsman-template	{
+		padding-top: 1.5em;
+		padding-bottom: 3em;
+		width: 100%;
+		height: auto;
+		@media (min-width: $screen-sm){
+			height: 200px;
+		}
+	}
+	.list-pages{
+		max-width: 800px;
+		margin: auto;
+		padding-bottom: 3em;
+	}
+}

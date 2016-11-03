@@ -1,16 +1,23 @@
 ---
-title: Welcome to Middleman
-modify: button, toolkit
+title: Welcome to marsman Template
+body: home
 ---
-
-<div class="welcome">
-  <h1>The Martians are Watching</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p>
+<div class="container">
+	<h1 class="sr-only">marsman-template</h1>
+  <svg class="shape shape marsman-template">
+    <use xlink:href="#shape-marsman-template">
+  </svg>
+  <div class="list-pages">
+		<div class="row">
+			<div class="col-sm-6">
+				
+			</div>
+			<div class="col-sm-6">
+				<h1>Páginas</h1>
+				<ul>
+					<li><a class="link" href="/toolkit">Toolkit</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
 </div>
-<a href="#" class="btn <%= modify('button','btn--primary') %>">Test</a>
-
-<% if modify('toolkit') %>
-<a href="/toolkit"">Toolkit</a>
-<% end %>

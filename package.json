@@ -1,11 +1,10 @@
 {
   "name": "marsman-template",
-  "version": "0.0.0",
-  "dependencies": {},
+  "version": "0.1.0",
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-svgmin": "^0.4.0",
-    "grunt-svgstore": "^0.3.6",
-    "load-grunt-tasks": "^0.4.0"
+    "grunt": "^1.0.0",
+    "grunt-svgmin": "^3.0.0",
+    "grunt-svgstore": "^1.0.0",
+    "load-grunt-tasks": "^3.5.2"
   }
 }
