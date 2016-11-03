@@ -61,12 +61,13 @@ input {
   background-image: none;
   background-color: white;
 
-  &:required {
+  &:required,
+  &.required {
     @extend %input-state;
     background-image: image-url("icon-required.svg");
   }
 
-  &.success {
+  .success {
     @extend %input-state;
     animation: escale10 .5s ease-out;
     border: 1px solid $success;
