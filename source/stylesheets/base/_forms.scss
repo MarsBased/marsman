@@ -5,7 +5,8 @@ $input--padding: .5em 1em;
 $input--placeholder: $secondary-light;
 
 .form-group {
-	margin-bottom: 1em;
+	margin-bottom: 2em;
+  position: relative;
 }
 
 %form-item{
@@ -16,7 +17,7 @@ $input--placeholder: $secondary-light;
   border-radius: $input--border-radius;
   padding: $input--padding;
   transition: all .2s ease-out;
-  margin-bottom: .3em;
+  margin-bottom: .5em;
 
   &:focus{
     box-shadow: 0 0 8px rgba($primary,.9);
@@ -38,6 +39,13 @@ label {
   + input {
     margin-top: .5em;
   }
+}
+
+.info-field{
+  position: absolute;
+  bottom: -1.5em;
+  width: 100%;
+  @include ellipsis;
 }
 
 
@@ -68,11 +76,15 @@ input {
     background-image: image-url("icon-required.svg");
   }
 
-  .success {
+  &.success {
     @extend %input-state;
     animation: escale10 .5s ease-out;
     border: 1px solid $success;
     background-image: image-url("icon-success.svg");
+
+    + .info-field{
+      color: $success
+    }
   }
 
   &.warning {
@@ -80,7 +92,12 @@ input {
     animation: escale10 .5s ease-out;
     border: 1px solid $warning;
     background-image: image-url("icon-warning.svg");
+
+    + .info-field{
+      color: $warning
+    }
   }
+
 }
 
 
