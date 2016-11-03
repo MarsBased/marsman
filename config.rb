@@ -9,15 +9,16 @@ set :fonts_dir, 'fonts'
 set :partials_dir, 'partials'
 
 activate :autoprefixer
-activate :livereload
+activate :directory_indexes
 
 configure :development do
+  activate :livereload
   set :environment, 'development'
 end
 
-activate :directory_indexes
 configure :build do
   ignore 'shapes/*'
+  activate :asset_hash
   set :environment, 'production'
 end
 
