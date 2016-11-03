@@ -53,22 +53,38 @@ $pills--active: $primary;
 
 			&::before{
 				left: 0;
-				background-color: $pills--active;
+				background-color: $secondary-lighter;
 			}
 		}
 
 		&.active {
 			color: $pills--active;
+			&::before{
+				left: 0;
+				background-color: $pills--active;
+			}
 		}
 
 		&.success{
 			@extend %pills-state;
 			background-image: image-url("icon-success.svg");
+			&.active{
+				color: $success;
+				&::before{
+					background-color: $success;
+				}
+			}
 		}
 
 		&.warning{
 			@extend %pills-state;
 			background-image: image-url("icon-warning.svg");
+			&.active{
+				color: $warning;
+				&::before{
+					background-color: $warning;
+				}
+			}
 		}
 	}
 }
