@@ -22,6 +22,7 @@ $input--placeholder: $secondary-light;
     box-shadow: 0 0 8px rgba($primary,.9);
     outline: none;
   }
+
   &::placeholder {
     color: $input--placeholder;
     opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
