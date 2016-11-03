@@ -2,6 +2,7 @@ $input--disabled: .3;
 $input--border: 1px solid $secondary-lighter;
 $input--border-radius: $border-radius;
 $input--padding: .5em 1em;
+$input--margin: .5em;
 $input--placeholder: $secondary-light;
 
 .form-group {
@@ -11,6 +12,7 @@ $input--placeholder: $secondary-light;
   .info-field{
     position: absolute;
     bottom: -1.5em;
+    margin: 0;
   }
 }
 
@@ -21,7 +23,6 @@ $input--placeholder: $secondary-light;
   padding-right: 2em;
 }
 
-
 %form-item{
   width: 100%;
   max-width: 100%;
@@ -30,7 +31,7 @@ $input--placeholder: $secondary-light;
   border-radius: $input--border-radius;
   padding: $input--padding;
   transition: all .2s ease-out;
-  margin-bottom: .5em;
+  margin-bottom: $input--margin;
   background-image: none;
   background-color: white;
 
@@ -86,6 +87,8 @@ label {
 .info-field{
   width: 100%;
   @include ellipsis;
+  margin-top: -$input--margin/2;
+  margin-bottom: $input--margin;
 }
 
 
