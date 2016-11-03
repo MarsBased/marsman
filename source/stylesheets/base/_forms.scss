@@ -7,7 +7,20 @@ $input--placeholder: $secondary-light;
 .form-group {
 	margin-bottom: 2em;
   position: relative;
+
+  .info-field{
+    position: absolute;
+    bottom: -1.5em;
+  }
 }
+
+%input-state{
+  background-repeat: no-repeat;
+  background-size: 1em;
+  background-position: calc(100% - .5em) center;
+  padding-right: 2em;
+}
+
 
 %form-item{
   width: 100%;
@@ -71,8 +84,6 @@ label {
 }
 
 .info-field{
-  position: absolute;
-  bottom: -1.5em;
   width: 100%;
   @include ellipsis;
 }
@@ -85,13 +96,6 @@ input[disabled]{
     pointer-events: none;
     opacity: $input--disabled;
   }
-}
-
-%input-state{
-  background-repeat: no-repeat;
-  background-size: 1em;
-  background-position: calc(100% - .5em) center;
-  padding-right: 2em;
 }
 
 input {

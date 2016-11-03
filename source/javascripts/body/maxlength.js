@@ -13,7 +13,7 @@
 
 	  $element
 	  	.attr('data-characters-counter', left)
-	  	.next('.'+spanClass)
+	  	.prev('.'+spanClass)
 	  		.attr('class', statusCounter(left)+' '+spanClass)
 	  			.text(signCounter(left));
   }
@@ -34,11 +34,11 @@
   }
 
   function createCounter($element){
-  	$element.after( '<span class="'+spanClass+'"></span>' );
+  	$element.before( '<span class="'+spanClass+'"></span>' );
   }
 
   function positionCounter($element){
-  	var $counter = $element.next('.'+spanClass),
+  	var $counter = $element.prev('.'+spanClass),
   			position = $element.position(),
   			width = $element.outerWidth(),
   			height = $element.outerHeight(),
