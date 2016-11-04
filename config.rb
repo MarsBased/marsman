@@ -9,11 +9,23 @@ set :fonts_dir, 'fonts'
 set :partials_dir, 'partials'
 
 activate :autoprefixer
+activate :pry
 activate :directory_indexes
 
 configure :development do
   activate :livereload
   set :environment, 'development'
+end
+
+ready do
+  sitemap.resources.each do |r|
+    if @modifies = r.data['modifies']
+      @modifies.split(/[\s,']/).reject(&:empty?).each do |m|
+        @path = r.destination_path.gsub 'index.html', "_#{m}.html"
+        proxy @path, r.path, :locals => { :modify => m }
+      end
+    end
+  end
 end
 
 configure :build do

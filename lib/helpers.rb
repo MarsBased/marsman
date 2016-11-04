@@ -12,10 +12,9 @@ module Helpers
   end
 
   def modify(name, return_value = true )
-    if(modify = current_page.data.modify)
-      modify.split(/[\s,']/)
-      return_value if(modify.include?(name))
-    end
+    @c = current_page
+    modify = "#{@c.data.modify} #{@c.metadata[:locals][:modify]}"
+    return_value if(modify.split(/[\s,']/).include?(name))
   end
 
   def full_url(path)

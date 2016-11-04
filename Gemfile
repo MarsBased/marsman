@@ -15,6 +15,7 @@ gem 'middleman-email', git: "git@github.com:MarsBased/middleman-email.git"
 gem 'jquery-middleman'
 
 gem 'middleman-deploy', '~> 1.0'
+gem 'middleman-pry'
 
 source 'https://rails-assets.org' do
   ## gem 'rails-assets-ngDialog'
