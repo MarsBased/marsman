@@ -20,17 +20,15 @@ end
 ready do
   @pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/) }
   @pages.each do |r|
-    @subpages = []
-
-    if @modifies = r.data['modifies']
-      @modifies.split(/[\s,']/).reject(&:empty?).each do |m|
-        @subpages.push(m)
+    @versions = []
+    if @data = r.data['versions']
+      @data.split(/[\s,']/).reject(&:empty?).each do |d|
+        @versions.push(d)
       end
     end
-
-    @subpages.each do |page|
-      @path = r.destination_path.gsub 'index.html', "_#{page}.html"
-      proxy @path, r.path, :locals => { :modify => page }
+    @versions.each do |version|
+      @path = r.destination_path.gsub 'index.html', "_#{version}.html"
+      proxy @path, r.path, :locals => { :version => version }
     end
   end
 end

@@ -11,10 +11,10 @@ module Helpers
     end
   end
 
-  def modify(name, return_value = true )
+  def version(name, return_value = true )
     @c = current_page
-    modify = "#{@c.data.modify} #{@c.metadata[:locals][:modify]}"
-    return_value if(modify.split(/[\s,']/).include?(name))
+    @versions = "#{@c.data.version} #{@c.metadata[:locals][:version]}"
+    return_value if(@versions.split(/[\s,']/).include?(name))
   end
 
   def full_url(path)
