@@ -1,5 +1,6 @@
 ---
 title: Toolkit
+versions: pills_states
 body: toolkit
 ---
 <div class="toolkit__container">
@@ -94,28 +95,31 @@ body: toolkit
 			<div class="row">
 				<div class="col-sm-6">
 					<ul class="pills">
+						<% if modify('pills_states')%>
 						<li class="pills__item">
-							<a href="#" class="pills__link active success">
+							<a href="#" class="pills__link success">
 								Element active & success
 							</a>
 						</li>
 						<li class="pills__item">
-							<a href="#" class="pills__link warning">
-								<%= lorem.words(rand(3..10)).humanize %>
+							<a href="#" class="pills__link active warning">
+								Element active & success
 							</a>
 						</li>
-						<% 2.times do%>
+						<% else %>
+						<li class="pills__item">
+							<a href="#" class="pills__link active">
+								Element active
+							</a>
+						</li>
+						<% end %>
+						<% 3.times do%>
 						<li class="pills__item">
 							<a href="#" class="pills__link">
 								<%= lorem.words(rand(3..10)).humanize %>
 							</a>
 						</li>
 						<% end %>
-						<li class="pills__item">
-							<a href="#" class="pills__link active">
-								About you is active
-							</a>
-						</li>
 					</ul>
 				</div>
 			</div>
