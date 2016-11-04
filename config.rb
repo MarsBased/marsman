@@ -18,12 +18,19 @@ configure :development do
 end
 
 ready do
-  sitemap.resources.each do |r|
+  @pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/) }
+  @pages.each do |r|
+    @subpages = []
+
     if @modifies = r.data['modifies']
       @modifies.split(/[\s,']/).reject(&:empty?).each do |m|
-        @path = r.destination_path.gsub 'index.html', "_#{m}.html"
-        proxy @path, r.path, :locals => { :modify => m }
+        @subpages.push(m)
       end
+    end
+
+    @subpages.each do |page|
+      @path = r.destination_path.gsub 'index.html', "_#{page}.html"
+      proxy @path, r.path, :locals => { :modify => page }
     end
   end
 end
