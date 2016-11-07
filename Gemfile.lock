@@ -152,6 +152,8 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rails-assets-lodash (4.16.2)
+    rails-assets-select2 (4.0.3)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -194,6 +196,8 @@ DEPENDENCIES
   middleman-livereload (~> 3.1.0)
   middleman-pry
   modernizr-rails
+  rails-assets-lodash!
+  rails-assets-select2!
 
 BUNDLED WITH
    1.11.2

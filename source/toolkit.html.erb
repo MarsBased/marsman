@@ -1,6 +1,6 @@
 ---
 title: Toolkit
-versions: pills_states
+versions: error
 body: toolkit
 ---
 <div class="toolkit__container">
@@ -92,10 +92,10 @@ body: toolkit
 		</div>
 		<div class="toolkit__item">
 			<h1>Pills and select</h1>
-			<div class="row">
-				<div class="col-sm-6">
+			<div class="toolkit__row">
+				<div class="toolkit__item">
 					<ul class="pills">
-						<% if version('pills_states')%>
+						<% if version('error')%>
 						<li class="pills__item">
 							<a href="#" class="pills__link success">
 								Element active & success
@@ -121,6 +121,43 @@ body: toolkit
 						</li>
 						<% end %>
 					</ul>
+				</div>
+				<div class="toolkit__item">
+					<select class="select2" id="select2_demo">
+						<% @select = [1992,1993,1994,1995,1996,1997,1998] %>
+		        <% @select.each_with_index do |s,index| %>
+		        <option value="<%= s %>" <%= 'selected' if index == 2 %> >
+		          <%= s %>
+		        </option>
+		        <% end %>
+		      </select>
+		      <% if version('error') %>
+		      <div class="info-field">About select2_demo.</div>
+		      <% end %>
+		      <select class="select2 search <%= version('error', 'success') %>"
+		       id="select2_demo_search" data-placeholder="Select an option"
+		        data-allow-clear="true">
+		       	<option></option>
+		        <% @select.each_with_index do |s,index| %>
+		        <option value="<%= s %>" >
+		          <%= s %>
+		        </option>
+		        <% end %>
+		      </select>
+		      <% if version('error') %>
+		      <div class="info-field">About select2_demo_search</div>
+		      <% end %>
+		      <select id="select_demo_default" class="<%= version('error', 'warning') %>">
+		       	<option></option>
+		        <% @select.each_with_index do |s,index| %>
+		        <option value="<%= s %>" <%= 'selected' if index == 2 %>>
+		          <%= s %>
+		        </option>
+		        <% end %>
+		      </select>
+		      <% if version('error') %>
+		      <div class="info-field">Information about this error.</div>
+		      <% end %>
 				</div>
 			</div>
 		</div>
@@ -165,7 +202,7 @@ body: toolkit
 				</div>
 				<div class="toolkit__block">
 					<h2>Textarea</h2>
-					<textarea name="textareaexample" id="textareaexample" 
+					<textarea name="textareaexample" id="textareaexample"
 					 rows="5" maxlength="200"><%= lorem.words(rand(10..12)) %></textarea>
 					<div class="info-field">Information about this textarea.</div>
 				</div>

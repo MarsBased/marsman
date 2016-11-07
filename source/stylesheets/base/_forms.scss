@@ -16,11 +16,16 @@ $input--placeholder: $secondary-light;
   }
 }
 
-%input-state{
+%input-bg{
   background-repeat: no-repeat;
   background-size: 1em;
   background-position: calc(100% - .5em) center;
   padding-right: 2em;
+}
+
+@mixin form-item-active ($color: $secondary, $opacity: .4) {
+  box-shadow: 0 0 4px rgba($color,$opacity);
+  outline: none;
 }
 
 %form-item{
@@ -35,9 +40,8 @@ $input--placeholder: $secondary-light;
   background-image: none;
   background-color: white;
 
-  &:focus{
-    box-shadow: 0 0 8px rgba($primary,.9);
-    outline: none;
+  &:focus {
+    @include form-item-active;
   }
 
   &::placeholder {
@@ -47,15 +51,19 @@ $input--placeholder: $secondary-light;
 
   &:required,
   &.required {
-    @extend %input-state;
+    @extend %input-bg;
     background-image: image-url("icon-required.svg");
   }
 
   &.success {
-    @extend %input-state;
+    @extend %input-bg;
     animation: escale10 .5s ease-out;
     border: 1px solid $success;
     background-image: image-url("icon-success.svg");
+
+    &:focus{
+      @include form-item-active(rgba($success,.4));
+    }
 
     + .info-field{
       color: $success
@@ -63,10 +71,14 @@ $input--placeholder: $secondary-light;
   }
 
   &.warning {
-    @extend %input-state;
+    @extend %input-bg;
     animation: escale10 .5s ease-out;
     border: 1px solid $warning;
     background-image: image-url("icon-warning.svg");
+
+    &:focus{
+      @include form-item-active(rgba($warning,.4));
+    }
 
     + .info-field{
       color: $warning
@@ -105,6 +117,15 @@ input {
   @extend %form-item;
 }
 
+select {
+  @extend %form-item;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-size: 1em;
+  background-position: calc(100% - .7em) center;
+  padding-right: 2em;
+  background-image: image-url("icon-caret-down.svg") !important;
+}
 
 textarea {
   @extend %form-item;
