@@ -63,7 +63,7 @@ button{
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
   white-space: nowrap;
-  @include button-size(.9rem, 2rem, 1.2rem, 1, 3px);
+  @include button-size(.8em, 1em, 1.2rem, 1, 3px);
   user-select: none;
   max-width: 100%;
   @include ellipsis;
@@ -81,6 +81,7 @@ button{
   &:hover,
   &:focus,
   &.focus {
+    outline: 0;
     text-decoration: none;
   }
 
@@ -103,5 +104,32 @@ button{
 .btn-block{
   display: block;
   width: 100%;
-  @include button-size(.9rem, 1rem, 1.2rem, 1, 3px);
+  margin-bottom: 1.2em;
+}
+
+.btn-rounded{
+  @extend %btn;
+  @include button-size(0, 0, 1em, 2.2em, 50%);
+  color: $secondary-light;
+  border: 1px solid $secondary-lighter;
+  width: 2.3em;
+  height: 2.3em;
+  opacity: .7;
+  transform: scale(1);
+  transition: all .2s ease-out;
+
+  &:hover{
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+.btn-facebook {
+  @include button(white,#286B99);
+  @extend .btn-block;
+}
+
+.btn-twitter{
+  @include button(white,#3CB1E7);
+  @extend .btn-block;
 }
