@@ -4,6 +4,9 @@ $input--border-radius: $border-radius;
 $input--padding: .5em 1em;
 $input--margin: .5em;
 $input--placeholder: $secondary-light;
+$input--success: $success;
+$input--warning: $warning;
+
 
 .form-group {
 	margin-bottom: 2em;
@@ -12,6 +15,8 @@ $input--placeholder: $secondary-light;
   .info-field{
     position: absolute;
     bottom: -1.5em;
+    @include ellipsis;
+    left: 0;
     margin: 0;
   }
 }
@@ -58,30 +63,30 @@ $input--placeholder: $secondary-light;
   &.success {
     @extend %input-bg;
     animation: escale10 .5s ease-out;
-    border: 1px solid $success;
+    border: 1px solid $input--success;
     background-image: image-url("icon-success.svg");
 
     &:focus{
-      @include form-item-active(rgba($success,.4));
+      @include form-item-active(rgba($input--success,.4));
     }
 
     + .info-field{
-      color: $success
+      color: $input--success
     }
   }
 
   &.warning {
     @extend %input-bg;
     animation: escale10 .5s ease-out;
-    border: 1px solid $warning;
+    border: 1px solid $input--warning;
     background-image: image-url("icon-warning.svg");
 
     &:focus{
-      @include form-item-active(rgba($warning,.4));
+      @include form-item-active(rgba($input--warning,.4));
     }
 
     + .info-field{
-      color: $warning
+      color: $input--warning
     }
   }
 }
@@ -90,15 +95,16 @@ label {
   display: block;
   max-width: 100%;
   line-height: 1.5em;
+  margin-bottom: .5em;
 
-  + input {
-    margin-top: .5em;
+  &.required::after{
+    content: "*";
+    margin-left: .25em;
   }
 }
 
 .info-field{
   width: 100%;
-  @include ellipsis;
   margin-top: -$input--margin/2;
   margin-bottom: $input--margin;
 }
@@ -144,9 +150,9 @@ textarea {
   padding: .5em;
 
   &.success{
-    color: $success;
+    color: $input--success;
   }
   &.warning{
-    color: $warning;
+    color: $input--warning;
   }
 }

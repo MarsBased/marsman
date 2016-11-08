@@ -11,6 +11,15 @@
   border: 0;
 }
 
+.reset-link{
+  color: inherit;
+  &:hover,
+  &.active,
+  &:focus{
+    text-decoration: none;
+  }
+}
+
 .list-reset{
   margin: 0;
   padding: 0;
@@ -49,6 +58,24 @@
 
 .centered{
   text-align: center;
+}
+
+.bg-warning {
+  background-color: $warning;
+  color: white;
+}
+
+.bg-success {
+  background-color: $success;
+  color: white;
+}
+
+.text-warning{
+  color: $warning;
+}
+
+.text-success{
+  color: $success;
 }
 
 @mixin tab-focus() {

@@ -52,17 +52,6 @@ button{
   }
 }
 
-.link{
-  text-decoration: none;
-  color: $primary;
-  &:hover,
-  &.active,
-  &:focus{
-    outline: 0;
-    text-decoration: underline;
-  }
-}
-
 %btn {
   display: inline-block;
   margin-bottom: 0; // For input.btn

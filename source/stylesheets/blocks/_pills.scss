@@ -19,6 +19,10 @@ $pills--active: $primary;
 	overflow: hidden;
 	border: $pills--border;
 
+	a {
+		@extend .reset-link;
+	}
+
 	&__item {
 		display: block;
 	}

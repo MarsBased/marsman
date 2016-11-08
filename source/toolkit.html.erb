@@ -31,6 +31,7 @@ body: toolkit
 					Secondary Button</button></p>
 					<p><button class="btn-block btn-secondary-light">
 					Secondary Button Light</button></p>
+					<p><button class="link">Link Something</button></p>
 				</div>
 				<div class="col-xs-4">
 					<h2>Hover/Active</h2>
@@ -42,6 +43,7 @@ body: toolkit
 					Secondary Button</button></p>
 					<p><button class="active btn-block btn-secondary-light">
 					Secondary Button Light</button></p>
+					<p><button class="link active">Link (Active/Hover)</button></p>
 				</div>
 				<div class="col-xs-4">
 					<h2>Disabled</h2>
@@ -89,6 +91,7 @@ body: toolkit
 					</p>
 				</div>
 			</div>
+			<p>Integer <a href="#" class="active">posuere</a> erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, <a href="#">vestibulum at eros.</a> Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue.</p>
 		</div>
 		<div class="toolkit__item">
 			<h1>Pills and select</h1>
@@ -168,36 +171,33 @@ body: toolkit
 	<div class="box">
 		<div class="toolkit__row">
 			<div class="toolkit__item">
-				<div class="toolkit__block">
+				<div class="toolkit__block toolkit__checkboxes">
 					<h2>Checkboxes</h2>
-					<div class="toolkit__table form-group">
-						<div class="toolkit__cell">
-						<input type="checkbox" name="checkgroup" id="check1" value="check1">
+					<div class="form-group">
+						<label class="required">Select one element</label>
+						<input type="checkbox" name="checkgroup" id="check1" value="check1"
+						class="<%= version('error','success')%>">
 						<label for="check1">Checkbox OFF</label>
-						</div>
-						<div class="toolkit__cell">
-						<input type="checkbox" name="checkgroup" id="check2" value="check2" checked>
+						<input type="checkbox" name="checkgroup" id="check2" value="check2"
+						 class="<%= version('error','success')%>" checked>
 						<label for="check2">Checkbox ON</label>
-						</div>
-						<div class="toolkit__cell">
 						<input type="checkbox" name="checkgroup" id="check3" value="check3"
-						 disabled checked>
+						 class="<%= version('error','success')%>" checked disabled>
 						<label for="check3">Checkbox Disabled</label>
-						</div>
+						<span class="info-field">Correct !!</span>
 					</div>
-					<div class="toolkit__table form-group">
-						<div class="toolkit__cell">
-						<input type="radio" name="radiogroup" id="radio1" value="radio1">
+					<div class="form-group">
+						<label class="required">Select one element</label>
+						<input type="radio" name="radiogroup" id="radio1" value="radio1"
+						 class="<%= version('error','warning')%>">
 						<label for="radio1">Radio OFF</label>
-						</div>
-						<div class="toolkit__cell">
-						<input type="radio" name="radiogroup" id="radio2" value="radio2" checked>
+						<input type="radio" name="radiogroup" id="radio2" value="radio2"
+						 class="<%= version('error','warning')%>" checked>
 						<label for="radio2">Radio ON</label>
-						</div>
-						<div class="toolkit__cell">
-						<input type="radio" name="radiogroup2" id="radio3" value="radio3" checked disabled>
+						<input type="radio" name="radiogroup2" id="radio3" value="radio3"
+						 class="<%= version('error','warning')%>" checked disabled >
 						<label for="radio3">Radio Disabled</label>
-						</div>
+						<span class="info-field">Error !!</span>
 					</div>
 				</div>
 				<div class="toolkit__block">

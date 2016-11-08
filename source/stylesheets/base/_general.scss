@@ -6,22 +6,21 @@ body{
 	min-height: 100vh;
 }
 
-::selection { background: lighten($primary,30%); }
+::selection { background: lighten($secondary,70%); }
 
-a{
-	color: inherit;
-	text-decoration: none;
+a,
+.link{
+  text-decoration: none;
+  color: $primary;
+  &:hover,
+  &.active,
+  &:focus{
+    outline: 0;
+    text-decoration: underline;
+  }
 }
 
 ul{
 	margin: 0;
 	padding: 0 0 0 1.5em;
-}
-
-.text-warning{
-	color: $warning;
-}
-
-.text-success{
-	color: $success;
 }

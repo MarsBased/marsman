@@ -16,12 +16,16 @@ body.toolkit{
 		}
 
 		&__item{
-			padding-bottom: 4rem;
+			margin-bottom: 4rem;
 			@include make-sm-column(6, $gutter*4);
 		}
 
 		&__block{
-			padding-bottom: 4rem;
+			margin-bottom: 4rem;
+		}
+
+		&__checkboxes {
+			@extend .toolkit__block;
 		}
 
 		&__table{
