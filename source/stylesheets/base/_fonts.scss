@@ -30,6 +30,9 @@ body {
 p{
   margin-top: 0;
   margin-bottom: .8em;
+  &:last-child{
+    margin-bottom: 0;
+  }
 }
 
 h1,.h1{
@@ -77,3 +80,9 @@ h6,.h6{
 .s5{font-size: $fs-h6;}
 .large{font-size: $fs-large;}
 .small{font-size: $fs-small;}
+
+hgroup{
+  h1,.s1{
+    margin-bottom: .2em;
+  }
+}

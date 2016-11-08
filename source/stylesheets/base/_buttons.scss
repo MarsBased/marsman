@@ -38,7 +38,7 @@ button{
   @include button(white,$primary);
 
   &-light{
-    @include button($primary,lighten($primary, 50%), transparent,
+    @include button($primary,$background-primary, transparent,
      $primary, lighten($primary, 30%), $primary);
   }
 }

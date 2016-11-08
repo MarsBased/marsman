@@ -12,6 +12,10 @@ $input--warning: $warning;
 	margin-bottom: 2em;
   position: relative;
 
+  &:last-child{
+    margin-bottom: 0;
+  }
+
   .info-field{
     position: absolute;
     bottom: -1.5em;

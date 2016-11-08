@@ -21,8 +21,10 @@
 }
 
 .list-reset{
-  margin: 0;
-  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
   list-style: none;
 }
 
@@ -42,10 +44,6 @@
     float: left;
     margin-bottom: 0;
   }
-}
-
-.clearfix {
-  @include clearfix;
 }
 
 .pull-right {

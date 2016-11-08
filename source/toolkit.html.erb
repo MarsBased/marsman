@@ -184,7 +184,9 @@ body: toolkit
 						<input type="checkbox" name="checkgroup" id="check3" value="check3"
 						 class="<%= version('error','success')%>" checked disabled>
 						<label for="check3">Checkbox Disabled</label>
+						<% if version('error')%>
 						<span class="info-field">Correct !!</span>
+						<% end %>
 					</div>
 					<div class="form-group">
 						<label class="required">Select one element</label>
@@ -197,7 +199,9 @@ body: toolkit
 						<input type="radio" name="radiogroup2" id="radio3" value="radio3"
 						 class="<%= version('error','warning')%>" checked disabled >
 						<label for="radio3">Radio Disabled</label>
+						<% if version('error')%>
 						<span class="info-field">Error !!</span>
+						<% end %>
 					</div>
 				</div>
 				<div class="toolkit__block">
@@ -250,7 +254,6 @@ body: toolkit
 					</div>
 					<div class="col-sm-4">
 						<h2>Dropdown</h2>
-
 					</div>
 				</div>
 			</div>

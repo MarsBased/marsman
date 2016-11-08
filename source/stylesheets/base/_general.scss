@@ -4,6 +4,10 @@ body{
 	background-color: $background-primary;
 	min-width: 320px;
 	min-height: 100vh;
+
+  &.primary{
+    background-color: $primary;
+  }
 }
 
 ::selection { background: lighten($secondary,70%); }
@@ -21,6 +25,15 @@ a,
 }
 
 ul{
-	margin: 0;
-	padding: 0 0 0 1.5em;
+  margin-top: 0;
+	margin-bottom: 1.5em;
+}
+
+li{
+  margin-bottom: .25em;
+}
+
+.shape{
+  width: 100%;
+  max-height: 100%;
 }

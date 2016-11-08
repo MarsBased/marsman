@@ -10,6 +10,17 @@ $container-sm:        100%;
 $container-md:        100%;
 $container-lg:        1180px;
 
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
 @mixin container-fixed($gutter: $grid-gutter-width) {
   margin-right: auto;
   margin-left: auto;

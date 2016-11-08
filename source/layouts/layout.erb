@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -12,6 +12,7 @@
     <%= javascript_include_tag  :head %>
   </head>
   <body class="<%= current_page.data.body %>">
+    <a id="top" class="sr-only" aria-hidden="true">Top page</a>
     <%= partial "partials/shapes" %>
     <%= yield %>
     <%= javascript_include_tag  :body %>
