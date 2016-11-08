@@ -1,10 +1,11 @@
 //font awesome dependence
-$checkbox--color: $secondary;
 $checkbox--scale: 0.9;
 $checkbox--size: 1.35em;
 $checkbox__icon: "\f096";
 $checkbox__icon--hover: "\f046";
 $checkbox__icon--checked: "\f14a";
+$checkbox--warning: $warning;
+$checkbox--success: $success;
 
 input[type="checkbox"]{
   @extend .sr-only;
@@ -14,6 +15,19 @@ input[type="checkbox"]{
     padding-right: .5em;
     vertical-align: middle;
     cursor: pointer;
+    user-select: none;
+
+    &.required::after{
+      content: '';
+    }
+
+    &.warning{
+      color: $checkbox--warning;
+    }
+
+    &.success{
+      color: $checkbox--success;
+    }
 
     &::before {
       @extend .fa;
@@ -23,7 +37,6 @@ input[type="checkbox"]{
       vertical-align: middle;
       width: 1em;
       height: 1em;
-      color: $checkbox--color;
       font-size: $checkbox--size;
       transition: all 0.3s ease-out;
       transform: scale(1);
@@ -46,6 +59,22 @@ input[type="checkbox"]{
       border: 0;
       background-color: white;
       transform: scale(1);
+    }
+  }
+
+  &.warning + label{
+    color: $checkbox--warning;
+
+    & + .info-field{
+      color: $checkbox--warning;
+    }
+  }
+
+  &.success + label {
+    color: $checkbox--success;
+
+    & + .info-field {
+      color: $checkbox--success;
     }
   }
 }

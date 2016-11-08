@@ -1,7 +1,9 @@
-$radio--color: $secondary;
 $radio--scale: 0.9;
 $radio--size: 1.2em;
 $radio--padding: 2px;
+$radio__dot--color: $secondary;
+$radio--warning: $warning;
+$radio--success: $success;
 
 input[type="radio"] {
   @extend .sr-only;
@@ -11,6 +13,11 @@ input[type="radio"] {
     padding-right: .5em;
     vertical-align: middle;
     cursor: pointer;
+    user-select: none;
+
+    &.required::after{
+      content: '';
+    }
 
     &::before {
       content: '';
@@ -22,9 +29,8 @@ input[type="radio"] {
       vertical-align: middle;
       border: 1px solid;
       border-radius: 50%;
-      transition: all 0.3s ease-out, border-width 0.1s ease-in-out;;
+      transition: all 0.3s ease-out, border-width 0.1s ease-in-out;
       transform: scale(1);
-      color: $radio--color;
       background-color: transparent;
       background-clip: content-box;
       box-sizing: border-box;
@@ -34,7 +40,6 @@ input[type="radio"] {
 
     &:hover::before {
       border-width: 2px;
-      border-color: $radio--color;
       transform: scale($radio--scale);
     }
   }
@@ -42,7 +47,6 @@ input[type="radio"] {
   &:focus {
     + label::before {
       border-width: 2px;
-      border-color: $radio--color;
       transform: scale($radio--scale);
     }
   }
@@ -51,7 +55,39 @@ input[type="radio"] {
     + label::before {
       transform: scale(1);
       border-width: 2px;
-      background-color: $radio--color;
-    };
+      background-color: $radio__dot--color;
+    }
+  }
+
+  &.success {
+    &:checked + label::before {
+      background-color: $radio--success;
+    }
+
+    + label{
+      color: $radio--success;
+
+      &::before {
+        background-color: $radio--success;
+      }
+
+      & + .info-field{
+        color: $radio--success;
+      }
+    }
+  }
+
+  &.warning {
+    &:checked + label::before {
+      background-color: $radio--warning;
+    }
+
+    + label{
+      color: $radio--warning;
+
+      & + .info-field{
+        color: $radio--warning;
+      }
+    }
   }
 }
