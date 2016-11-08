@@ -1,0 +1,76 @@
+.footer {
+	&__main {
+		padding: 50px 0;
+		background-color: $background-secondary;
+		border-top: 1px solid darken($background-secondary, 10%);
+		border-bottom: 1px solid darken($background-secondary, 10%);
+	}
+
+	&__container {
+		@extend .container;
+	}
+
+	&__link-groups {
+		@include make-sm-column(6,0);
+		@include make-row(0)
+	}
+
+	&__link-group {
+		@include make-sm-column(4);
+
+		ul {@extend .list-reset;}
+
+		a {@extend .reset-link;}
+	}
+
+	&__social {
+		@include make-sm-column(6,0);
+		text-align: right;
+	}
+
+	&__social-icons{
+		@extend .list-reset;
+
+		li {
+			display: inline-block;
+			margin-left: .5em;
+		}
+	}
+
+	&__icon {
+		$icons: 'github','instagram','medium','linkedin','facebook','twitter';
+
+		@each $icon in $icons {
+		  &--#{$icon} {
+		  	@extend .btn-rounded;
+				@extend .fa;
+				@extend .fa-#{$icon};
+		  }
+		}
+	}
+
+	&__logo {
+		height: 38px;
+		width: 110px;
+		display: inline-block;
+		margin-bottom: 1.5em;
+	}
+
+	&__info {
+		background-color: $background-primary;
+		padding: 1.5em 0;
+	}
+
+	&__copyright {
+		@include make-sm-column(10);
+		line-height: $fs-h1;
+	}
+
+	&__top-page {
+		@extend .reset-link;
+		@include make-sm-column(2);
+		text-align: right;
+		font-size: $fs-h1;
+		line-height: 1;
+	}
+}
