@@ -1,0 +1,26 @@
+* { box-sizing: border-box; }
+
+body{
+	background-color: $background-primary;
+	min-width: 320px;
+	min-height: 100vh;
+}
+
+::selection { background: lighten($secondary,70%); }
+
+a,
+.link{
+  text-decoration: none;
+  color: $primary;
+  &:hover,
+  &.active,
+  &:focus{
+    outline: 0;
+    text-decoration: underline;
+  }
+}
+
+ul{
+	margin: 0;
+	padding: 0 0 0 1.5em;
+}

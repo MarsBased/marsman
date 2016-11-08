@@ -1,7 +1,8 @@
 module Helpers
 
-  def class_active(name, class_name = 'active', reverse = false)
-    if(class_active = current_page.data.class_active)
+  def active(name, class_name = 'active', reverse = false)
+    if(class_active = current_page.data.active)
+      class_active.split(/[\s,']/)
       if(reverse)
         class_name if(!class_active.include?(name))
       else
@@ -10,10 +11,10 @@ module Helpers
     end
   end
 
-  def modify(name, return_value = true )
-    if(modify = current_page.data.modify)
-      return_value if(modify.include?(name))
-    end
+  def version(name, return_value = true )
+    @c = current_page
+    @versions = "#{@c.data.version} #{@c.metadata[:locals][:version]}"
+    return_value if(@versions.split(/[\s,']/).include?(name))
   end
 
   def full_url(path)

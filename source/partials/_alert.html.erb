@@ -1,0 +1,10 @@
+<div class="alert <%= locals[:css] %> <%= 'dismissible' if locals[:dismissible] %>"
+ role="alert">
+	<% if locals[:dismissible] == true %>
+	<button type="button" class="alert__close" data-dismiss="alert"
+	 aria-label="Close">
+		<span class="icon" aria-hidden="true">&times;</span>
+	</button>
+	<% end %>
+	<%= yield %>
+</div>

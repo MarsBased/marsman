@@ -1,0 +1,158 @@
+$input--disabled: .3;
+$input--border: 1px solid $secondary-lighter;
+$input--border-radius: $border-radius;
+$input--padding: .5em 1em;
+$input--margin: .5em;
+$input--placeholder: $secondary-light;
+$input--success: $success;
+$input--warning: $warning;
+
+
+.form-group {
+	margin-bottom: 2em;
+  position: relative;
+
+  .info-field{
+    position: absolute;
+    bottom: -1.5em;
+    @include ellipsis;
+    left: 0;
+    margin: 0;
+  }
+}
+
+%input-bg{
+  background-repeat: no-repeat;
+  background-size: 1em;
+  background-position: calc(100% - .5em) center;
+  padding-right: 2em;
+}
+
+@mixin form-item-active ($color: $secondary, $opacity: .4) {
+  box-shadow: 0 0 4px rgba($color,$opacity);
+  outline: none;
+}
+
+%form-item{
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  border: $input--border;
+  border-radius: $input--border-radius;
+  padding: $input--padding;
+  transition: all .2s ease-out;
+  margin-bottom: $input--margin;
+  background-image: none;
+  background-color: white;
+
+  &:focus {
+    @include form-item-active;
+  }
+
+  &::placeholder {
+    color: $input--placeholder;
+    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+  }
+
+  &:required,
+  &.required {
+    @extend %input-bg;
+    background-image: image-url("icon-required.svg");
+  }
+
+  &.success {
+    @extend %input-bg;
+    animation: escale10 .5s ease-out;
+    border: 1px solid $input--success;
+    background-image: image-url("icon-success.svg");
+
+    &:focus{
+      @include form-item-active(rgba($input--success,.4));
+    }
+
+    + .info-field{
+      color: $input--success
+    }
+  }
+
+  &.warning {
+    @extend %input-bg;
+    animation: escale10 .5s ease-out;
+    border: 1px solid $input--warning;
+    background-image: image-url("icon-warning.svg");
+
+    &:focus{
+      @include form-item-active(rgba($input--warning,.4));
+    }
+
+    + .info-field{
+      color: $input--warning
+    }
+  }
+}
+
+label {
+  display: block;
+  max-width: 100%;
+  line-height: 1.5em;
+  margin-bottom: .5em;
+
+  &.required::after{
+    content: "*";
+    margin-left: .25em;
+  }
+}
+
+.info-field{
+  width: 100%;
+  margin-top: -$input--margin/2;
+  margin-bottom: $input--margin;
+}
+
+
+input[disabled]{
+  opacity: $input--disabled;
+  pointer-events: none;
+  + label{
+    pointer-events: none;
+    opacity: $input--disabled;
+  }
+}
+
+input {
+  @extend %form-item;
+}
+
+select {
+  @extend %form-item;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-size: 1em;
+  background-position: calc(100% - .7em) center;
+  padding-right: 2em;
+  background-image: image-url("icon-caret-down.svg") !important;
+}
+
+textarea {
+  @extend %form-item;
+
+  &[maxlength] {
+    padding-bottom: 1.5em;
+    resize: none;
+  }
+}
+
+.character-counter{
+  position: absolute;
+  transform: translate(-100%,-100%);
+  display: inline-block;
+  pointer-events: none;
+  padding: .5em;
+
+  &.success{
+    color: $input--success;
+  }
+  &.warning{
+    color: $input--warning;
+  }
+}

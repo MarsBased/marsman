@@ -1,0 +1,107 @@
+// Helpers
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.reset-link{
+  color: inherit;
+  &:hover,
+  &.active,
+  &:focus{
+    text-decoration: none;
+  }
+}
+
+.list-reset{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list-inline{
+  > li{
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  > dt{
+    clear: both;
+    margin-right: 0.3em;
+  }
+
+  > dt,
+  > dd{
+    float: left;
+    margin-bottom: 0;
+  }
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.centered{
+  text-align: center;
+}
+
+.bg-warning {
+  background-color: $warning;
+  color: white;
+}
+
+.bg-success {
+  background-color: $success;
+  color: white;
+}
+
+.text-warning{
+  color: $warning;
+}
+
+.text-success{
+  color: $success;
+}
+
+@mixin tab-focus() {
+  // Default
+  outline: thin dotted;
+  // WebKit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+// Centered elements
+@mixin centered{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Drop Overlays
+@mixin drop-overlay(){
+  content: '';
+  position: absolute;
+  z-index: $z2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(#27353B, .6);
+}

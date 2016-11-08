@@ -9,24 +9,28 @@ module.exports = function (grunt) {
       partialsPath: 'source/partials'
     },
 
-    // Optimize the SVGs dropped inside the icons folder
+    //SVG min
     svgmin: {
-      dev: {
-        options: {
-          plugins: [
-            {
-              removeTitle: true
-            }
-          ]
-        },
-        files: [
+      options: {
+        plugins: [
           {
-            expand: true,
-            cwd: '<%= cfg.shapesPath %>/',
-            src: '*.svg',
-            dest: '<%= cfg.shapesPath %>/'
+            removeViewBox: false
+          }, {
+            removeUselessStrokeAndFill: false
+          }, {
+            removeAttrs: {
+              attrs: ['xmlns']
+            }
           }
         ]
+      },
+      multiple: {
+        files: [{
+          expand: true,
+          cwd: '<%= cfg.shapesPath %>/',
+          src: ['**/*.svg'],
+          dest: '<%= cfg.shapesPath %>/'
+        }]
       }
     },
 
@@ -48,5 +52,5 @@ module.exports = function (grunt) {
     },
   });
 
-  grunt.registerTask('svg', ['svgmin', 'svgstore:dev']);
+  grunt.registerTask('svg', ['svgmin','svgstore:dev']);
 }

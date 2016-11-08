@@ -1,0 +1,266 @@
+---
+title: Toolkit
+versions: error
+body: toolkit
+---
+<div class="toolkit__container">
+	<div class="toolkit__row">
+		<div class="toolkit__item">
+			<h1 data-icon="P">Colors</h1>
+			<div class="card-css__container">
+			<% for i in 1..8 %>
+				<div class="card-css--colors-list">
+					<div class="card-css__content">
+						<div class="card-css__block"></div>
+						<div class="card-css__text"></div>
+					</div>
+				</div>
+			<% end %>
+			</div>
+		</div>
+		<div class="toolkit__item">
+			<h1>Buttons</h1>
+			<div class="row">
+				<div class="col-xs-4">
+					<h2>Normal</h2>
+					<p><button class="btn-block btn-primary">
+					Primary Button</button></p>
+					<p><button class="btn-block btn-primary-light">
+					Primary Button Light</button></p>
+					<p><button class="btn-block btn-secondary">
+					Secondary Button</button></p>
+					<p><button class="btn-block btn-secondary-light">
+					Secondary Button Light</button></p>
+					<p><button class="link">Link Something</button></p>
+				</div>
+				<div class="col-xs-4">
+					<h2>Hover/Active</h2>
+					<p><button class="active btn-block btn-primary">
+					Primary Button</button></p>
+					<p><button class="active btn-block btn-primary-light">
+					Primary Button Light</button></p>
+					<p><button class="active btn-block btn-secondary">
+					Secondary Button</button></p>
+					<p><button class="active btn-block btn-secondary-light">
+					Secondary Button Light</button></p>
+					<p><button class="link active">Link (Active/Hover)</button></p>
+				</div>
+				<div class="col-xs-4">
+					<h2>Disabled</h2>
+					<p><button disabled class="btn-block btn-primary">
+					Primary Button</button></p>
+					<p><button disabled class="btn-block btn-primary-light">
+					Primary Button</button></p>
+					<p><button class="disabled btn-block btn-secondary">
+					Secondary Button</button></p>
+					<p><button class="disabled btn-block btn-secondary-light">
+					Secondary Button Light</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="toolkit__row">
+		<div class="toolkit__item">
+			<h1>Typography</h1>
+			<div class="row">
+				<div class="card-css--typography">
+					<div class="card-css__content">
+						<div class="card-css__block">Aa</div>
+						<div class="card-css__text">
+							<div class="card-css__title">Karla</div>
+							<div class="card-css__subtitle">Google Font</div>
+						</div>
+					</div>
+				</div>
+				<div class="typography__container">
+					<p class="typography__h1">
+						<span class="typography__title">h1, 24px</span>
+						Tousled food truck polaroid
+					</p>
+					<p class="typography__h2">
+						<span class="typography__title">h2, 16px</span>
+						Tousled food truck polaroid
+					</p>
+					<p class="typography__base">
+						<span class="typography__title">Text, inputs, links, 14px</span>
+						Tousled food truck polaroid
+					</p>
+					<p class="typography__small">
+						<span class="typography__title">Buttons, 12px</span>
+						Tousled food truck polaroid
+					</p>
+				</div>
+			</div>
+			<p>Integer <a href="#" class="active">posuere</a> erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, <a href="#">vestibulum at eros.</a> Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue.</p>
+		</div>
+		<div class="toolkit__item">
+			<h1>Pills and select</h1>
+			<div class="toolkit__row">
+				<div class="toolkit__item">
+					<ul class="pills">
+						<% if version('error')%>
+						<li class="pills__item">
+							<a href="#" class="pills__link success">
+								Element active & success
+							</a>
+						</li>
+						<li class="pills__item">
+							<a href="#" class="pills__link active warning">
+								Element active & success
+							</a>
+						</li>
+						<% else %>
+						<li class="pills__item">
+							<a href="#" class="pills__link active">
+								Element active
+							</a>
+						</li>
+						<% end %>
+						<% 3.times do%>
+						<li class="pills__item">
+							<a href="#" class="pills__link">
+								<%= lorem.words(rand(3..10)).humanize %>
+							</a>
+						</li>
+						<% end %>
+					</ul>
+				</div>
+				<div class="toolkit__item">
+					<select class="select2" id="select2_demo">
+						<% @select = [1992,1993,1994,1995,1996,1997,1998] %>
+		        <% @select.each_with_index do |s,index| %>
+		        <option value="<%= s %>" <%= 'selected' if index == 2 %> >
+		          <%= s %>
+		        </option>
+		        <% end %>
+		      </select>
+		      <% if version('error') %>
+		      <div class="info-field">About select2_demo.</div>
+		      <% end %>
+		      <select class="select2 search <%= version('error', 'success') %>"
+		       id="select2_demo_search" data-placeholder="Select an option"
+		        data-allow-clear="true">
+		       	<option></option>
+		        <% @select.each_with_index do |s,index| %>
+		        <option value="<%= s %>" >
+		          <%= s %>
+		        </option>
+		        <% end %>
+		      </select>
+		      <% if version('error') %>
+		      <div class="info-field">About select2_demo_search</div>
+		      <% end %>
+		      <select id="select_demo_default" class="<%= version('error', 'warning') %>">
+		       	<option></option>
+		        <% @select.each_with_index do |s,index| %>
+		        <option value="<%= s %>" <%= 'selected' if index == 2 %>>
+		          <%= s %>
+		        </option>
+		        <% end %>
+		      </select>
+		      <% if version('error') %>
+		      <div class="info-field">Information about this error.</div>
+		      <% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="toolkit__container">
+	<h1>Forms</h1>
+	<div class="box">
+		<div class="toolkit__row">
+			<div class="toolkit__item">
+				<div class="toolkit__block toolkit__checkboxes">
+					<h2>Checkboxes</h2>
+					<div class="form-group">
+						<label class="required">Select one element</label>
+						<input type="checkbox" name="checkgroup" id="check1" value="check1"
+						class="<%= version('error','success')%>">
+						<label for="check1">Checkbox OFF</label>
+						<input type="checkbox" name="checkgroup" id="check2" value="check2"
+						 class="<%= version('error','success')%>" checked>
+						<label for="check2">Checkbox ON</label>
+						<input type="checkbox" name="checkgroup" id="check3" value="check3"
+						 class="<%= version('error','success')%>" checked disabled>
+						<label for="check3">Checkbox Disabled</label>
+						<span class="info-field">Correct !!</span>
+					</div>
+					<div class="form-group">
+						<label class="required">Select one element</label>
+						<input type="radio" name="radiogroup" id="radio1" value="radio1"
+						 class="<%= version('error','warning')%>">
+						<label for="radio1">Radio OFF</label>
+						<input type="radio" name="radiogroup" id="radio2" value="radio2"
+						 class="<%= version('error','warning')%>" checked>
+						<label for="radio2">Radio ON</label>
+						<input type="radio" name="radiogroup2" id="radio3" value="radio3"
+						 class="<%= version('error','warning')%>" checked disabled >
+						<label for="radio3">Radio Disabled</label>
+						<span class="info-field">Error !!</span>
+					</div>
+				</div>
+				<div class="toolkit__block">
+					<h2>Textarea</h2>
+					<textarea name="textareaexample" id="textareaexample"
+					 rows="5" maxlength="200"><%= lorem.words(rand(10..12)) %></textarea>
+					<div class="info-field">Information about this textarea.</div>
+				</div>
+				<div class="toolkit__block">
+					<div class="row">
+						<div class="col-sm-6">
+							<h2>Profile picture</h2>
+						</div>
+						<div class="col-sm-6">
+							<h2>Alerts</h2>
+							<% partial "alert" do %>
+								JPEG, PNG, GIF or BMP - 5MB file limit, at least 250x250 pixels.
+							<% end %>
+							<% partial "alert", locals:{css: 'warning', dismissible: true} do %>
+								Something really bad has happened.
+							<% end %>
+							<% partial "alert", locals:{css: 'success'} do %>
+								This is fine and requires notification
+							<% end %>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="toolkit__item">
+				<div class="toolkit__block">
+					<h2>Uploader</h2>
+				</div>
+				<div class="row">
+					<div class="col-sm-8">
+						<h2>Inputs</h2>
+						<div class="form-group">
+							<label for="without-text">Label</label>
+							<input type="text" id="without-text" name="i1" placeholder="Placeholder text" required>
+						</div>
+						<div class="form-group">
+							<input type="text" class="success" name="i1"
+							 placeholder="Placeholder text" value="Input success">
+							<div class="info-field">Information about this success.</div>
+						</div>
+						<div class="form-group">
+							<input type="text" class="warning" id="without-text"
+							 name="i1" placeholder="Placeholder text" value="Input error">
+							<div class="info-field">Information about this error.</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<h2>Dropdown</h2>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="toolkit__row">
+			<div class="toolkit__item">
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
