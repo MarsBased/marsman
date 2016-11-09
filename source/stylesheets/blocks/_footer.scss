@@ -17,6 +17,10 @@
 
 	&__link-group {
 		@include make-sm-column(4);
+		margin-bottom: 2em;
+		@media (min-width: $screen-sm){
+			margin-bottom: 0;
+		}
 
 		ul {@extend .list-reset;}
 
@@ -24,8 +28,10 @@
 	}
 
 	&__social {
-		@include make-sm-column(6,0);
-		text-align: right;
+		@include make-sm-column(6);
+		@media (min-width: $screen-sm){
+			text-align: right;
+		}
 	}
 
 	&__social-icons{
@@ -33,7 +39,9 @@
 
 		li {
 			display: inline-block;
-			margin-left: .5em;
+			@media (min-width: $screen-sm){
+				margin-left: .5em;
+			}
 		}
 	}
 
@@ -69,8 +77,12 @@
 	&__top-page {
 		@extend .reset-link;
 		@include make-sm-column(2);
-		text-align: right;
+		display: block;
+		text-align: center;
 		font-size: $fs-h1;
 		line-height: 1;
+		@media (min-width: $screen-sm){
+			text-align: right;
+		}
 	}
 }
