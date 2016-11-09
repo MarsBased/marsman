@@ -18,6 +18,10 @@ $box--border-radius: 8px;
 		margin-right: auto;
 		box-shadow: 0 16px 33px rgba(black, .28);
 
+		.box__header{
+			text-align: center;
+		}
+
 		.box__content{
 			max-width: 308px;
 			padding-left: 0;
