@@ -20,7 +20,7 @@ end
 ready do
   @pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/) }
   @pages.each do |r|
-    @versions = ['error']
+    @versions = []
     if @data = r.data['versions']
       @data.split(/[\s,']/).reject(&:empty?).each do |d|
         @versions.push(d)
