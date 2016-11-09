@@ -1,9 +1,12 @@
+$buttons--fs: 1.2rem;
+
 @mixin button($color, $bg, $border: transparent, $color--active: $color,
  $bg--active: darken($bg, 15%), $border--active: $border) {
   @extend %btn;
   color: $color;
   background-color: $bg;
   border-color: $border;
+  min-width: 12em;
 
   &:hover,
   &:focus,
@@ -38,7 +41,7 @@ button{
   @include button(white,$primary);
 
   &-light{
-    @include button($primary,$background-primary, transparent,
+    @include button($primary,$primary-lighter, transparent,
      $primary, lighten($primary, 30%), $primary);
   }
 }
@@ -47,12 +50,13 @@ button{
   @include button(white, $secondary-light);
 
   &-light{
-    @include button($secondary-light,lighten($secondary-light, 40%), transparent,
+    @include button($secondary-light, $secondary-lighter, transparent,
      $secondary-light, lighten($secondary-light, 30%), $secondary-light);
   }
 }
 
 %btn {
+  @include button-size(.8em, 1em, $buttons--fs, 1, 3px);
   display: inline-block;
   margin-bottom: 0; // For input.btn
   font-weight: normal;
@@ -62,11 +66,8 @@ button{
   cursor: pointer;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
-  white-space: nowrap;
-  @include button-size(.8em, 1em, 1.2rem, 1, 3px);
   user-select: none;
   max-width: 100%;
-  @include ellipsis;
   transition: all .2s ease-out;
 
   &,
@@ -104,7 +105,7 @@ button{
 .btn-block{
   display: block;
   width: 100%;
-  margin-bottom: 1.2em;
+  @include margin-bottom(1.166em);
 }
 
 .btn-rounded{

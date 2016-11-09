@@ -3,7 +3,7 @@ title: Login
 versions: error
 body: sign-in primary
 ---
-<div class="main-content--primary">
+<div class="main-content">
 	<div class="container">
 		<header class="main-content__header">
 			<h1 class="sr-only">marsman-template</h1>
@@ -31,11 +31,11 @@ body: sign-in primary
 						<input type="password" class="required <%= version('error','warning') %>"
 						 name="password" placeholder="password" >
 						<% if version('error') %>
-						<div class="info-field">Information about this success.</div>
+						<div class="info-field">Wrong password.</div>
 						<% end %>
 					</div>
 					<p class="centered">
-						<button class="btn-primary">
+						<button class="btn-primary" type="submit">
 							Log In
 						</button>
 					</p>

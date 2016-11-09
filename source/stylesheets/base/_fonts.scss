@@ -23,52 +23,48 @@ body {
   font-family: $font-family-base;
   font-size: $fs-base;
   color: $font-base-color;
-  font-size: 1.4rem;
   line-height: $line-height-base;
 }
 
 p{
   margin-top: 0;
-  margin-bottom: .8em;
-  &:last-child{
-    margin-bottom: 0;
-  }
+  @include margin-bottom;
 }
 
 h1,.h1{
   font-size: $fs-h1;
   margin-top: 0;
-  margin-bottom: .8em;
+  @include margin-bottom;
 }
 
 h2,.h2{
   font-size: $fs-h2;
   margin-top: 0;
-  margin-bottom: .8em;
+  @include margin-bottom;
 }
 
 h3,.h3{
   font-size: $fs-h3;
   margin-top: 0;
-  margin-bottom: .8em;
+  @include margin-bottom;
 }
 
 h4,.h4{
   font-size: $fs-h3;
   margin-top: 0;
-  margin-bottom: .8em;
+  @include margin-bottom;
 }
 
 h5,.h5{
   font-size: $fs-h3;
   margin-top: 0;
-  margin-bottom: .8em;
+  @include margin-bottom;
 }
 
 h6,.h6{
   font-size: $fs-h3;
   margin-top: 0;
-  margin-bottom: .8em;
+  @include margin-bottom;
 }
 
 //extend sizes

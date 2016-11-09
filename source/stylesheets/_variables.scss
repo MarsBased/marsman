@@ -1,9 +1,10 @@
 //COLORS
 $primary:         				#E74C3C;
 $primary-light:						#F1C3BF;
+$primary-lighter:					#F9F2F2;
 $secondary:								#22252A;
 $secondary-light:					#555A63;
-$secondary-lighter:				#D3D3D1;
+$secondary-lighter:				#E6E9EE;
 $background-primary:			#F9F9F9;
 $background-secondary:		#FFFFFF;
 $status-complete:					#57BC27;
@@ -11,8 +12,6 @@ $status-error:						#F9B13D;
 
 $success:         				$status-complete;
 $warning:         				$status-error;
-$info:            				#5bc0de;
-$danger:          				#d9534f;
 
 $gutter: 									2.4rem;
 $border-radius: 					3px;

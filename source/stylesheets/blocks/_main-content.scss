@@ -3,14 +3,6 @@
 	padding-top: 1.5em;
 	padding-bottom: 1.5em;
 
-	&--primary{
-		@extend .main-content;
-		background-repeat: repeat-x;
-		background-color: $primary;
-		background-image: linear-gradient(to bottom, $primary 50%,
-		 lighten($primary, 10%) 100%);
-	}
-
 	&__header {
 		text-align: center;
 

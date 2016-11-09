@@ -76,6 +76,13 @@
   color: $success;
 }
 
+@mixin margin-bottom ($margin-bottom: .8em) {
+  margin-bottom: $margin-bottom;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 @mixin tab-focus() {
   // Default
   outline: thin dotted;

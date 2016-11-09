@@ -9,20 +9,7 @@ $input--warning: $warning;
 
 
 .form-group {
-	margin-bottom: 2em;
-  position: relative;
-
-  &:last-child{
-    margin-bottom: 0;
-  }
-
-  .info-field{
-    position: absolute;
-    bottom: -1.5em;
-    @include ellipsis;
-    left: 0;
-    margin: 0;
-  }
+  @include margin-bottom(1em);
 }
 
 %input-bg{
@@ -45,7 +32,7 @@ $input--warning: $warning;
   border-radius: $input--border-radius;
   padding: $input--padding;
   transition: all .2s ease-out;
-  margin-bottom: $input--margin;
+  @include margin-bottom($input--margin);
   background-image: none;
   background-color: white;
 
@@ -99,7 +86,7 @@ label {
   display: block;
   max-width: 100%;
   line-height: 1.5em;
-  margin-bottom: .5em;
+  @include margin-bottom($input--margin);
 
   &.required::after{
     content: "*";
@@ -109,8 +96,8 @@ label {
 
 .info-field{
   width: 100%;
-  margin-top: -$input--margin/2;
-  margin-bottom: $input--margin;
+  display: block;
+  @include margin-bottom($input--margin);
 }
 
 

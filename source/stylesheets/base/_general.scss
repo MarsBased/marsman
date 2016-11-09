@@ -6,7 +6,10 @@ body{
 	min-height: 100vh;
 
   &.primary{
+    background-repeat: repeat-x;
     background-color: $primary;
+    background-image: linear-gradient(to bottom, $primary 30%,
+     lighten($primary, 10%) 100%);
   }
 }
 
@@ -26,11 +29,11 @@ a,
 
 ul{
   margin-top: 0;
-	margin-bottom: 1.5em;
+	@include margin-bottom;
 }
 
 li{
-  margin-bottom: .25em;
+  @include margin-bottom (.25em);
 }
 
 .shape{
