@@ -79,6 +79,6 @@ h6,.h6{
 
 hgroup{
   h1,.s1{
-    margin-bottom: .2em;
+    @include margin-bottom(.2em)
   }
 }

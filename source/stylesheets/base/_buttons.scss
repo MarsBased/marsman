@@ -1,4 +1,4 @@
-$buttons--fs: 1.2rem;
+$buttons--fs: $fs-small;
 
 @mixin button($color, $bg, $border: transparent, $color--active: $color,
  $bg--active: darken($bg, 15%), $border--active: $border) {
@@ -105,7 +105,7 @@ button{
 .btn-block{
   display: block;
   width: 100%;
-  @include margin-bottom(1.166em);
+  @include margin-bottom(($fs-base/$fs-small)* 1em);
 }
 
 .btn-rounded{
