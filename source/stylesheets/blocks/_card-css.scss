@@ -1,11 +1,13 @@
 $colors-list: "Primary" $primary,
 					    "Primary light" $primary-light,
-					    "Status complete" $status-complete,
+					    "Primary lighter" $primary-lighter,
 					    "Bg primary" $background-primary,
 					    "Secondary" $secondary,
 					    "Secondary light" $secondary-light,
-					    "Status error" $status-error,
-					    "Bg secondary" $background-secondary;
+					    "Secondary lighter" $secondary-lighter,
+					    "Bg secondary" $background-secondary,
+					    "Success" $status-complete,
+					    "Warning" $status-error;
 
 @mixin card-css--color($content, $color){
 	.card-css__block{ background-color: $color;}
