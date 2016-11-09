@@ -1,58 +1,51 @@
 ---
 title: Login
+layout: login
 versions: error
-body: sign-in primary
+body: primary
 ---
-<div class="main-content">
-	<div class="container">
-		<header class="main-content__header">
-			<h1 class="sr-only">marsman-template</h1>
-		  <%= partial 'svg', locals:{name: 'marsman-template-negative'} %>
-		</header>
-		<div class="box--form">
-			<hgroup class="box__header">
-				<h1>Sign in</h1>
-				<h4>Log in to your account</h4>
-			</hgroup>
-			<div class="box__content">
-				<button class="btn-facebook">
-					Login with Facebook
-				</button>
-				<button class="btn-twitter">
-					Login with Twitter
-				</button>
-				<div class="separator">or log in with</div>
-				<form action="/">
-					<div class="form-group">
-						<input type="email" class="required <%= version('error','success') %>"
-						 name="email" placeholder="Email" value="javier.artero@marsbased.com">
-					</div>
-					<div class="form-group">
-						<input type="password" class="required <%= version('error','warning') %>"
-						 name="password" placeholder="password" >
-						<% if version('error') %>
-						<div class="info-field">Wrong password.</div>
-						<% end %>
-					</div>
-					<p class="centered">
-						<button class="btn-primary" type="submit">
-							Log In
-						</button>
-					</p>
-					<p class="centered">
-						<a href="/forgot">
-							I forgot my password
-						</a>
-					</p>
-				</form>
+
+<div class="box--form">
+	<hgroup class="box__header">
+		<h1>Sign in</h1>
+		<h4>Log in to your account</h4>
+	</hgroup>
+	<div class="box__content">
+		<button class="btn-facebook">
+			Login with Facebook
+		</button>
+		<button class="btn-twitter">
+			Login with Twitter
+		</button>
+		<div class="separator">or log in with</div>
+		<form action="/">
+			<div class="form-group">
+				<input type="email" class="required <%= version('error','success') %>"
+				 name="email" placeholder="Email" value="javier.artero@marsbased.com">
 			</div>
-			<div class="box__footer centered">
-				<button class="btn-primary-light">
-					Create an account
-				</button>
+			<div class="form-group">
+				<input type="password" class="required <%= version('error','warning') %>"
+				 name="password" placeholder="password" >
+				<% if version('error') %>
+				<div class="info-field">Wrong password.</div>
+				<% end %>
 			</div>
-		</div>
+			<p class="centered">
+				<button class="btn-primary" type="submit">
+					Log In
+				</button>
+			</p>
+			<p class="centered">
+				<a href="/reset-password">
+					I forgot my password
+				</a>
+			</p>
+		</form>
+	</div>
+	<div class="box__footer centered">
+		<button class="btn-primary-light">
+			Create an account
+		</button>
 	</div>
 </div>
-<%= partial 'footer' %>
 
