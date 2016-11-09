@@ -3,7 +3,7 @@ $input--border: 1px solid $secondary-lighter;
 $input--border-radius: $border-radius;
 $input--padding: .5em 1em;
 $input--margin: .5em;
-$input--placeholder: $secondary-lighter;
+$input--placeholder: rgba($secondary-light,.4);
 $input--success: $success;
 $input--warning: $warning;
 
@@ -19,11 +19,6 @@ $input--warning: $warning;
   padding-right: 2em;
 }
 
-@mixin form-item-active ($color: $secondary, $opacity: .4) {
-  box-shadow: 0 0 4px rgba($color,$opacity);
-  outline: none;
-}
-
 %form-item{
   width: 100%;
   max-width: 100%;
@@ -37,7 +32,7 @@ $input--warning: $warning;
   background-color: white;
 
   &:focus {
-    @include form-item-active;
+    @include focus;
   }
 
   &::placeholder {
@@ -58,7 +53,7 @@ $input--warning: $warning;
     background-image: image-url("icon-success.svg");
 
     &:focus{
-      @include form-item-active(rgba($input--success,.4));
+      @include focus(rgba($input--success,.4));
     }
 
     + .info-field{
@@ -73,7 +68,7 @@ $input--warning: $warning;
     background-image: image-url("icon-warning.svg");
 
     &:focus{
-      @include form-item-active(rgba($input--warning,.4));
+      @include focus(rgba($input--warning,.4));
     }
 
     + .info-field{

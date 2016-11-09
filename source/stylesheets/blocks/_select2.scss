@@ -48,18 +48,18 @@ $select2__search--bg-color: lighten($primary,20%);
   &--open,
   &--focus {
     .selection {
-      @include form-item-active;
+      @include focus;
     }
 
     &.success{
       .selection{
-        @include form-item-active($success);
+        @include focus($success);
       }
     }
 
     &.warning{
       .selection{
-        @include form-item-active($warning);
+        @include focus($warning);
       }
     }
   }

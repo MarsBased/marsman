@@ -8,13 +8,23 @@ $buttons--fs: $fs-base;
   border-color: $border;
   min-width: 12em;
 
-  &:hover,
-  &:focus,
-  &.active,
-  &.focus {
+  &:hover {
     color: $color--active;
     background-color: $bg--active;
     border-color: $border--active;
+  }
+
+  &:focus {
+    @include focus($bg, .8);
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+    pointer-events: none; // Future-proof disabling of clicks
+    opacity: .65;
+    box-shadow: none;
   }
 }
 
@@ -32,8 +42,11 @@ button{
   background-color: transparent;
   padding: 0;
   margin: 0;
-  &:focus{
+  &:hover,
+  &:focus,
+  &:active{
     outline: 0;
+    text-decoration: none;
   }
 }
 
@@ -69,37 +82,6 @@ button{
   user-select: none;
   max-width: 100%;
   transition: all .2s ease-out;
-
-  &,
-  &:active,
-  &.active {
-    &:focus,
-    &.focus {
-      @include tab-focus;
-    }
-  }
-
-  &:hover,
-  &:focus,
-  &.focus {
-    outline: 0;
-    text-decoration: none;
-  }
-
-  &:active,
-  &.active {
-    outline: 0;
-    background-image: none;
-  }
-
-  &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    cursor: not-allowed;
-    pointer-events: none; // Future-proof disabling of clicks
-    opacity: .65;
-    box-shadow: none;
-  }
 }
 
 .btn-block{
