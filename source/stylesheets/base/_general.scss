@@ -4,8 +4,6 @@ body{
 	background-color: $background-primary;
 	min-width: 320px;
 	min-height: 100vh;
-  padding-left: 10px;
-  padding-right: 10px;
   @media (min-width: $screen-sm){
     padding-left: 0;
     padding-right: 0;
@@ -29,11 +27,11 @@ a,
 ul{
   margin-top: 0;
   padding-left: 1.1em;
-	@include margin-bottom;
+	margin-bottom: .8em;
 }
 
 li{
-  @include margin-bottom (.25em);
+  margin-bottom: .25em;
 }
 
 .shape{

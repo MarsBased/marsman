@@ -27,12 +27,14 @@ $container-lg:        1180px;
   padding-left:  ($gutter / 2);
   padding-right: ($gutter / 2);
   @include clearfix;
+  @include last-margin;
 }
 
 @mixin make-row($gutter: $grid-gutter-width) {
   margin-left:  ($gutter / -2);
   margin-right: ($gutter / -2);
   @include clearfix;
+  @include last-margin;
 }
 
 @mixin make-column($columns, $gutter: $grid-gutter-width) {
@@ -42,6 +44,7 @@ $container-lg:        1180px;
   min-height: 1px;
   padding-left:  ($gutter / 2);
   padding-right: ($gutter / 2);
+  @include last-margin;
 }
 
 @mixin make-clear($columns, $clean: 0 ){

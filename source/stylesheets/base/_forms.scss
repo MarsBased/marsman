@@ -7,9 +7,14 @@ $input--placeholder: rgba($secondary-light,.4);
 $input--success: $success;
 $input--warning: $warning;
 
+$info-field--fs: $fs-small;
+
+form{
+  @include last-margin;
+}
 
 .form-group {
-  @include margin-bottom(1em);
+  margin-bottom: 1em;
 }
 
 %input-bg{
@@ -27,7 +32,7 @@ $input--warning: $warning;
   border-radius: $input--border-radius;
   padding: $input--padding;
   transition: all .2s ease-out;
-  @include margin-bottom($input--margin);
+  margin-bottom: $input--margin;
   background-image: none;
   background-color: white;
 
@@ -81,7 +86,7 @@ label {
   display: block;
   max-width: 100%;
   line-height: 1.5em;
-  @include margin-bottom($input--margin);
+  margin-bottom: $input--margin;
 
   &.required::after{
     content: "*";
@@ -92,7 +97,8 @@ label {
 .info-field{
   width: 100%;
   display: block;
-  @include margin-bottom($input--margin);
+  font-size: $info-field--fs;
+  margin-bottom: $input--margin;
 }
 
 

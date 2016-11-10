@@ -1,6 +1,7 @@
 .main-content {
 	min-height: 100vh;
 	position: relative;
+	@extend .container;
 	padding-top: 3em;
 	padding-bottom: 3em;
 

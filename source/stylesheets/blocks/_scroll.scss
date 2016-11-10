@@ -1,9 +1,12 @@
+$scroll--fs: $fs-h1;
+
 .scroll {
 	@extend .fa;
 	position: absolute;
 	bottom: 10px;
+	left: 50%;
+	margin-left: $scroll--fs/2;
 	text-align: center;
-	width: 100%;
 	opacity: 0;
 	cursor: pointer;
 	font-size: $fs-h1;

@@ -4,12 +4,13 @@ $box__header--bg-color: $background-primary;
 $box--border-radius: 8px;
 
 .box{
-	padding: $box--padding;
+	padding: 0 $box--padding;
 	background: white;
 	border: 1px solid $box--border-color;
 	border-radius: $box--border-radius;
 	overflow: hidden;
 	@include margin-bottom (1.5em);
+	@include last-margin;
 
 	&--form {
 		@extend .box;
@@ -31,17 +32,18 @@ $box--border-radius: 8px;
 	}
 
 	&__header {
-		margin: -#{$box--padding} -#{$box--padding} 0;
+		margin: 0 -#{$box--padding};
 		padding: $box--padding;
 		background-color: $box__header--bg-color;
 		border-bottom: 1px solid $box--border-color;
-		*:last-child{margin-bottom: 0;}
+		@include last-margin;
 	}
 
 	&__content {
 		padding: $box--padding;
 		margin-left: -$box--padding;
 		margin-right: -$box--padding;
+		@include last-margin;
 	}
 
 	&__footer {
@@ -49,6 +51,6 @@ $box--border-radius: 8px;
 		padding: $box--padding;
 		margin-left: -$box--padding;
 		margin-right: -$box--padding;
-		margin-bottom: -$box--padding;
+		@include last-margin;
 	}
 }

@@ -90,7 +90,7 @@ button{
   display: block;
   width: 100%;
   min-width: auto;
-  @include margin-bottom(($fs-base/$fs-small)* 1em);
+  margin-bottom: 1em;
 }
 
 .btn-rounded{

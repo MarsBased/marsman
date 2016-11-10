@@ -28,9 +28,11 @@
 	}
 
 	&__social {
+		margin-top: 2em;
 		@include make-sm-column(6);
 		@media (min-width: $screen-sm){
 			text-align: right;
+			margin-top: 0;
 		}
 	}
 
@@ -72,6 +74,10 @@
 	&__copyright {
 		@include make-sm-column(10);
 		line-height: $fs-h1;
+		text-align: center;
+		@media (min-width: $screen-sm) {
+			text-align: inherit;
+		}
 	}
 
 	&__top-page {
