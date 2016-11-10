@@ -58,6 +58,12 @@
   text-align: center;
 }
 
+.vertical-relative{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .bg-warning {
   background-color: $warning;
   color: white;
@@ -86,24 +92,4 @@
 @mixin focus ($color: $secondary, $opacity: .4) {
   box-shadow: 0 0 4px rgba($color,$opacity);
   outline: none;
-}
-
-// Centered elements
-@mixin centered{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-// Drop Overlays
-@mixin drop-overlay(){
-  content: '';
-  position: absolute;
-  z-index: $z2;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: rgba(#27353B, .6);
 }

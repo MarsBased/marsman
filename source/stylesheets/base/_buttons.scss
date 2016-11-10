@@ -12,6 +12,8 @@ $buttons--fs: $fs-base;
     color: $color--active;
     background-color: $bg--active;
     border-color: $border--active;
+    outline: 0;
+    text-decoration: none;
   }
 
   &:focus {

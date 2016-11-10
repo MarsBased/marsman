@@ -1,12 +1,12 @@
 <% wrap_layout :layout do %>
 	<div class="main-content">
-		<div class="container">
-			<header class="main-content__header">
-				<h1 class="sr-only">marsman-template</h1>
-			  <%= partial 'svg', locals:{ name: 'marsman-template-negative' } %>
-			</header>
-			<%= yield %>
-		</div>
+		<header class="main-content__header">
+			<h1 class="sr-only">marsman-template</h1>
+			<a href="/">
+		  <%= partial 'svg', locals:{ name: 'marsman-template-negative' } %>
+		  </a>
+		</header>
+		<%= yield %>
 		<i class="scroll-down active" data-scroll=".footer"></i>
 	</div>
 	<%= partial 'footer' %>

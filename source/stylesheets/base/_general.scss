@@ -4,6 +4,12 @@ body{
 	background-color: $background-primary;
 	min-width: 320px;
 	min-height: 100vh;
+  padding-left: 10px;
+  padding-right: 10px;
+  @media (min-width: $screen-sm){
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   &.primary{
     background-repeat: repeat-x;
