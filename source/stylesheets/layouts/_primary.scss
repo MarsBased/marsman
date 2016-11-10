@@ -1,0 +1,14 @@
+body.primary{
+  background-repeat: repeat-x;
+  background-color: $primary;
+  background-image: linear-gradient(to bottom, $primary 30%,
+   lighten($primary, 10%) 100%);
+
+  .main-content {
+		color: white;
+  }
+
+  .box {
+		color: $font-base-color;
+  }
+}
