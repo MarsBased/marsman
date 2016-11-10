@@ -21,11 +21,11 @@ body: sign-in
 		<form action="_error">
 			<div class="form-group">
 				<input type="email" class="required <%= version('error','success') %>"
-				 name="email" placeholder="Email" value="javier.artero@marsbased.com">
+				 name="email" placeholder="Your email address" value="<%= version('error','javier.artero@marsbased.com') %>">
 			</div>
 			<div class="form-group">
 				<input type="password" class="required <%= version('error','warning') %>"
-				 name="password" placeholder="password" >
+				 name="password" placeholder="Your password" >
 				<% if version('error') %>
 				<div class="info-field">Wrong password.</div>
 				<% end %>
@@ -36,16 +36,16 @@ body: sign-in
 				</button>
 			</p>
 			<p class="centered">
-				<a href="/reset-password">
+				<a href="/reset-password/">
 					I forgot my password
 				</a>
 			</p>
 		</form>
 	</div>
 	<div class="box__footer centered">
-		<button class="btn-primary-light">
+		<a class="btn-primary-light" href="/sign-up/">
 			Create an account
-		</button>
+		</a>
 	</div>
 </div>
 
