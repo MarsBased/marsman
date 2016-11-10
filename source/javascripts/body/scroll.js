@@ -12,14 +12,9 @@
   function scrollVisible($window) {
     $element.each(function(){
       var $target = $($(this).data("scroll"));
-      console.log("target :"+$target.offset().top);
-      console.log("scroll :"+$window.scrollTop());
-      console.log("height :"+$window.height())
       if (($window.scrollTop() + $window.height()) > $target.offset().top) {
-        console.log("visible");
         $(this).removeClass('active');
       }else{
-        console.log("hidden");
         $(this).addClass('active');
       }
     })
@@ -37,7 +32,5 @@
 
     scrollVisible($(window))
   }
-
-  //$("body").scrollspy({target: $element, offset: 0});
 
 })();
