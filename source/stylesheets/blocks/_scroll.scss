@@ -5,7 +5,7 @@ $scroll--fs: $fs-h1;
 	position: absolute;
 	bottom: 10px;
 	left: 50%;
-	margin-left: $scroll--fs/2;
+	margin-left: -($scroll--fs/2);
 	text-align: center;
 	opacity: 0;
 	cursor: pointer;
