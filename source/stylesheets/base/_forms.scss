@@ -46,12 +46,13 @@ form{
   }
 
   &:required,
-  &.required {
+  &.required{
     @extend %input-bg;
     background-image: image-url("icon-required.svg");
   }
 
-  &.success {
+  &.success,
+  .form-group.success & {
     @extend %input-bg;
     animation: escale10 .5s ease-out;
     border: 1px solid $input--success;
@@ -66,7 +67,8 @@ form{
     }
   }
 
-  &.warning {
+  &.warning,
+  .form-group.warning &{
     @extend %input-bg;
     animation: escale10 .5s ease-out;
     border: 1px solid $input--warning;

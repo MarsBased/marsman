@@ -173,31 +173,31 @@ body: toolkit
 			<div class="toolkit__item">
 				<div class="toolkit__block toolkit__checkboxes">
 					<h2>Checkboxes</h2>
-					<div class="form-group">
+					<div class="form-group <%= version('error','success')%>">
 						<label class="required">Select one element</label>
 						<input type="checkbox" name="checkgroup" id="check1" value="check1"
-						class="<%= version('error','success')%>">
+						class="">
 						<label for="check1">Checkbox OFF</label>
 						<input type="checkbox" name="checkgroup" id="check2" value="check2"
-						 class="<%= version('error','success')%>" checked>
+						 class="" checked>
 						<label for="check2">Checkbox ON</label>
 						<input type="checkbox" name="checkgroup" id="check3" value="check3"
-						 class="<%= version('error','success')%>" checked disabled>
+						 class="" checked disabled>
 						<label for="check3">Checkbox Disabled</label>
 						<% if version('error')%>
 						<span class="info-field">Correct !!</span>
 						<% end %>
 					</div>
-					<div class="form-group">
+					<div class="form-group <%= version('error','warning')%>">
 						<label class="required">Select one element</label>
 						<input type="radio" name="radiogroup" id="radio1" value="radio1"
-						 class="<%= version('error','warning')%>">
+						 class="">
 						<label for="radio1">Radio OFF</label>
 						<input type="radio" name="radiogroup" id="radio2" value="radio2"
-						 class="<%= version('error','warning')%>" checked>
+						 class="" checked>
 						<label for="radio2">Radio ON</label>
 						<input type="radio" name="radiogroup2" id="radio3" value="radio3"
-						 class="<%= version('error','warning')%>" checked disabled >
+						 class="" checked disabled >
 						<label for="radio3">Radio Disabled</label>
 						<% if version('error')%>
 						<span class="info-field">Error !!</span>
@@ -206,9 +206,11 @@ body: toolkit
 				</div>
 				<div class="toolkit__block">
 					<h2>Textarea</h2>
-					<textarea name="textareaexample" id="textareaexample"
+					<div class="form-group <%= version('error','warning') %>">
+						<textarea name="textareaexample" id="textareaexample"
 					 rows="5" maxlength="200"><%= lorem.words(rand(10..12)) %></textarea>
-					<div class="info-field">Information about this textarea.</div>
+						<div class="info-field">Information about this textarea.</div>
+					</div>
 				</div>
 				<div class="toolkit__block">
 					<div class="row">
@@ -241,13 +243,13 @@ body: toolkit
 							<label for="without-text">Label</label>
 							<input type="text" id="without-text" name="i1" placeholder="Placeholder text" required>
 						</div>
-						<div class="form-group">
-							<input type="text" class="success" name="i1"
+						<div class="form-group success">
+							<input type="text" name="i1"
 							 placeholder="Placeholder text" value="Input success">
 							<div class="info-field">Information about this success.</div>
 						</div>
-						<div class="form-group">
-							<input type="text" class="warning" id="without-text"
+						<div class="form-group warning">
+							<input type="text" id="without-text"
 							 name="i1" placeholder="Placeholder text" value="Input error">
 							<div class="info-field">Information about this error.</div>
 						</div>

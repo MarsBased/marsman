@@ -59,7 +59,8 @@ input[type="radio"] {
     }
   }
 
-  &.success {
+  &.success,
+  .form-group.success & {
     &:checked + label::before {
       background-color: $radio--success;
     }
@@ -77,7 +78,8 @@ input[type="radio"] {
     }
   }
 
-  &.warning {
+  &.warning,
+  .form-group.warning & {
     &:checked + label::before {
       background-color: $radio--warning;
     }

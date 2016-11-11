@@ -62,19 +62,25 @@ input[type="checkbox"]{
     }
   }
 
-  &.warning + label{
-    color: $checkbox--warning;
-
-    & + .info-field{
+  &.warning,
+  .form-group.warning & {
+    & + label{
       color: $checkbox--warning;
+
+      & + .info-field{
+        color: $checkbox--warning;
+      }
     }
   }
 
-  &.success + label {
-    color: $checkbox--success;
-
-    & + .info-field {
+  &.success,
+  .form-group.success & {
+    + label {
       color: $checkbox--success;
+
+      & + .info-field {
+        color: $checkbox--success;
+      }
     }
   }
 }
