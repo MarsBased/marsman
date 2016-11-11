@@ -21,4 +21,10 @@ module Helpers
     "#{config[:host]}#{path}"
   end
 
+  def svg(name)
+    content_tag(:svg, class: "shape #{name}") do
+      content_tag(:use, nil, :'xlink:href' => "#shape-#{name}")
+    end
+  end
+
 end
