@@ -12,7 +12,7 @@
   function scrollVisible($window) {
     $element.each(function(){
       var $target = $($(this).data("scroll"));
-      if (($window.scrollTop() + $window.height()) > $target.offset().top) {
+      if (($window.scrollTop() + window.innerHeight) > $target.offset().top) {
         $(this).removeClass('active');
       }else{
         $(this).addClass('active');
