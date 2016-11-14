@@ -48,7 +48,7 @@
 	}
 
 	&__icon {
-		$icons: 'github','instagram','medium','linkedin','facebook','twitter';
+		$icons: 'google-plus','github','instagram','linkedin','facebook','twitter','envelope';
 
 		@each $icon in $icons {
 		  &--#{$icon} {

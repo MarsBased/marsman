@@ -35,9 +35,8 @@
 					<%= svg('marsman-template') %>
 			  </a>
 			  <ul class="footer__social-icons">
-			  	<% ['github','instagram','medium','linkedin','facebook',
-			  		'twitter'].each do |i| %>
-						<li><a href="/" class="footer__icon--<%=i%>"></a></li>
+			  	<% data.social_icons.each do |s| %>
+						<li><a href="<%= s.url %>" class="footer__icon--<%= s.name %>"></a></li>
 			  	<% end %>
 			  </ul>
 			</div>

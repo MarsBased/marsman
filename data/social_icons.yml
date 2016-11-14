@@ -1,0 +1,14 @@
+- name: envelope
+  url: mailto:hola@marsbased.com
+- name: twitter
+  url: https://twitter.com/MarsBased
+- name: facebook
+  url: http://facebook.com/marsbased
+- name: linkedin
+  url: http://www.linkedin.com/company/marsbased
+- name: instagram
+  url: http://www.instagram.com/marsbased
+- name: google-plus
+  url: http://plus.google.com/+Marsbased/
+- name: github
+  url: https://github.com/MarsBased
