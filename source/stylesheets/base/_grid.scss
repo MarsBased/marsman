@@ -34,7 +34,6 @@ $container-lg:        1180px;
   margin-left:  ($gutter / -2);
   margin-right: ($gutter / -2);
   @include clearfix;
-  @include last-margin;
 }
 
 @mixin make-column($columns, $gutter: $grid-gutter-width) {
