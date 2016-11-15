@@ -3,7 +3,6 @@
   display: table;
   width: 100%;
   text-align: center;
-  color: white;
   position: relative;
   @extend .container;
 
@@ -16,6 +15,10 @@
   	height: 90px;
   	width: auto;
   	@include margin-bottom(50px);
+
+    svg{
+      opacity: .3;
+    }
   }
 
   .hero__button {
