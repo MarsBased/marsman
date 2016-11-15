@@ -14,12 +14,14 @@ module.exports = function (grunt) {
       options: {
         plugins: [
           {
+            removeEmptyAttrs: false
+          }, {
             removeViewBox: false
           }, {
-            removeUselessStrokeAndFill: true
+            //removeUselessStrokeAndFill: true
           }, {
             removeAttrs: {
-              attrs: ['xmlns']
+              attrs: ['xmlns','fill=none']
             }
           }
         ]

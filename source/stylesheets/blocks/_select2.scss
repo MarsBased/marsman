@@ -14,6 +14,10 @@ $select2__dropdown--border: 1px solid $primary;
 $select2__search--color: white;
 $select2__search--bg-color: lighten($primary,20%);
 
+.select2 {
+  width: 100%;
+}
+
 .select2-hidden-accessible {
   border: 0 !important;
   clip: rect(0 0 0 0) !important;
