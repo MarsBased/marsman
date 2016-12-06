@@ -81,5 +81,8 @@ hgroup{
   @include last-margin;
   h1,.s1{
     margin-bottom: .2em;
+    + *{
+      font-weight: normal;
+    }
   }
 }

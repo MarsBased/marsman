@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-caret-down</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-caret-down" fill="#E74C3C">
+            <path d="M11.0000095,5.49999225 C11.0000095,5.22655443 10.7734468,4.99999166 10.5000089,4.99999166 L3.5000006,4.99999166 C3.22656277,4.99999166 3,5.22655443 3,5.49999225 C3,5.63280491 3.05468757,5.75780506 3.14843768,5.85155517 L6.64844185,9.35155934 C6.74219196,9.44530945 6.86719211,9.49999702 7.00000477,9.49999702 C7.13281743,9.49999702 7.25781758,9.44530945 7.35156769,9.35155934 L10.8515719,5.85155517 C10.945322,5.75780506 11.0000095,5.63280491 11.0000095,5.49999225 Z" id="caret-down---FontAwesome"></path>
+        </g>
+    </g>
+</svg>

@@ -1,4 +1,4 @@
-$pills--padding: 1em 1.5em;
+$pills--padding: 1em 2em;
 $pills--radius: $border-radius;
 $pills--border: 1px solid $secondary-lighter;
 $pills--bg: white;
@@ -7,8 +7,8 @@ $pills--active: $primary;
 %pills-state{
   background-repeat: no-repeat;
   background-size: 1em;
-  background-position: calc(100% - .5em) center;
-  padding-right: 2em;
+  background-position: calc(100% - 1em) center;
+  padding-right: 2.9em;
 }
 
 .pills {
@@ -18,6 +18,7 @@ $pills--active: $primary;
 	border-radius: $pills--radius;
 	overflow: hidden;
 	border: $pills--border;
+	background-color: $pills--bg;
 
 	a {
 		@extend .reset-link;
@@ -31,8 +32,7 @@ $pills--active: $primary;
 	&__link {
 		display: block;
 		padding: $pills--padding;
-		background-color: $pills--bg;
-		border-top: $pills--border;
+		border-bottom: $pills--border;
 		position: relative;
 		transition:  color .4s ease-out;
 
@@ -47,8 +47,8 @@ $pills--active: $primary;
 			background-color: transparent;
 		}
 
-		.pills__item:first-child & {
-			border-top: 0;
+		.pills__item:last-child & {
+			border-bottom: 0;
 		}
 
 		&.active,
@@ -58,8 +58,14 @@ $pills--active: $primary;
 
 			&::before{
 				left: 0;
-				background-color: $secondary-lighter;
+				background-color: currentColor;
 			}
+		}
+
+		&.disabled{
+			opacity: .2;
+			cursor: not-allowed;
+			//pointers-events: none;
 		}
 
 		&.active {
@@ -73,22 +79,31 @@ $pills--active: $primary;
 		&.success{
 			@extend %pills-state;
 			background-image: image-url("icon-success.svg");
-			&.active{
-				color: $success;
-				&::before{
-					background-color: $success;
-				}
-			}
 		}
 
 		&.warning{
 			@extend %pills-state;
 			background-image: image-url("icon-warning.svg");
-			&.active{
-				color: $warning;
-				&::before{
-					background-color: $warning;
-				}
+		}
+	}
+
+	&--number {
+		@extend .pills;
+		counter-reset: section;
+
+		.pills__link {
+			position: relative;
+			padding-left: 2.8em;
+
+			&::after{
+				width: 2em;
+				font-weight: bold;
+				text-align: right;
+				content: counter(section)".";
+				counter-increment: section;
+				left: .3em;
+				top: 1em;
+				position: absolute;
 			}
 		}
 	}

@@ -1,0 +1,36 @@
+$header--height: 4rem;
+$header--gutter: $gutter;
+
+.header {
+	background-color: $background-secondary;
+	min-height: $header--height;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	border-bottom: 1px solid $primary;
+
+
+	&__container {
+		@extend .container;
+		display: table;
+	}
+
+	&__logo {
+		display: table-cell;
+		vertical-align: middle;
+		height: $header--height;
+		padding-left: $header--gutter/2;
+		padding-right: $header--gutter/2;
+		img {
+			height: 100%;
+			width: auto;
+		}
+	}
+
+	&__user-info{
+		display: table-cell;
+		text-align: right;
+		vertical-align: middle;
+		padding-left: $header--gutter/2;
+		padding-right: $header--gutter/2;
+	}
+}

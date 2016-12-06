@@ -56,7 +56,6 @@ input[type="checkbox"]{
     + label::before {
       content: $checkbox__icon--checked;
       border: 0;
-      background-color: white;
       transform: scale(1);
     }
   }

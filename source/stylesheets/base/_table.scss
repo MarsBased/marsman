@@ -1,0 +1,70 @@
+$table--color: $font-base-color;
+$table--bg-color: $background-primary;
+$table--border: 1px solid $table--color;
+$table__tr--odd: $table--bg-color;
+$table__tr--even: inherit;
+$table__td--border: 1px solid $table--bg-color;
+
+table {
+	font-size: $fs-small;
+	width: 100%;
+	border-collapse: separate;
+	border: 1px solid;
+
+	tr {
+		&.odd {
+			background-color: $table--bg-color;
+		}
+
+		&.even {
+			background-color: $table__tr--even;
+		}
+
+	}
+
+	th {
+		padding: .5em 1em;
+		text-align: left;
+		background-color: $table--color;
+		font-weight: normal;
+		color: white;
+	}
+
+	td {
+		padding: 1em;
+		border-left: 1px solid $table--bg-color;
+
+		&:first-child {
+			border-left: 0;
+		}
+	}
+
+	tfoot{
+		background-color: $background-secondary;
+		td,th {
+			border: 0;
+		}
+		tr:first-child {
+			td,th{
+				border-top: $table--border;
+			}
+		}
+	}
+}
+
+.cell{
+	&-actions{
+		padding-left: .5em;
+		padding-right: .5em;
+
+		a{
+			@extend .reset-link;
+			display: inline-block;
+			color: $primary;
+			margin-left: .5em;
+			&:first-child{
+				margin-left: 0;
+			}
+		}
+	}
+}

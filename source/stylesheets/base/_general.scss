@@ -1,9 +1,10 @@
 * { box-sizing: border-box; }
 
-body{
-	background-color: $background-primary;
+body {
+  background-color: $background-primary;
 	min-width: 320px;
 	min-height: 100vh;
+
   @media (min-width: $screen-sm){
     padding-left: 0;
     padding-right: 0;
@@ -24,6 +25,17 @@ a,
   }
 }
 
+.fa{
+  text-decoration: none;
+  display: inline-block;
+  &:hover,
+  &.active,
+  &:focus{
+    outline: 0;
+    text-decoration: none;
+  }
+}
+
 ul{
   margin-top: 0;
   padding-left: 1.1em;
@@ -32,6 +44,11 @@ ul{
 
 li{
   margin-bottom: .25em;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
 }
 
 .shape{

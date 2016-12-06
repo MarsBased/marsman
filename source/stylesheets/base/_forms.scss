@@ -1,7 +1,7 @@
 $input--disabled: .3;
 $input--border: 1px solid $secondary-lighter;
 $input--border-radius: $border-radius;
-$input--padding: .5em 1em;
+$input--padding: .4em 1em;
 $input--margin: .5em;
 $input--placeholder: rgba($secondary-light,.4);
 $input--success: $success;
@@ -11,6 +11,27 @@ $info-field--fs: $fs-small;
 
 form{
   @include last-margin;
+}
+
+.form-inline{
+  @extend .columns;
+  margin-bottom: 1.5em;
+
+  > * {
+    @media (min-width: $screen-sm){
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    @media (min-width: $screen-md){
+      width: 50%;
+    }
+    @media (min-width: $screen-sm){
+      text-align: right;
+      padding-top: .5em;
+    }
+  }
 }
 
 .form-group {
@@ -29,6 +50,7 @@ form{
   width: 100%;
   max-width: 100%;
   display: block;
+  color: $font-base-color;
   border: $input--border;
   border-radius: $input--border-radius;
   padding: $input--padding;
@@ -44,6 +66,14 @@ form{
   &::placeholder {
     color: $input--placeholder;
     opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+  }
+
+  &.inline {
+    display: inline-block;
+    width: auto;
+    & + & {
+      margin-left: $gutter/2;
+    }
   }
 
   &:required,
@@ -116,6 +146,19 @@ input[disabled]{
 
 input {
   @extend %form-item;
+  height: 2em;
+
+  &.search {
+    @extend %input-bg;
+    background-color: $secondary-lighter;
+    transition: all .2s ease-out;
+    background-image: image-url("icon-search.svg");
+    margin-bottom: 0;
+
+    &:focus{
+      background-color: white;
+    }
+  }
 }
 
 select {
@@ -150,4 +193,9 @@ textarea {
   &.warning{
     color: $input--warning;
   }
+}
+
+.g-recaptcha {
+  margin-top: .2em;
+  margin-bottom: .8em;
 }

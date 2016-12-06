@@ -48,7 +48,7 @@
 	}
 
 	&__icon {
-		$icons: 'google-plus','github','instagram','linkedin','facebook','twitter','envelope';
+		$icons: 'github','instagram','envelope','medium','linkedin','facebook','twitter';
 
 		@each $icon in $icons {
 		  &--#{$icon} {
@@ -60,10 +60,10 @@
 	}
 
 	&__logo {
-		height: 38px;
-		width: 110px;
+		height: auto;
+		width: 180px;
 		display: inline-block;
-		margin-bottom: 1.5em;
+		margin-bottom: 1em;
 	}
 
 	&__info {

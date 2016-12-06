@@ -14,6 +14,10 @@ input[type="radio"] {
     cursor: pointer;
     user-select: none;
 
+    &[data-radio-input]::before {
+      margin-right: 0;
+    }
+
     &.required::after{
       content: '';
     }
@@ -91,4 +95,18 @@ input[type="radio"] {
       }
     }
   }
+}
+
+
+
+.radio-input{
+  border: 0 !important;
+  background-image: none !important;
+  width: auto;
+  display: inline-block;
+  padding: .2em !important;
+  width: 4em;
+  margin-bottom: 0;
+  margin-left: -.5em;
+  line-height: 1;
 }

@@ -1,0 +1,60 @@
+$pagination--color: $font-base-color;
+$pagination--radius: $border-radius;
+$pagination--border: $background-primary;
+$pagination--hover-bg: $primary;
+$pagination--hover-color: white;
+$pagination--active-bg: $primary-light;
+$pagination--active-color: white;
+
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  border-radius: $pagination--radius;
+  background-color: $background-secondary;
+
+  > li {
+    display: inline; // Remove list-style and block-level defaults
+    a{
+      @extend .reset-link;
+      position: relative;
+      float: left; // Collapse white-space
+      padding: .5em 1em;
+      color: $pagination--color;
+      line-height: 1.2;
+      text-decoration: none;
+      border: 1px solid $pagination--border;
+      transition: all .2s ease-out;
+      margin-left: -1px;
+
+      &:hover,
+      &:focus {
+        background-color: $pagination--hover-bg;
+        color: $pagination--hover-color;
+      }
+
+      &.active{
+        background-color: $pagination--active-bg;
+        color: $pagination--active-color;
+        &:hover, &:focus{
+          background-color: $pagination--hover-bg;
+          color: $pagination--hover-color;
+        }
+      }
+
+      &.disabled{
+        opacity: .5;
+      }
+    }
+
+    &:first-child a {
+      margin-left: 0;
+      border-top-left-radius: $pagination--radius;
+      border-bottom-left-radius: $pagination--radius;
+    }
+
+    &:last-child a {
+      border-top-right-radius: $pagination--radius;
+      border-bottom-right-radius: $pagination--radius;
+    }
+  }
+}

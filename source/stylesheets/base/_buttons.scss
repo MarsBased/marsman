@@ -18,6 +18,7 @@ $buttons--fs: $fs-base;
 
   &:focus {
     @include focus($bg, .8);
+    text-decoration: none;
   }
 
   &.disabled,
@@ -44,6 +45,7 @@ button{
   background-color: transparent;
   padding: 0;
   margin: 0;
+  appearance: none;
   &:hover,
   &:focus,
   &:active{
@@ -71,12 +73,13 @@ button{
 }
 
 %btn {
-  @include button-size(.5em, 1em, inherit, 1, 3px);
-  display: inline-block;
+  @include button-size(.5em, 1em, inherit, 1em, 3px);
+  display: inline-flex; // tags a & button Odd paddings difference
+  align-items: center;
+  justify-content: center;
   margin-bottom: 0; // For input.btn
   font-weight: normal;
   text-align: center;
-  vertical-align: middle;
   touch-action: manipulation;
   cursor: pointer;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
@@ -87,7 +90,6 @@ button{
 }
 
 .btn-block{
-  display: block;
   width: 100%;
   min-width: auto;
   margin-bottom: 1em;

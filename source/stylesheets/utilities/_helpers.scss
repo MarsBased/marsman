@@ -82,6 +82,34 @@
   text-align: center;
 }
 
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+.middle{
+  vertical-align: middle;
+}
+
+.primary {
+  color: $primary;
+}
+
+.primary-light{
+  color: $primary-light;
+}
+
+.secondary {
+  color: $secondary;
+}
+
+.secondary-light{
+  color: $secondary-light;
+}
+
 .vertical-relative{
   position: relative;
   top: 50%;
@@ -104,4 +132,8 @@
 
 .text-success{
   color: $success;
+}
+
+.hidden{
+  display: none;
 }

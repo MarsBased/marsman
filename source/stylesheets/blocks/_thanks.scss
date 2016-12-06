@@ -1,0 +1,26 @@
+.thanks-order-summary {
+  .success-thanks-icon{
+    padding-bottom: ($grid-gutter-width / 2);
+    margin: 0 auto;
+    width: 10%;
+
+    @media (min-width: $screen-sm) {
+      float: left;
+    }
+
+    .icon-success {
+      width: 6rem;
+      border: 2px solid $success;
+      padding: ($grid-gutter-width / 2);
+      height: 6rem;
+      border-radius: 100%;
+      margin-bottom: ($grid-gutter-width / 2);
+    }
+  }
+  .thanks-text{
+    color: $success;
+    padding: 1rem;
+    display: inline-block;
+    width: 90%;
+  }
+}

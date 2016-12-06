@@ -1,0 +1,43 @@
+.nav-pills {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  @include make-column(12);
+  @include make-row;
+  padding-bottom: 2rem;
+
+  > li {
+    float: left;
+    position: relative;
+    display: block;
+
+    > a {
+      @extend .btn-primary-light;
+      display: inline;
+    }
+    + li {
+      margin-left: .5rem;
+    }
+
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: white;
+        background-color: $primary;
+      }
+    }
+
+    &.disabled > a {
+      color: black;
+
+      &:hover,
+      &:focus {
+        color: $primary-light;
+        text-decoration: none;
+        background-color: transparent;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

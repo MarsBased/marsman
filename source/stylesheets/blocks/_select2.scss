@@ -5,18 +5,14 @@ $select2--bg-color: white !default;
 $select2--margin: $input--margin;
 $select2--color-active: $primary;
 
-$select2__icon--padding: 1.5em;
+$select2__icon--padding: 2em;
 $select2__icon--color: $primary;
 
-$select2__dropdown--max-height: 32px * 3 + 14px;
+$select2__dropdown--max-height: 32px * 7 + 14px;
 $select2__dropdown--border: 1px solid $primary;
 
 $select2__search--color: white;
 $select2__search--bg-color: lighten($primary,20%);
-
-.select2 {
-  width: 100%;
-}
 
 .select2-hidden-accessible {
   border: 0 !important;
@@ -31,6 +27,7 @@ $select2__search--bg-color: lighten($primary,20%);
 
 .select2-container {
   @extend %form-item;
+  width: auto;
   display: inline-block;
   position: relative;
   vertical-align: middle;

@@ -4,13 +4,45 @@ $box__header--bg-color: $background-primary;
 $box--border-radius: 8px;
 
 .box{
-	padding: 0 $box--padding;
+	padding: $box--padding;
 	background: white;
 	border: 1px solid $box--border-color;
 	border-radius: $box--border-radius;
 	overflow: hidden;
 	@include margin-bottom (1.5em);
 	@include last-margin;
+
+	&__header {
+		margin: -#{$box--padding} -#{$box--padding} 0;
+		padding: $box--padding;
+		background-color: $box__header--bg-color;
+		border-bottom: 1px solid $box--border-color;
+		@include last-margin;
+	}
+
+	&__content {
+		padding: $box--padding $box--padding 0;
+		margin-left: -$box--padding;
+		margin-right: -$box--padding;
+		margin-bottom: $box--padding;
+		@include last-margin;
+	}
+
+	&__footer {
+		border-top: 1px solid $secondary-lighter;
+		padding: $box--padding;
+		margin-left: -#{$box--padding};
+		margin-right: -#{$box--padding};
+		margin-bottom: -#{$box--padding} !important;
+		@include last-margin;
+	}
+
+	&__nav {
+		text-align: right;
+		> * {
+			margin-left: .5em;
+		}
+	}
 
 	&--form {
 		@extend .box;
@@ -27,30 +59,16 @@ $box--border-radius: 8px;
 			max-width: 308px;
 			padding-left: 0;
 			padding-right: 0;
-			margin: auto;
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 
-	&__header {
-		margin: 0 -#{$box--padding};
-		padding: $box--padding;
-		background-color: $box__header--bg-color;
-		border-bottom: 1px solid $box--border-color;
-		@include last-margin;
-	}
-
-	&__content {
-		padding: $box--padding;
-		margin-left: -$box--padding;
-		margin-right: -$box--padding;
-		@include last-margin;
-	}
-
-	&__footer {
-		border-top: 1px solid $secondary-lighter;
-		padding: $box--padding;
-		margin-left: -$box--padding;
-		margin-right: -$box--padding;
-		@include last-margin;
+	&--form-m {
+		@extend .box;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+		box-shadow: 0 16px 33px rgba(black, .28);
 	}
 }
