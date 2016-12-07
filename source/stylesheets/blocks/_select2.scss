@@ -27,7 +27,7 @@ $select2__search--bg-color: lighten($primary,20%);
 
 .select2-container {
   @extend %form-item;
-  width: 100% !important;
+  width: auto;
   max-width: 100%;
   display: inline-block;
   position: relative;
@@ -35,6 +35,10 @@ $select2__search--bg-color: lighten($primary,20%);
   background-color: transparent;
   padding: 0 !important;
   border: 0 !important;
+
+  &.select2 {
+    width: 100% !important;
+  }
 
   .selection {
     width: 100%;
