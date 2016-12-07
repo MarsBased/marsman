@@ -12,12 +12,16 @@ body.toolkit{
 		}
 
 		&__row{
-			@include make-row($gutter*4)
+			@media (min-width: $screen-sm ){
+				@include make-row($gutter*2)
+			}
 		}
 
 		&__item{
 			margin-bottom: 4rem;
-			@include make-sm-column(6, $gutter*4);
+			@media (min-width: $screen-sm ){
+				@include make-column(6, $gutter*2);
+			}
 		}
 
 		&__block{
