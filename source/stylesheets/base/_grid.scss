@@ -6,9 +6,9 @@ $screen-sm:           768px;
 $screen-md:           992px;
 $screen-lg:           1140px;
 
-$container-sm:        100%;
-$container-md:        100%;
-$container-lg:        1180px;
+$container-sm:        768px;
+$container-md:        990px;
+$container-lg:        1240px;
 
 @mixin clearfix() {
   &:before,
@@ -22,6 +22,7 @@ $container-lg:        1180px;
 }
 
 @mixin container-fixed($gutter: $grid-gutter-width) {
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
   padding-left:  ($gutter / 2);
@@ -264,13 +265,13 @@ $container-lg:        1180px;
   @include container-fixed;
 
   @media (min-width: $screen-sm) {
-    width: $container-sm;
+    max-width: $container-sm;
   }
   @media (min-width: $screen-md) {
-    width: $container-md;
+    max-width: $container-md;
   }
   @media (min-width: $screen-lg) {
-    width: $container-lg;
+    max-width: $container-lg;
   }
 }
 
