@@ -27,7 +27,8 @@ $select2__search--bg-color: lighten($primary,20%);
 
 .select2-container {
   @extend %form-item;
-  width: auto;
+  width: 100% !important;
+  max-width: 100%;
   display: inline-block;
   position: relative;
   vertical-align: middle;
@@ -106,6 +107,7 @@ $select2__search--bg-color: lighten($primary,20%);
   &__rendered {
     outline: 0 !important;
     @include ellipsis;
+    display: block;
   }
 
   &__clear {
@@ -122,11 +124,15 @@ $select2__search--bg-color: lighten($primary,20%);
   margin-top: $select2--margin/2;
   margin-bottom: $select2--margin/2;
   border-radius: $select2--radius;
-  width: 100%;
   z-index: 998;
   overflow: hidden;
   border: 1px solid $select2--color-active;
   background-color: white;
+  //width: 1px;
+
+  &--above{
+    margin-top: -$select2--margin/2;
+  }
 
   ul {
     @extend .list-reset;
