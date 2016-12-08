@@ -90,8 +90,12 @@
   text-align: left;
 }
 
-.middle{
+.middle {
   vertical-align: middle;
+}
+
+.nowrapp {
+  white-space: nowrap;
 }
 
 .text-primary {
@@ -114,6 +118,14 @@
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.bg-primary {
+  background-color: $background-primary;
+}
+
+.bg-secondary {
+  background-color: $background-secondary;
 }
 
 .bg-warning {
