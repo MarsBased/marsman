@@ -1,6 +1,6 @@
 .actions {
 	$this: '.actions';
-	$this--margin: .25em;
+	$this--margin: .5em;
 
 
 	text-align: right;
@@ -11,13 +11,12 @@
 	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: center;
-	margin-bottom: -($this--margin*2);
+	margin-bottom: -$this--margin;
 
 	> * {
 		@include last-margin;
 		margin-left: $this--margin;
 		margin-right: $this--margin;
-		margin-bottom: $this--margin*2;
-
+		margin-bottom: $this--margin;
 	}
 }

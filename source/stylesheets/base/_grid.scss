@@ -28,7 +28,6 @@ $container-lg:        1400px;
   padding-left:  ($gutter / 2);
   padding-right: ($gutter / 2);
   @include clearfix;
-  @include last-margin;
 }
 
 @mixin make-row($gutter: $grid-gutter-width) {
