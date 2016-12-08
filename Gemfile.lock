@@ -52,6 +52,8 @@ GEM
     erubis (2.7.0)
     eventmachine (1.2.0.1)
     execjs (2.7.0)
+    faker (1.6.1)
+      i18n (~> 0.5)
     ffi (1.9.14)
     font-awesome-sass (4.3.2.1)
       sass (~> 3.2)
@@ -186,6 +188,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass (~> 3.3.3)
+  faker
   font-awesome-sass (~> 4.3.0)
   jquery-middleman
   magnific-popup-rails
@@ -200,4 +203,4 @@ DEPENDENCIES
   rails-assets-select2!
 
 BUNDLED WITH
-   1.11.2
+   1.13.6
