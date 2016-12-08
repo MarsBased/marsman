@@ -16,4 +16,9 @@
 		@extend #{$this};
 		@extend .fa-trash;
 	}
+
+	&-detail {
+		@extend #{$this};
+		@extend .fa-chevron-right;
+	}
 }
