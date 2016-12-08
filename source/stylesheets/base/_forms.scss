@@ -148,7 +148,7 @@ input[disabled]{
   }
 }
 
-input[type="text"] {
+input:not([type="submit"]) {
   @extend %form-item;
   height: 2em;
 
