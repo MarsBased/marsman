@@ -21,4 +21,9 @@
 		@extend #{$this};
 		@extend .fa-chevron-right;
 	}
+
+	&-close {
+		@extend #{$this};
+		@extend .fa-times;
+	}
 }

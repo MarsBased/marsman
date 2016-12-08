@@ -18,12 +18,16 @@
 		min-height: 3.6rem;
 		padding: $this--padding;
 		background-color: $this__header--bg-color;
-		border-bottom: 1px solid $this__header--bg-color;
+		border-bottom: 1px solid $this--border-color;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
+	}
+
+	&__title {
+		margin: 0;
 	}
 
 	&__content {
