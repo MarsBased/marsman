@@ -6,9 +6,9 @@ $screen-sm:           768px;
 $screen-md:           992px;
 $screen-lg:           1140px;
 
-$container-sm:        768px;
-$container-md:        990px;
-$container-lg:        1240px;
+$container-sm:        100%;
+$container-md:        100%;
+$container-lg:        1400px;
 
 @mixin clearfix() {
   &:before,
@@ -263,6 +263,7 @@ $container-lg:        1240px;
 
 .container {
   @include container-fixed;
+  max-width: 100%;
 
   @media (min-width: $screen-sm) {
     max-width: $container-sm;
@@ -310,7 +311,6 @@ $container-lg:        1240px;
   @media (min-width: $screen-sm) {
     display: table;
     width: 100%;
-    margin-bottom: 1.2em;
 
     & > * {
       display: table-cell;

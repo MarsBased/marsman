@@ -56,9 +56,12 @@ form{
   border-radius: $input--border-radius;
   padding: $input--padding;
   transition: background .2s ease-out, border .2s ease-out;
-  margin-bottom: $input--margin;
   background-image: none;
   background-color: white;
+  margin-bottom: $input--margin;
+  &:last-child{
+    margin-bottom: 0;
+  }
 
   &:focus {
     @include focus;
@@ -145,7 +148,7 @@ input[disabled]{
   }
 }
 
-input {
+input[type="text"] {
   @extend %form-item;
   height: 2em;
 
