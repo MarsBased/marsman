@@ -12,9 +12,13 @@ input[type="checkbox"]{
 
   + label {
     display: inline-block;
-    padding-right: .5em;
     cursor: pointer;
     user-select: none;
+    padding-right: .5em;
+
+    &:last-child {
+      padding-right: 0;
+    }
 
     &.required::after{
       content: '';
