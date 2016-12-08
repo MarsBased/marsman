@@ -1,39 +1,40 @@
-$box--padding: $gutter;
-$box--border-color: $secondary-lighter;
-$box__header--bg-color: $background-primary;
-$box--border-radius: 8px;
+.box {
+	$this: '.box';
+	$this--padding: $gutter;
+	$this--border-color: $secondary-lighter;
+	$box__header--bg-color: $background-primary;
+	$this--border-radius: 8px;
 
-.box{
-	padding: $box--padding;
+	padding: $this--padding;
 	background: white;
-	border: 1px solid $box--border-color;
-	border-radius: $box--border-radius;
+	border: 1px solid $this--border-color;
+	border-radius: $this--border-radius;
 	overflow: hidden;
 	@include margin-bottom (1.5em);
 	@include last-margin;
 
 	&__header {
-		margin: -#{$box--padding} -#{$box--padding} 0;
-		padding: $box--padding;
+		margin: -#{$this--padding} -#{$this--padding} 0;
+		padding: $this--padding;
 		background-color: $box__header--bg-color;
-		border-bottom: 1px solid $box--border-color;
+		border-bottom: 1px solid $this--border-color;
 		@include last-margin;
 	}
 
 	&__content {
-		padding: $box--padding $box--padding 0;
-		margin-left: -$box--padding;
-		margin-right: -$box--padding;
-		margin-bottom: $box--padding;
+		padding: $this--padding $this--padding 0;
+		margin-left: -$this--padding;
+		margin-right: -$this--padding;
+		margin-bottom: $this--padding;
 		@include last-margin;
 	}
 
 	&__footer {
 		border-top: 1px solid $secondary-lighter;
-		padding: $box--padding;
-		margin-left: -#{$box--padding};
-		margin-right: -#{$box--padding};
-		margin-bottom: -#{$box--padding} !important;
+		padding: $this--padding;
+		margin-left: -#{$this--padding};
+		margin-right: -#{$this--padding};
+		margin-bottom: -#{$this--padding} !important;
 		@include last-margin;
 	}
 
@@ -44,6 +45,34 @@ $box--border-radius: 8px;
 		}
 	}
 
+	&--transparent {
+		@extend .box;
+		background-color: transparent;
+		border-color: transparent;
+		box-shadow: none;
+
+		#{$this}__header {
+			padding-bottom: 0;
+			border-color: transparent;
+		}
+
+		#{$this}__footer {
+			border-color: transparent;
+		}
+	}
+
+	&--primary {
+		@extend .box;
+		#{$this}__header {
+			color: white;
+			background-color: $primary;
+		}
+
+		#{$this}__footer {
+			background-color: $secondary;
+		}
+	}
+
 	&--form {
 		@extend .box;
 		max-width: 460px;
@@ -51,11 +80,11 @@ $box--border-radius: 8px;
 		margin-right: auto;
 		box-shadow: 0 16px 33px rgba(black, .28);
 
-		.box__header{
+		.box__header {
 			text-align: center;
 		}
 
-		.box__content{
+		.box__content {
 			max-width: 308px;
 			padding-left: 0;
 			padding-right: 0;
