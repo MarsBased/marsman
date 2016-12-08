@@ -21,13 +21,9 @@
 		border-bottom: 1px solid $this__header--bg-color;
 		display: flex;
 		flex-direction: row;
+		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
-		@include last-margin;
-
-		> * {
-			@include last-margin;
-		}
 	}
 
 	&__content {

@@ -1,0 +1,23 @@
+.actions {
+	$this: '.actions';
+	$this--margin: .25em;
+
+
+	text-align: right;
+	margin-right: -$this--margin;
+	margin-left: -$this--margin;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-bottom: -($this--margin*2);
+
+	> * {
+		@include last-margin;
+		margin-left: $this--margin;
+		margin-right: $this--margin;
+		margin-bottom: $this--margin*2;
+
+	}
+}

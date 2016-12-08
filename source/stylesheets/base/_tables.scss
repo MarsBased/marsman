@@ -50,6 +50,11 @@ table {
 	}
 	&-actions{
 		white-space: nowrap;
-		@extend .actions;
+		padding-left: .25em;
+		padding-right: .25em;
+		> * {
+			margin-right: .25em;
+			margin-left: .25em;
+		}
 	}
 }
