@@ -1,0 +1,19 @@
+.icon {
+	$this: '.icon';
+	@extend .fa;
+	text-decoration: none;
+
+	&:hover{
+		text-decoration: none;
+	}
+
+	&-edit {
+		@extend #{$this};
+		@extend .fa-pencil;
+	}
+
+	&-del {
+		@extend #{$this};
+		@extend .fa-trash;
+	}
+}
