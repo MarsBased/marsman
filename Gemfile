@@ -14,7 +14,7 @@ gem 'middleman-email', git: "git@github.com:MarsBased/middleman-email.git"
 
 gem 'jquery-middleman'
 
-gem 'faker'
+gem 'faker', '~> 1.6.6'
 
 gem 'middleman-deploy', '~> 1.0'
 gem 'middleman-pry'
