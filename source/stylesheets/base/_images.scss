@@ -1,0 +1,10 @@
+.img-float {
+  width: $gutter * 5;
+  float: left;
+  background-color: $secondary-light;
+  border-radius: 50%;
+
+  + * {
+    margin-left: $gutter * 6
+  }
+}
