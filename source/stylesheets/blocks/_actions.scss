@@ -19,4 +19,9 @@
 		margin-right: $this--margin;
 		margin-bottom: $this--margin;
 	}
+
+	&--buttons {
+		@extend .actions;
+		margin-top: -.25em;
+	}
 }
