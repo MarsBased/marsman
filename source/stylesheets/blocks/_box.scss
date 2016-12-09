@@ -35,6 +35,7 @@
 		margin-left: -$this--padding;
 		margin-right: -$this--padding;
 		margin-bottom: $this--padding;
+		position: relative;
 		@include last-margin;
 	}
 
