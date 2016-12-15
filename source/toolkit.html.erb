@@ -58,8 +58,7 @@ body: toolkit
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="toolkit__row">
+
 		<div class="toolkit__item">
 			<h1>Typography</h1>
 			<div class="row">
@@ -269,3 +268,85 @@ body: toolkit
 	</div>
 </div>
 
+<div class="toolkit__container">
+	<h1>Boxes</h1>
+	<div class="toolkit__row">
+		<div class="col-xs-4">
+			<div class="box">
+				<div class="box__header">
+					<h2 class="box__title">Box</h2>
+				</div>
+				<div class="box__content">
+					<%= Faker::ChuckNorris.fact %>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box__content">
+					<h1>Boxes without title</h1>
+					<%= Faker::ChuckNorris.fact %>
+				</div>
+			</div>
+			<div class="box">
+				Boxes without box__content</br>
+				<%= Faker::ChuckNorris.fact %>
+			</div>
+		</div>
+
+		<div class="col-xs-4">
+			<div class="box--primary">
+				<div class="box__header">
+					<h2 class="box__title">Box</h2>
+				</div>
+				<div class="box__content">
+					<%= Faker::ChuckNorris.fact %>
+				</div>
+			</div>
+			<div class="box--secondary">
+				<div class="box__header">
+					<h2 class="box__title">Box</h2>
+				</div>
+				<div class="box__content">
+					<%= Faker::ChuckNorris.fact %>
+				</div>
+			</div>
+			<div class="box--secondary-light">
+				<div class="box__header">
+					<h2 class="box__title">Box</h2>
+				</div>
+				<div class="box__content">
+					<%= Faker::ChuckNorris.fact %>
+				</div>
+			</div>
+		</div>
+		<div class="toolkit__row">
+			<div class="col-xs-4">
+				<div class="box--transparent">
+					<div class="box__header">
+						<h2 class="box__title">Box</h2>
+					</div>
+					<div class="box__content">
+						<%= Faker::ChuckNorris.fact %>
+					</div>
+				</div>
+
+				<div class="box--form">
+					<div class="box__header">
+						<h2 class="box__title">Box Form</h2>
+					</div>
+					<div class="box__content">
+						<%= Faker::ChuckNorris.fact %>
+					</div>
+				</div>
+
+				<div class="box--form-m">
+					<div class="box__header">
+						<h2 class="box__title">Box form-m</h2>
+					</div>
+					<div class="box__content">
+						<%= Faker::ChuckNorris.fact %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
