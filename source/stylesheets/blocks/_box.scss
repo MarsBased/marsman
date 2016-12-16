@@ -13,8 +13,12 @@
 	margin-bottom: $gutter;
 	@include last-margin;
 
+	& > *:first-child {
+ 		margin: -#{$this--padding} -#{$this--padding} 0;
+		min-height: 7rem;
+	}
+
 	&__header {
-		margin: -#{$this--padding} -#{$this--padding} 0;
 		min-height: 7rem;
 		padding: $this--padding/2 $this--padding;
 		background-color: $this__header--bg-color;
