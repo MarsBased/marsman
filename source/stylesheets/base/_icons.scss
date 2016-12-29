@@ -1,3 +1,6 @@
+$icon-loader-color: inherit;
+$icon-loader-animation-duration: .75s;
+
 .icon {
 	$this: '.icon';
 	@extend .fa;
@@ -26,4 +29,20 @@
 		@extend #{$this};
 		@extend .fa-times;
 	}
+
+  &-loader {
+    animation-duration: $icon-loader-animation-duration;
+    color: $icon-loader-color;
+    @extend #{$this};
+    @extend .fa-spin;
+    @extend .fa-spinner;
+
+    &__right-sided {
+      margin-left: 10px;
+    }
+
+    &__left-sided {
+      margin-right: 10px;
+    }
+  }
 }
