@@ -73,10 +73,9 @@ button{
 }
 
 %btn {
-  @include button-size(.5em, 1em, inherit, 1em, 3px);
-  display: inline-flex; // tags a & button Odd paddings difference
-  align-items: center;
-  justify-content: center;
+  @include button-size(.3em, 1em, inherit, 1.4em, 3px);
+  display: inline-block;
+  vertical-align: middle;
   margin-bottom: 0; // For input.btn
   font-weight: normal;
   text-align: center;
@@ -89,10 +88,23 @@ button{
   transition: all .2s ease-out;
 }
 
+.btn{
+  @extend %btn;
+  &:hover,
+  &.active,
+  &:focus{
+    text-decoration: none;
+  }
+}
+
 .btn-block{
   width: 100%;
   min-width: auto;
   margin-bottom: 1em;
+}
+
+.btn-wide{
+  min-width: 12em;
 }
 
 .btn-rounded{
