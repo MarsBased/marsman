@@ -6,9 +6,9 @@ $screen-sm:           768px;
 $screen-md:           992px;
 $screen-lg:           1140px;
 
-$container-sm:        100%;
-$container-md:        100%;
-$container-lg:        1400px;
+$container-sm:        768px;
+$container-md:        990px;
+$container-lg:        1240px;
 
 @mixin clearfix() {
   &:before,
