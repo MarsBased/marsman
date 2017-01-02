@@ -26,4 +26,12 @@
 		@extend #{$this};
 		@extend .fa-times;
 	}
+
+  &-loader {
+    animation-duration: .75s;
+    color: inherit;
+    @extend #{$this};
+    @extend .fa-spin;
+    @extend .fa-spinner;
+  }
 }
