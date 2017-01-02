@@ -33,13 +33,5 @@
     @extend #{$this};
     @extend .fa-spin;
     @extend .fa-spinner;
-
-    &__right-sided {
-      margin-left: 10px;
-    }
-
-    &__left-sided {
-      margin-right: 10px;
-    }
   }
 }
