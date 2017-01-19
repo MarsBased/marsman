@@ -1,13 +1,24 @@
 $zindex-modal-background:  1040 !default;
 $zindex-modal:             1050 !default;
 
-
-$modal-backdrop-bg:           $primary;
-$modal-backdrop-opacity:      .9;
+$modal-backdrop-bg:           black;
+$modal-backdrop-opacity:      .4;
 
 $modal-lg:                    900px;
 $modal-md:                    600px;
 $modal-sm:                    400px;
+
+
+@keyframes modal-in {
+  0% {
+    transform: translate(0, -25%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
 
 .modal-open {
   overflow: hidden;
@@ -31,12 +42,15 @@ $modal-sm:                    400px;
   &.fade .modal-dialog {
     transform: translate(0, -25%);
     opacity: 0;
-    transition: transform 0.3s ease-out, opacity 0.3s ease-out ;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
   }
-  &.in .modal-dialog {  transform: translate(0, 0); opacity: 1; }
+  &.in .modal-dialog {
+    animation: modal-in .5s;
+    animation-fill-mode: forwards;
+  }
 }
 
-.modal-open .modal {
+.modal-open .modal.in {
   overflow-x: hidden;
   overflow-y: auto;
   display: flex !important;
@@ -70,13 +84,16 @@ $modal-sm:                    400px;
   left: 0;
   z-index: $zindex-modal-background;
   background-color: $modal-backdrop-bg;
-  transition: opacity .3s ease-out;
+  transition: opacity .1s ease-out;
 
-  &.fade { opacity: 0; }
+  &.fade {
+    opacity: 0;
+  }
 
-  &.in { opacity: $modal-backdrop-opacity; }
+  &.in {
+    opacity: $modal-backdrop-opacity;
+  }
 }
-
 
 // Measure scrollbar width for padding body during modal show/hide
 .modal-scrollbar-measure {
@@ -99,9 +116,13 @@ $modal-sm:                    400px;
   }
 
   // Modal sizes
-  .modal-sm { width: $modal-sm; }
+  .modal-sm {
+    width: $modal-sm;
+  }
 }
 
 @media (min-width: $screen-md) {
-  .modal-lg { width: $modal-lg; }
+  .modal-lg {
+    width: $modal-lg;
+  }
 }
