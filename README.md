@@ -2,7 +2,7 @@
 
 Frontend framework for starting new projects.
 
-Developed with Middleman (https://middlemanapp.com/)
+Developed with Middleman (https://middlemanapp.com/).
 Uses Grunt to automatize SVG inline generation.
 
 ## Development
