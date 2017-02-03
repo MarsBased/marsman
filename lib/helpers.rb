@@ -13,7 +13,7 @@ module Helpers
 
   def version(name, return_value = true )
     @c = current_page
-    @versions = "#{@c.data.version} #{@c.metadata[:locals][:version]}"
+    @versions = "#{@c.data.version} #{@c.metadata[:locals][:versions]}"
     return_value if(@versions.split(/[\s,']/).include?(name))
   end
 

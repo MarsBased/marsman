@@ -4,11 +4,8 @@ helpers Helpers
 
 # sprockets.import_asset 'modernizr'
 
-set :css_dir, 'stylesheets'
-set :js_dir, 'javascripts'
-set :images_dir, 'images'
-set :fonts_dir, 'fonts'
-set :partials_dir, 'partials'
+
+activate :sprockets
 
 activate :autoprefixer
 activate :pry
@@ -16,8 +13,15 @@ activate :directory_indexes
 
 configure :development do
   activate :livereload
+  # set :css_dir, 'stylesheets'
   set :environment, 'development'
+  set :fonts_dir, 'fonts'
+  set :css_dir, 'stylesheets'
+  set :js_dir, 'javascripts'
+  set :images_dir, 'images'
+  set :partials_dir, 'partials'
 end
+
 
 ready do
   @pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/) }
@@ -30,16 +34,18 @@ ready do
     end
     @versions.each do |version|
       @path = r.destination_path.gsub 'index.html', "_#{version}.html"
-      proxy @path, r.path, :locals => { :version => version }
+      proxy @path, r.path, :locals => { :versions => version }
     end
   end
 end
+
 
 configure :build do
   ignore 'shapes/*'
   activate :asset_hash
   set :environment, 'production'
 end
+
 
 activate :deploy do |deploy|
   deploy.deploy_method = :rsync
