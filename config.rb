@@ -1,25 +1,13 @@
 require "lib/helpers"
 helpers Helpers
 
-
-# sprockets.import_asset 'modernizr'
-
-
 activate :sprockets
-
 activate :autoprefixer
 activate :pry
 activate :directory_indexes
 
 configure :development do
   activate :livereload
-  # set :css_dir, 'stylesheets'
-  set :environment, 'development'
-  set :fonts_dir, 'fonts'
-  set :css_dir, 'stylesheets'
-  set :js_dir, 'javascripts'
-  set :images_dir, 'images'
-  set :partials_dir, 'partials'
 end
 
 
@@ -54,6 +42,7 @@ activate :deploy do |deploy|
   deploy.user  = 'deploy'
   deploy.flags = '-avzp --chmod=+r'
 end
+
 
 # activate :email do |email|
 #   email.user = 'postmaster@mg.marsbased.com'

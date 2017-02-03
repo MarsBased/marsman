@@ -21,6 +21,7 @@ gem 'magnific-popup-rails', require: false
 
 gem 'middleman-autoprefixer'
 # gem 'middleman-email', git: "git@github.com:MarsBased/middleman-email.git"
+gem 'middleman-email', path: "/Users/_adek_/Projects/middleman-email"
 
 gem 'jquery-middleman'
 
