@@ -7,7 +7,7 @@ gem 'sass-globbing', '~> 1.1'
 
 #middleman gems
 gem 'middleman', '>= 4.0.0'
-gem 'middleman-livereload', '~> 3.3'
+gem 'middleman-livereload'
 gem "middleman-compass"
 gem 'middleman-sprockets', '>= 4.0.0.rc.1'
 

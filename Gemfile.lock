@@ -15,7 +15,7 @@ GEM
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
-    chunky_png (1.3.7)
+    chunky_png (1.3.8)
     coderay (1.1.1)
     coffee-script (2.4.1)
       coffee-script-source
@@ -116,7 +116,7 @@ GEM
     middleman-pry (1.0.1)
       middleman (>= 3.3, < 5)
       pry (~> 0.9)
-    middleman-sprockets (4.0.0)
+    middleman-sprockets (4.1.0)
       middleman-core (~> 4.0)
       sprockets (>= 3.0)
     minitest (5.10.1)
@@ -175,7 +175,7 @@ DEPENDENCIES
   middleman-autoprefixer
   middleman-compass
   middleman-deploy (~> 2.0.0.pre.alpha)
-  middleman-livereload (~> 3.3)
+  middleman-livereload
   middleman-pry
   middleman-sprockets (>= 4.0.0.rc.1)
   modernizr-rails
