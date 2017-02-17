@@ -1,41 +1,23 @@
 source 'https://rubygems.org'
 
-
-#solve globbing bug
-gem 'sass',          '~> 3.4'
-gem 'sass-globbing', '~> 1.1'
+gem 'sassc'
+gem 'faker', '~> 1.7.3'
 
 #middleman gems
 gem 'middleman', '>= 4.0.0'
 gem 'middleman-livereload'
 gem "middleman-compass"
 gem 'middleman-sprockets', '>= 4.0.0.rc.1'
-
-gem 'bootstrap-sass', '~> 3.3.3', require: false
-gem 'font-awesome-sass', '~> 4.3.0'
-
-
-
-gem 'modernizr-rails', require: false
-gem 'magnific-popup-rails', require: false
-
 gem 'middleman-autoprefixer'
-
-# gem 'middleman-email', git: "git@github.com:MarsBased/middleman-email.git"
-
-
-gem 'jquery-middleman'
-
-
-
-gem 'faker', '~> 1.6.6'
-
 gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 gem 'middleman-pry'
-
+# gem 'middleman-email', git: "git@github.com:MarsBased/middleman-email.git"
 
 source 'https://rails-assets.org' do
+	gem 'rails-assets-jquery'
 	gem 'rails-assets-lodash'
+	gem 'rails-assets-modernizr'
 	gem 'rails-assets-select2'
+	gem 'rails-assets-fontawesome'
+	gem 'rails-assets-bootstrap'
 end
-
