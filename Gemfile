@@ -6,7 +6,6 @@ gem 'faker', '~> 1.7.3'
 #middleman gems
 gem 'middleman', '>= 4.0.0'
 gem 'middleman-livereload'
-gem "middleman-compass"
 gem 'middleman-sprockets', '>= 4.0.0.rc.1'
 gem 'middleman-autoprefixer'
 gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
