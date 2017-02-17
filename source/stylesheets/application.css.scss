@@ -1,10 +1,9 @@
-@import 'compass';
-@import 'variables';
-@import 'fontawesome';
-
+@import 'utilities/variables';
 @import 'utilities/helpers';
 @import 'utilities/keyframes';
 @import 'utilities/normalize';
+
+@import 'fontawesome';
 
 @import 'base/grid';
 @import 'base/fonts';
