@@ -119,7 +119,7 @@ GEM
       rack
     rails-assets-bootstrap (3.3.7)
       rails-assets-jquery (>= 1.9.1, < 4)
-    rails-assets-fontawesome (4.7.0)
+    rails-assets-fontawesome (4.3.0)
     rails-assets-jquery (3.1.1)
     rails-assets-lodash (4.17.4)
     rails-assets-modernizr (2.8.3)
@@ -157,7 +157,7 @@ DEPENDENCIES
   middleman-pry
   middleman-sprockets (>= 4.0.0.rc.1)
   rails-assets-bootstrap!
-  rails-assets-fontawesome!
+  rails-assets-fontawesome (= 4.3.0)!
   rails-assets-jquery!
   rails-assets-lodash!
   rails-assets-modernizr (= 2.8.3)!

@@ -17,6 +17,6 @@ source 'https://rails-assets.org' do
 	gem 'rails-assets-lodash'
 	gem 'rails-assets-modernizr', '2.8.3'
 	gem 'rails-assets-select2'
-	gem 'rails-assets-fontawesome'
+	gem 'rails-assets-fontawesome', '4.3.0'
 	gem 'rails-assets-bootstrap'
 end
