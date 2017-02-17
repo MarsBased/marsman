@@ -137,7 +137,7 @@ GEM
     rails-assets-fontawesome (4.7.0)
     rails-assets-jquery (3.1.1)
     rails-assets-lodash (4.17.4)
-    rails-assets-modernizr (3.3.1)
+    rails-assets-modernizr (2.8.3)
     rails-assets-select2 (4.0.3)
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
@@ -176,7 +176,7 @@ DEPENDENCIES
   rails-assets-fontawesome!
   rails-assets-jquery!
   rails-assets-lodash!
-  rails-assets-modernizr!
+  rails-assets-modernizr (= 2.8.3)!
   rails-assets-select2!
   sassc
 

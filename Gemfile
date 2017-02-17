@@ -16,7 +16,7 @@ gem 'middleman-pry'
 source 'https://rails-assets.org' do
 	gem 'rails-assets-jquery'
 	gem 'rails-assets-lodash'
-	gem 'rails-assets-modernizr'
+	gem 'rails-assets-modernizr', '2.8.3'
 	gem 'rails-assets-select2'
 	gem 'rails-assets-fontawesome'
 	gem 'rails-assets-bootstrap'
