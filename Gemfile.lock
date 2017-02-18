@@ -34,6 +34,8 @@ GEM
     fastimage (2.0.1)
       addressable (~> 2)
     ffi (1.9.17)
+    font-awesome-sass (4.7.0)
+      sass (>= 3.2)
     haml (4.0.7)
       tilt
     hamster (3.0.0)
@@ -119,7 +121,6 @@ GEM
       rack
     rails-assets-bootstrap (3.3.7)
       rails-assets-jquery (>= 1.9.1, < 4)
-    rails-assets-fontawesome (4.3.0)
     rails-assets-jquery (3.1.1)
     rails-assets-lodash (4.17.4)
     rails-assets-modernizr (2.8.3)
@@ -150,6 +151,7 @@ PLATFORMS
 
 DEPENDENCIES
   faker (~> 1.7.3)
+  font-awesome-sass (~> 4.7.0)
   middleman (>= 4.0.0)
   middleman-autoprefixer
   middleman-deploy (~> 2.0.0.pre.alpha)
@@ -157,7 +159,6 @@ DEPENDENCIES
   middleman-pry
   middleman-sprockets (>= 4.0.0.rc.1)
   rails-assets-bootstrap!
-  rails-assets-fontawesome (= 4.3.0)!
   rails-assets-jquery!
   rails-assets-lodash!
   rails-assets-modernizr (= 2.8.3)!

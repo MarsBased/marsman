@@ -3,7 +3,8 @@
 @import 'utilities/keyframes';
 @import 'utilities/normalize';
 
-@import 'fontawesome';
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 @import 'base/grid';
 @import 'base/fonts';
