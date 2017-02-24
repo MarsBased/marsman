@@ -2,8 +2,19 @@
 
 Frontend framework for starting new projects.
 
-Developed with Middleman (https://middlemanapp.com/).
-Uses Grunt to automatize SVG inline generation.
+Developed with Middleman (https://middlemanapp.com/). Uses Grunt to automatize SVG inline generation.
+
+## MarsMan Installation
+
+To use MarsMan as a template, init the project with the following command:
+
+```
+middleman init new_project -T marsbased/marsman
+```
+
+=======
+
+# Project README
 
 ## Development
 

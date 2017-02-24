@@ -1,25 +1,23 @@
 source 'https://rubygems.org'
 
-gem 'middleman', '~>3.3.10'
-gem 'middleman-livereload', '~> 3.1.0'
+gem 'sassc'
+gem 'faker', '~> 1.7.3'
+gem 'font-awesome-sass', '~> 4.7.0'
 
-gem 'bootstrap-sass', '~> 3.3.3', require: false
-gem 'font-awesome-sass', '~> 4.3.0', require: false
-
-gem 'modernizr-rails', require: false
-gem 'magnific-popup-rails', require: false
-
+#middleman gems
+gem 'middleman', '>= 4.0.0'
+gem 'middleman-livereload'
+gem 'middleman-sprockets', '>= 4.1.0'
+gem 'middleman4-sprockets3-sassc', '~> 0.0.4'
 gem 'middleman-autoprefixer'
-gem 'middleman-email', git: "git@github.com:MarsBased/middleman-email.git"
-
-gem 'jquery-middleman'
-
-gem 'faker', '~> 1.6.6'
-
-gem 'middleman-deploy', '~> 1.0'
+gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 gem 'middleman-pry'
+# gem 'middleman-email', git: "git@github.com:MarsBased/middleman-email.git"
 
 source 'https://rails-assets.org' do
+	gem 'rails-assets-jquery'
 	gem 'rails-assets-lodash'
+	gem 'rails-assets-modernizr', '2.8.3'
 	gem 'rails-assets-select2'
+	gem 'rails-assets-bootstrap'
 end
