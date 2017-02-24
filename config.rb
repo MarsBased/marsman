@@ -5,6 +5,7 @@ activate :sprockets
 activate :autoprefixer
 activate :pry
 activate :directory_indexes
+activate :sprockets3_sassc
 
 configure :development do
   activate :livereload, no_swf: true
