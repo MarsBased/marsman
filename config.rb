@@ -5,11 +5,11 @@ activate :sprockets
 activate :autoprefixer
 activate :pry
 activate :directory_indexes
+activate :sprockets3_sassc
 
 configure :development do
-  activate :livereload
+  activate :livereload, no_swf: true
 end
-
 
 ready do
   @pages = sitemap.resources.find_all{|p| p.source_file.match(/\.html/) }
@@ -27,13 +27,11 @@ ready do
   end
 end
 
-
 configure :build do
   ignore 'shapes/*'
   activate :asset_hash
   set :environment, 'production'
 end
-
 
 activate :deploy do |deploy|
   deploy.deploy_method = :rsync
@@ -42,7 +40,6 @@ activate :deploy do |deploy|
   deploy.user  = 'deploy'
   deploy.flags = '-avzp --chmod=+r'
 end
-
 
 # activate :email do |email|
 #   email.user = 'postmaster@mg.marsbased.com'
