@@ -57,7 +57,8 @@
 
   &__container {
     padding: 0;
-    margin: 2rem 0 0;
+    margin-left: -$gutter/2;
+    margin-right: -$gutter/2;
     display: flex;
     align-items: stretch;
     flex-wrap: wrap;
@@ -68,6 +69,8 @@
   &__item {
     font-size: $item--size;
     width: 1em;
+    margin-left: $gutter/2;
+    margin-right: $gutter/2;
     margin-bottom: 1rem;
   }
 
