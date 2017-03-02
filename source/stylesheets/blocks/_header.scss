@@ -8,10 +8,18 @@
 	background-color: $background-secondary;
 	min-height: $height-bp;
 	border-bottom: 1px solid $primary-light;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
 
 	@media (min-width: $grid-breakpoint){
 		min-height: $height;
+		body:not(.fixed) &{
+			position: static;
+		}
 	}
+
 
 	&__container {
 		@include container-fixed;

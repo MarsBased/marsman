@@ -25,9 +25,16 @@ body {
 
 .wrapper{
   position: relative;
-  height: 100%;
   padding-left: 0;
+  top: $header-height-breakpoint;
+  height: calc(100% - #{$header-height-breakpoint});
+  -webkit-overflow-scrolling: touch;
   overflow-y: auto;
+
+  @media (min-width: $grid-breakpoint){
+    height: auto;
+    top: initial;
+  }
 }
 
 ::selection { background: lighten($secondary,70%); }
