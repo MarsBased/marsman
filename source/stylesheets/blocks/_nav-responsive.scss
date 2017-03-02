@@ -1,0 +1,15 @@
+.nav-responsive {
+  $bkg: $secondary;
+  $width: $nav-responsive-width;
+
+  height: 100vh;
+  width: $width;
+  position: absolute;
+  left: -$width;
+  background: $bkg;
+
+  .pills{
+    background-color: transparent;
+    border-radius: 0;
+  }
+}
