@@ -13,7 +13,10 @@ $status-error:						#F9B13D;
 $success:         				$status-complete;
 $warning:         				$status-error;
 
-$gutter: 									2.4rem;
-$header-height:           7rem;
-$border-radius: 					3px;
-$shadow:									0 2px 4px rgba(black, .08);
+$gutter: 									  2.4rem;
+$header-height:             7rem;
+$header-height-breakpoint:  5rem;
+$nav-responsive-width:      26rem;
+
+$border-radius: 					  3px;
+$shadow:									  0 2px 4px rgba(black, .08);
