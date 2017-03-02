@@ -1,5 +1,5 @@
 .main-content {
-	min-height: 100vh;
+	min-height: calc(100vh - #{$header-height});
 	position: relative;
 	@extend .container;
 	padding-top: 3em;
