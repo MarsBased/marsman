@@ -1,0 +1,13 @@
+.nav-inline {
+  @extend .list-reset;
+  @extend .list-inline;
+  margin-bottom: 0;
+
+  a{
+    padding: .5em;
+
+    &.active{
+      text-decoration: underline
+    }
+  }
+}

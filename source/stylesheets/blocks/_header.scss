@@ -1,36 +1,77 @@
-$header--height: 4rem;
-$header--gutter: $gutter;
-
 .header {
+	$height: $header-height;
+  $gutter: $gutter;
+
+	display: flex;
 	background-color: $background-secondary;
-	min-height: $header--height;
-	padding-top: 1.5rem;
-	padding-bottom: 1.5rem;
-	border-bottom: 1px solid $primary;
+	min-height: $height;
+	border-bottom: 1px solid $primary-light;
 
 
 	&__container {
-		@extend .container;
-		display: table;
+		@include container-fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 	}
 
 	&__logo {
-		display: table-cell;
-		vertical-align: middle;
-		height: $header--height;
-		padding-left: $header--gutter/2;
-		padding-right: $header--gutter/2;
-		img {
+		height: $height - $gutter;
+		margin-right: $gutter;
+
+		img, svg {
 			height: 100%;
-			width: auto;
+			width: 13rem;
+		}
+	}
+
+	&__nav{
+		flex: 1;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		min-width: 400px;
+
+		> *:not(:last-child) {
+			margin-right: $gutter;
+		}
+	}
+
+	&__actions {
+		$spacing: $gutter/2;
+
+		text-align: right;
+		display: flex;
+		align-items: center;
+
+		> *:not(:last-child) {
+			margin-right: $spacing;
+		}
+
+		input.search {
+			max-width: 20rem;
+			min-width: 10rem;
 		}
 	}
 
 	&__user-info{
-		display: table-cell;
-		text-align: right;
-		vertical-align: middle;
-		padding-left: $header--gutter/2;
-		padding-right: $header--gutter/2;
+		$size: 3.2rem;
+
+		min-width: 5rem;
+
+		&::after{
+			@include fa-icon;
+			margin-left: .25em;
+			content: $fa-var-caret-down;
+			color: $primary;
+		}
+
+		img{
+			height: $size;
+			width: $size;
+			border-radius: 50%;
+			background-color: $secondary;
+			vertical-align: middle;
+		}
 	}
 }
