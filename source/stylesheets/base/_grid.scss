@@ -10,6 +10,8 @@ $container-sm:        768px;
 $container-md:        990px;
 $container-lg:        1240px;
 
+$grid-breakpoint:     $screen-md;
+
 @mixin clearfix() {
   &:before,
   &:after {
