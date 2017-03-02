@@ -4,4 +4,29 @@ body: whole-page-test
 layout: basic
 ---
 
-Text
+<div class="box">
+  <div class="box__header">
+    <hgroup>
+      <h1>Whole page text</h1>
+      <h4>Some information about MarsBased</h4>
+    </hgroup>
+  </div>
+  <div class="box__content">
+    <p><%= Faker::Lorem.paragraph(10) %></p>
+    <blockquote>
+    <%= Faker::Lorem.paragraph(2) %>
+    </blockquote>
+    <p><%= Faker::Lorem.paragraph(3) %></p>
+    <h2><%= Faker::ChuckNorris.fact %></h2>
+    <p><%= Faker::Lorem.paragraph(5) %></p>
+    <div class="row">
+      <div class="col-sm-6">
+        <h2><%= Faker::ChuckNorris.fact %></h2>
+        <p><%= Faker::Lorem.paragraph(5) %></p>
+      </div>
+      <div class="col-sm-6">
+        <%= image_tag(Faker::LoremPixel.image("600x600", false, 'fashion')) %>
+      </div>
+    </div>
+  </div>
+</div>
