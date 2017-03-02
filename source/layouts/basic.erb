@@ -1,0 +1,14 @@
+<% wrap_layout :layout do %>
+<%= partial 'partials/nav-responsive' %>
+<div class="wrapper">
+  <%= partial 'partials/header' %>
+	<div class="main-content">
+		<div class="main-content__container">
+      <%= yield %>
+    </div>
+		<i class="scroll-down active" data-scroll=".footer"></i>
+	</div>
+	<%= partial 'partials/footer' %>
+ </div>
+<% end %>
+
