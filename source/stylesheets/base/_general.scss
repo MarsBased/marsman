@@ -17,7 +17,9 @@ body {
   }
 
   &.open-menu{
-    transform: translateX($nav-responsive-width);
+    @media (max-width: $grid-breakpoint - 1){
+      transform: translateX($nav-responsive-width);
+    }
   }
 }
 
