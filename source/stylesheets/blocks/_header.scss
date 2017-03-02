@@ -1,12 +1,17 @@
 .header {
+	$this: '.header';
 	$height: $header-height;
+	$height-bp: $header-height-breakpoint;
   $gutter: $gutter;
 
 	display: flex;
 	background-color: $background-secondary;
-	min-height: $height;
+	min-height: $height-bp;
 	border-bottom: 1px solid $primary-light;
 
+	@media (min-width: $grid-breakpoint){
+		min-height: $height;
+	}
 
 	&__container {
 		@include container-fixed;
@@ -17,7 +22,16 @@
 
 	&__logo {
 		height: $height - $gutter;
-		margin-right: $gutter;
+		flex: 1;
+		text-align: center;
+		padding-top: .5rem;
+		padding-bottom: .5rem;
+		@media (min-width: $grid-breakpoint){
+			flex: initial;
+			margin-right: $gutter;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
 
 		img, svg {
 			height: 100%;
@@ -31,6 +45,9 @@
 		flex-wrap: nowrap;
 		align-items: center;
 		min-width: 400px;
+		@media (max-width: $grid-breakpoint - 1){
+			display: none;
+		}
 
 		> *:not(:last-child) {
 			margin-right: $gutter;
@@ -46,6 +63,12 @@
 
 		> *:not(:last-child) {
 			margin-right: $spacing;
+		}
+
+		> *:not(#{$this}__user-info){
+			@media (max-width: $grid-breakpoint - 1){
+				display: none;
+			}
 		}
 
 		input.search {

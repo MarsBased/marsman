@@ -1,9 +1,13 @@
 .main-content {
-	min-height: calc(100vh - #{$header-height});
+	min-height: calc(100vh - #{$header-height-breakpoint});
 	position: relative;
 	@extend .container;
 	padding-top: 3em;
 	padding-bottom: 3em;
+
+	@media (min-width: $grid-breakpoint){
+		min-height: calc(100vh - #{$header-height});
+	}
 
 	&__header {
 		text-align: center;
