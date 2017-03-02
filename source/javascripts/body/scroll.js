@@ -1,13 +1,26 @@
 (function () {
   'use strict';
 
-  var $element = $('[data-scroll]');
+  var $element = $('[data-scroll]'),
+      $scrollers = $('html,body,.wrapper');
 
   function scrollTo($e){
-    $('html,body,.wrapper').animate({
-        scrollTop: $e.offset().top},
+    $scrollers.animate({
+        scrollTop: $e.offset().top - $('.wrapper').offset().top},
         'slow');
   }
+
+
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        scrollTo(target)
+        return false;
+      }
+    }
+  });
 
   function scrollVisible($window) {
     $element.each(function(){
@@ -26,9 +39,13 @@
       scrollTo($($(this).data("scroll")));
     });
 
-    $(window).scroll(function(){
+    $scrollers.scroll(function(){
       scrollVisible($(this))
     });
+
+    $(window).scroll(function(){
+      scrollVisible($(this));
+    })
 
     scrollVisible($(window))
   }
