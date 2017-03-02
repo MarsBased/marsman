@@ -23,6 +23,13 @@ layout: basic
       <div class="col-sm-6">
         <h2><%= Faker::ChuckNorris.fact %></h2>
         <p><%= Faker::Lorem.paragraph(5) %></p>
+        <p><%= Faker::Lorem.paragraph(2) %></p>
+        <h3></h3>
+        <ul>
+          <li><%= Faker::GameOfThrones.character %></li>
+          <li><%= Faker::GameOfThrones.character %></li>
+          <li><%= Faker::GameOfThrones.character %></li>
+        </ul>
       </div>
       <div class="col-sm-6">
         <%= image_tag(Faker::LoremPixel.image("600x600", false, 'fashion')) %>
