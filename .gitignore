@@ -2,8 +2,6 @@
 /.bundle
 /vendor/bundle
 
-.ruby-version
-
 # Ignore the build directory
 /build
 
