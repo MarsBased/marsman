@@ -1,14 +1,31 @@
 * { box-sizing: border-box; }
 
+html{
+  height: 100%;
+}
+
 body {
   background-color: $background-primary;
 	min-width: 320px;
-	min-height: 100vh;
+	height: 100%;
+  overflow-x: hidden;
+  transition: transform .5s ease-out;
 
-  @media (min-width: $screen-sm){
+  @media (min-width: $grid-breakpoint){
     padding-left: 0;
     padding-right: 0;
   }
+
+  &.open-menu{
+    transform: translateX($nav-responsive-width);
+  }
+}
+
+.wrapper{
+  position: relative;
+  height: 100%;
+  padding-left: 0;
+  overflow-y: auto;
 }
 
 ::selection { background: lighten($secondary,70%); }

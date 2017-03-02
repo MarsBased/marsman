@@ -4,7 +4,7 @@
   var $element = $('[data-scroll]');
 
   function scrollTo($e){
-    $('html,body').animate({
+    $('html,body,.wrapper').animate({
         scrollTop: $e.offset().top},
         'slow');
   }
