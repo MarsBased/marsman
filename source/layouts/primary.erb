@@ -1,5 +1,6 @@
 <% wrap_layout :layout do %>
 	<div class="main-content">
+		<div class="main-content__container">
 		<header class="main-content__header">
 			<h1 class="sr-only">marsman-template</h1>
 			<a href="/">
@@ -7,6 +8,7 @@
 		  </a>
 		</header>
 		<%= yield %>
+		</div>
 		<i class="scroll-down active" data-scroll=".footer"></i>
 	</div>
 	<%= partial 'partials/footer' %>
