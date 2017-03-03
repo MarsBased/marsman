@@ -1,11 +1,20 @@
 .icon {
 	$this: '.icon';
+
 	@extend .fa;
 	text-decoration: none;
 
 	&:hover{
 		text-decoration: none;
 	}
+
+	&-loader {
+    animation-duration: .75s;
+    color: inherit;
+    @extend #{$this};
+    @extend .fa-spin;
+    @extend .fa-spinner;
+  }
 
 	&-edit {
 		@extend #{$this};
@@ -22,16 +31,52 @@
 		@extend .fa-chevron-right;
 	}
 
+	&-actions {
+		@extend #{$this};
+		@extend .fa-ellipsis-v;
+	}
+
 	&-close {
 		@extend #{$this};
 		@extend .fa-times;
 	}
 
-  &-loader {
-    animation-duration: .75s;
-    color: inherit;
-    @extend #{$this};
-    @extend .fa-spin;
-    @extend .fa-spinner;
-  }
+	&-search {
+		@extend #{$this};
+		@extend .fa-search;
+	}
+
+	&-filter {
+		@extend #{$this};
+		@extend .fa-filter;
+	}
+
+	&-add {
+		@extend #{$this};
+		@extend .fa-plus;
+	}
+
+	&-logout {
+		@extend #{$this};
+		@extend .fa-sign-out;
+	}
+
+	&-caret {
+		@extend #{$this};
+		@extend .fa-caret-down;
+
+		.dropdown.open & {
+			@extend .fa-caret-up;
+		}
+	}
+
+	&-on {
+		@extend #{$this};
+		@extend .fa-toggle-on;
+	}
+
+	&-off {
+		@extend #{$this};
+		@extend .fa-toggle-off;
+	}
 }
