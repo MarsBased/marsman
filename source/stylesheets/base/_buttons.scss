@@ -68,7 +68,7 @@ button{
 
   &-light{
     @include button($secondary-light, $secondary-lighter, transparent,
-     $secondary-light, lighten($secondary-light, 30%), $secondary-light);
+     $secondary-light, lighten($secondary-light, 45%), $secondary-light);
   }
 }
 
