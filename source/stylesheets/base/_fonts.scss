@@ -27,16 +27,16 @@ body {
 }
 
 @mixin content-blocks{
-  & + p, & + ul, & + ol, & + .content-block{
+  & + p, & + ul, & + ol, & + blockquote, & + .content-block{
    @content;
   }
 }
 
-p,ul,ol,.content-block{
+p,ul,ol,blockquote,.content-block{
   margin-top: 0;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.8em;
   @include content-blocks{
-    margin-top: -.5em;
+    margin-top: -.8em;
   }
 
 }
@@ -47,6 +47,17 @@ ul{
 
 li{
   margin-bottom: .25em;
+}
+
+blockquote {
+  border-left: 4px solid $primary;
+  padding-left: 1em;
+  font-size: $fs-h3;
+  font-weight: bold;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  max-width: 600px
 }
 
 h1,.h1{
