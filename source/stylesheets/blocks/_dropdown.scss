@@ -135,7 +135,7 @@
       display: block;
     }
 
-    &.right {
+    &.is-right {
       left: auto; // Reset the default from `.dropdown-menu`
       right: 0;
 
@@ -146,7 +146,7 @@
       }
     }
 
-    &.left {
+    &.is-left {
       left: 0;
       right: auto;
 
@@ -157,7 +157,7 @@
       }
     }
 
-    &.center {
+    &.is-center {
       left: 50%;
       transform: translateX(-50%);
       right: auto;
@@ -170,7 +170,7 @@
       }
     }
 
-    &.top{
+    &.is-top{
       top: auto;
       bottom: 100%;
       margin-bottom: 2px;
