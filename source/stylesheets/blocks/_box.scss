@@ -9,9 +9,6 @@
 	background: white;
 	border: 1px solid $this--border-color;
 	border-radius: $this--border-radius;
-	max-width: 940px;
-	margin-left: auto;
-	margin-right: auto;
 	margin-bottom: $gutter;
 
 	@include last-margin;
@@ -60,6 +57,12 @@
 		> * {
 			margin-left: .5em;
 		}
+	}
+
+	&--wide{
+		max-width: 940px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	&--transparent {
