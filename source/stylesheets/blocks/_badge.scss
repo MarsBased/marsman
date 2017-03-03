@@ -1,0 +1,26 @@
+.badge {
+	$this: '.badge';
+  $margin: .5em;
+
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: $primary;
+  color: white;
+  font-size: .9em;
+  padding: .1em .25em;
+  display: inline-block;
+  min-width: 1.5em;
+  text-align: center;
+  border-radius: $border-radius;
+	text-decoration: none;
+  margin-left: $margin;
+  margin-right: $margin;
+
+  * > &:last-child {
+    margin-right: 0;
+  }
+
+  * > &:first-child {
+    margin-left: 0;
+  }
+}
