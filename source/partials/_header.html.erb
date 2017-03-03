@@ -1,0 +1,29 @@
+<header class="header">
+  <div class="header__container">
+    <button class="btn-collapse">
+      <span>menu</span>
+    </button>
+    <div class="header__logo">
+      <%= svg('marsman-template') %>
+    </div>
+    <nav class="header__nav">
+      <div class="header__lenguages">
+        <button class="btn">
+          ES <i class="icon-caret"></i>
+        </button>
+      </div>
+      <ul class="nav-inline">
+        <li class="active"><a href="/">Shop</a></li>
+        <li><a href="/">Company</a></li>
+        <li><a href="/">Platform</a></li>
+      </ul>
+    </nav>
+    <div class="header__actions">
+      <input type="text" class="search" placeholder="Search..." >
+      <button class="btn-primary">Upload</button>
+      <button class="header__user-info">
+        <%= image_tag('avatar.png')%>
+      </button>
+    </div>
+  </div>
+</header>

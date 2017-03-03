@@ -26,45 +26,74 @@ body {
   line-height: $line-height-base;
 }
 
-p{
+@mixin content-blocks{
+  & + p, & + ul, & + ol, & + blockquote, & + .content-block{
+   @content;
+  }
+}
+
+p,ul,ol,blockquote,.content-block{
   margin-top: 0;
-  margin-bottom: .8em
+  margin-bottom: 1.8em;
+  @include content-blocks{
+    margin-top: -.8em;
+  }
+
+}
+
+ul{
+  padding-left: 1.1em;
+}
+
+li{
+  margin-bottom: .25em;
+}
+
+blockquote {
+  border-left: 4px solid $primary;
+  padding-left: 1em;
+  font-size: $fs-h3;
+  font-weight: bold;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  max-width: 600px
 }
 
 h1,.h1{
   font-size: $fs-h1;
   margin-top: 0;
-  margin-bottom: .8em
+  margin-bottom: 1rem;
 }
 
 h2,.h2{
   font-size: $fs-h2;
   margin-top: 0;
-  margin-bottom: .8em
+  margin-bottom: 1rem;
 }
 
 h3,.h3{
   font-size: $fs-h3;
   margin-top: 0;
-  margin-bottom: .8em
+  margin-bottom: 1rem
 }
 
 h4,.h4{
   font-size: $fs-h3;
   margin-top: 0;
-  margin-bottom: .8em
+  margin-bottom: 1rem
 }
 
 h5,.h5{
   font-size: $fs-h3;
   margin-top: 0;
-  margin-bottom: .8em
+  margin-bottom: 1rem
 }
 
 h6,.h6{
   font-size: $fs-h3;
   margin-top: 0;
-  margin-bottom: .8em
+  margin-bottom: 1rem
 }
 
 //extend sizes

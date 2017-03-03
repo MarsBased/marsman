@@ -1,0 +1,43 @@
+.nav-responsive {
+  $bkg: $secondary;
+  $width: $nav-responsive-width;
+
+  height: 100vh;
+  width: $width;
+  position: absolute;
+  left: -$width;
+  background: $bkg;
+
+  &__header{
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    min-height: $header-height-breakpoint;
+    border-bottom: 1px solid rgba($primary,.2);
+  }
+
+  .pills{
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+
+    &__link {
+      border: 0;
+      &.active,
+      &:hover{
+        color: white;
+      }
+      &::before{
+        left: -.3em;
+			  width: .3em;
+      }
+    }
+
+    > *:nth-child(even) {
+      background-color: rgba(white, .05);
+    }
+  }
+
+}

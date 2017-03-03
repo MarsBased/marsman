@@ -1,9 +1,16 @@
 .main-content {
-	min-height: 100vh;
+	$padding: 3rem;
+
+	min-height: 100%;
 	position: relative;
 	@extend .container;
-	padding-top: 3em;
-	padding-bottom: 3em;
+	padding-top: $padding;
+	padding-bottom: $padding;
+
+	@media (min-width: $grid-breakpoint){
+		padding-top: $padding;
+		min-height: calc(100vh - #{$header-height});
+	}
 
 	&__header {
 		text-align: center;
