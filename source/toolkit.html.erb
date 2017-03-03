@@ -280,6 +280,46 @@ body: toolkit
 						</div>
 						<div class="col-sm-4">
 							<h2>Dropdown</h2>
+							<p>
+							<div class="dropdown open">
+								<button class="btn-primary" data-toggle="dropdown">
+									User info
+								</button>
+								<ul class="dropdown-menu right" aria-labelledby="dropdown-user">
+									<li class="dropdown-header">
+										Signed in as <br>
+										<strong><%= Faker::GameOfThrones.character %></strong>
+									</li>
+									<li role="separator" class="divider"></li>
+									<li>
+										<%= link_to('Your profile', 'whole-page-text') %>
+									</li>
+									<li>
+										<%= link_to('<i class="icon-logout"></i> Sign out', 'sign-in') %>
+									</li>
+								</ul>
+							</div>
+							</p>
+							<p>
+							<div class="dropdown no-icon">
+								<a href="javascript:void(0)" data-toggle="dropdown">
+									Link with no-icon align center
+								</a>
+								<ul class="dropdown-menu center top" aria-labelledby="dropdown-user">
+									<li class="dropdown-header">
+										Signed in as <br>
+										<strong><%= Faker::GameOfThrones.character %></strong>
+									</li>
+									<li role="separator" class="divider"></li>
+									<li>
+										<%= link_to('Your profile', 'whole-page-text') %>
+									</li>
+									<li>
+										<%= link_to('<i class="icon-logout"></i> Sign out', 'sign-in') %>
+									</li>
+								</ul>
+							</div>
+							</p>
 						</div>
 					</div>
 				</div>

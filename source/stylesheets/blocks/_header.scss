@@ -20,7 +20,6 @@
 		}
 	}
 
-
 	&__container {
 		@include container-fixed;
     display: flex;
@@ -47,7 +46,7 @@
 		}
 	}
 
-	&__nav{
+	&__nav {
 		flex: 1;
 		display: flex;
 		flex-wrap: nowrap;
@@ -89,13 +88,6 @@
 		$size: 3.2rem;
 
 		min-width: 5rem;
-
-		&::after{
-			@include fa-icon;
-			margin-left: .25em;
-			content: $fa-var-caret-down;
-			color: $primary;
-		}
 
 		img{
 			height: $size;

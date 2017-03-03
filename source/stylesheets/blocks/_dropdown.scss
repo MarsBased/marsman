@@ -1,0 +1,205 @@
+.dropdown {
+  $this:                  '.dropdown';
+  $zindex:                1000;
+  $bkg:                   #fff;
+  $border:                lighten($primary,10%);
+  $padding-top:           .4em;
+  $padding:               $padding-top 1em;
+  $bkg-divider:           $border;
+  $link-color:            $secondary;
+  $link-hover-color:      $primary;
+  $link-hover-bkg:        lighten($secondary-lighter,5%);
+  $link-active-color:     $primary;
+  $link-active-bkg:       $bkg ;
+  $link-disabled-color:   $secondary-light ;
+  $header-color:          $secondary-light ;
+  $caret-color:           #000 ;
+
+  position: relative;
+  display: inline-block;
+
+  &:not(.no-icon) > *:first-child {
+    &::after{
+      @include fa-icon;
+      margin-left: .25em;
+      content: $fa-var-caret-down;
+      transition: all .3s ease-out;
+      opacity: .8
+    }
+
+    &:hover{
+      &::after{
+        opacity: 1
+      }
+    }
+  }
+
+  &.open > *:first-child::after{
+    transform: rotate(-180deg)
+  }
+
+  &-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: $zindex;
+    display: none;
+    float: left;
+    min-width: 10em;
+    padding: $padding-top 0;
+    margin: .7em 0 0;
+    list-style: none;
+    text-align: left;
+    background-color: $bkg;
+    border: 1px solid $border;
+    border-radius: $border-radius;
+    box-shadow: $shadow;
+    background-clip: padding-box;
+
+    &::before,
+    &::after{
+      font-size: 10px;
+      content: "";
+      position: absolute;
+      top: -.9em;
+      left: 1em;
+      border-width: 0 1em 1em;
+      border-style: solid;
+      border-color: $bkg transparent;
+      display: block;
+      width: 0;
+    }
+
+    &::before{
+      margin-top: -1px;
+      border-color: $border transparent;
+    }
+
+    .divider {
+      height: 1px;
+      margin-top: $padding-top;
+      margin-bottom: $padding-top;
+      background-color: $bkg-divider;
+    }
+
+    li{
+      margin: 0;
+    }
+
+    > li {
+      > a {
+        display: block;
+        padding: $padding;
+        clear: both;
+        font-weight: normal;
+        color: $link-color;
+        white-space: nowrap; // prevent links from randomly breaking onto new lines
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          color: $link-hover-color;
+          background-color: $link-hover-bkg;
+        }
+      }
+    }
+
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $link-active-color;
+        text-decoration: none;
+        outline: 0;
+        background-color: $link-active-bkg;
+      }
+    }
+
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $link-disabled-color;
+      }
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        background-color: transparent;
+        background-image: none; // Remove CSS gradient
+        //@include reset-filter;
+        cursor: not-allowed;
+      }
+    }
+
+    .open > & {
+      display: block;
+    }
+
+    &.right {
+      left: auto; // Reset the default from `.dropdown-menu`
+      right: 0;
+
+      &::before,
+      &::after{
+        left: auto;
+        right: 1em;
+      }
+    }
+
+    &.left {
+      left: 0;
+      right: auto;
+
+      &::before,
+      &::after{
+        right: auto;
+        left: 1em;
+      }
+    }
+
+    &.center {
+      left: 50%;
+      transform: translateX(-50%);
+      right: auto;
+
+      &::before,
+      &::after{
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &.top{
+      top: auto;
+      bottom: 100%;
+      margin-bottom: 2px;
+      &::before,
+      &::after{
+        top: auto;
+        bottom: -.9em;
+        border-width: 1em 1em 0;
+      }
+      &::before{
+        margin-top: 0px;
+        margin-bottom: -1px;
+      }
+    }
+  }
+
+  &-backdrop {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: ($zindex - 10);
+  }
+
+  &-header,
+  &-content {
+    display: block;
+    padding: $padding;
+    white-space: nowrap; // as with > li > a
+  }
+}
