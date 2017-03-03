@@ -1,28 +1,28 @@
 .box {
 	$this: '.box';
-	$this--padding: $gutter;
-	$this--border-color: $secondary-lighter;
-	$this__header--bg-color: $background-primary;
-	$this--border-radius: 8px;
+	$padding: $gutter;
+	$border-color: $secondary-lighter;
+	$header-bkg-color: $background-primary;
+	$border-radius: 8px;
 
-	padding: $this--padding;
+	padding: $padding;
 	background: white;
-	border: 1px solid $this--border-color;
-	border-radius: $this--border-radius;
+	border: 1px solid $border-color;
+	border-radius: $border-radius;
 	margin-bottom: $gutter;
 
 	@include last-margin;
 
 	& > *:first-child {
- 		margin: -#{$this--padding} -#{$this--padding} 0;
+ 		margin: -#{$padding} -#{$padding} 0;
 		min-height: 7rem;
 	}
 
 	&__header {
 		min-height: 7rem;
-		padding: $this--padding/2 $this--padding;
-		background-color: $this__header--bg-color;
-		border-bottom: 1px solid $this--border-color;
+		padding: $padding/2 $padding;
+		background-color: $header-bkg-color;
+		border-bottom: 1px solid $border-color;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -35,20 +35,20 @@
 	}
 
 	&__content {
-		padding: $this--padding $this--padding 0;
-		margin-left: -$this--padding;
-		margin-right: -$this--padding;
-		margin-bottom: $this--padding;
+		padding: $padding $padding 0;
+		margin-left: -$padding;
+		margin-right: -$padding;
+		margin-bottom: $padding;
 		position: relative;
 		@include last-margin;
 	}
 
 	&__footer {
 		border-top: 1px solid $secondary-lighter;
-		padding: $this--padding;
-		margin-left: -#{$this--padding};
-		margin-right: -#{$this--padding};
-		margin-bottom: -#{$this--padding} !important;
+		padding: $padding;
+		margin-left: -#{$padding};
+		margin-right: -#{$padding};
+		margin-bottom: -#{$padding} !important;
 		@include last-margin;
 	}
 
@@ -59,7 +59,7 @@
 		}
 	}
 
-	&--wide{
+	&.is-wide{
 		max-width: 940px;
 		margin-left: auto;
 		margin-right: auto;
