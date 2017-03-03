@@ -3,6 +3,7 @@
 
 	@extend .fa;
 	text-decoration: none;
+	vertical-align: middle;
 
 	&:hover{
 		text-decoration: none;
@@ -19,6 +20,11 @@
 	&-edit {
 		@extend #{$this};
 		@extend .fa-pencil;
+	}
+
+	&-cart {
+		@extend #{$this};
+		@extend .fa-shopping-cart;
 	}
 
 	&-del {
