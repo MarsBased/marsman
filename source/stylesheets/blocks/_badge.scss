@@ -24,3 +24,16 @@
     margin-left: 0;
   }
 }
+
+[data-badge] {
+  padding-right: 4.5rem !important;
+
+  &::after{
+    @extend .badge;
+    content: attr(data-badge);
+    position: absolute;
+    right: $gutter/2;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
