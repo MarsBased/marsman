@@ -26,13 +26,14 @@
 }
 
 [data-badge] {
-  padding-right: 4.5rem !important;
+  position: relative;
+  padding-right: 3.5em !important;
 
   &::after{
     @extend .badge;
     content: attr(data-badge);
     position: absolute;
-    right: $gutter/2;
+    right: 1em;
     top: 50%;
     transform: translateY(-50%);
   }
