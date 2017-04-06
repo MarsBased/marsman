@@ -52,7 +52,7 @@
 
 		@each $icon in $icons {
 		  &--#{$icon} {
-		  	@extend .btn-rounded;
+		  	@extend .btn-icon;
 				@extend .fa;
 				@extend .fa-#{$icon};
 		  }

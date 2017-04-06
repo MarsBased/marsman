@@ -1,12 +1,33 @@
-$buttons--fs: $fs-base;
+%btn {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0; // For input.btn
+  font-weight: normal;
+  text-align: center;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid transparent;
+  user-select: none;
+  max-width: 100%;
+  transition: all .2s ease-out;
 
-@mixin button($color, $bg, $border: transparent, $color--active: $color,
+  &.is-block{
+    width: 100%;
+    min-width: auto;
+    margin-bottom: 1em;
+  }
+
+  &.is-wide{
+    min-width: 12em;
+  }
+}
+
+@mixin button-color($color, $bg, $border: transparent, $color--active: $color,
  $bg--active: darken($bg, 15%), $border--active: $border) {
-  @extend %btn;
   color: $color;
   background-color: $bg;
   border-color: $border;
-  //min-width: 12em;
 
   &:hover {
     color: $color--active;
@@ -54,40 +75,6 @@ button{
   }
 }
 
-.btn-primary{
-  @include button(white,$primary);
-
-  &-light{
-    @include button($primary,$primary-lighter, transparent,
-     $primary, lighten($primary, 30%), $primary);
-  }
-}
-
-.btn-secondary{
-  @include button(white, $secondary-light);
-
-  &-light{
-    @include button($secondary-light, $secondary-lighter, transparent,
-     $secondary-light, lighten($secondary-light, 45%), $secondary-light);
-  }
-}
-
-%btn {
-  @include button-size(.3em, 1em, inherit, 1.4em, 3px);
-  display: inline-block;
-  vertical-align: middle;
-  margin-bottom: 0; // For input.btn
-  font-weight: normal;
-  text-align: center;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  border: 1px solid transparent;
-  user-select: none;
-  max-width: 100%;
-  transition: all .2s ease-out;
-}
-
 .btn{
   @extend %btn;
   &:hover,
@@ -97,17 +84,33 @@ button{
   }
 }
 
-.btn-block{
-  width: 100%;
-  min-width: auto;
-  margin-bottom: 1em;
+.btn-primary{
+  @extend %btn;
+  @include button-color(white,$primary);
+  @include button-size(.3em, 1em, inherit, 1.4em, 3px);
 }
 
-.btn-wide{
-  min-width: 12em;
+.btn-primary-light{
+  @extend %btn;
+  @include button-color($primary,$primary-lighter, transparent,
+    $primary, lighten($primary, 30%), $primary);
+  @include button-size(.3em, 1em, inherit, 1.4em, 3px);
 }
 
-.btn-rounded{
+.btn-secondary{
+  @extend %btn;
+  @include button-color(white, $secondary-light);
+  @include button-size(.3em, 1em, inherit, 1.4em, 3px);
+}
+
+.btn-secondary-light{
+  @extend %btn;
+  @include button-color($secondary-light, $secondary-lighter, transparent,
+    $secondary-light, lighten($secondary-light, 45%), $secondary-light);
+  @include button-size(.3em, 1em, inherit, 1.4em, 3px);
+}
+
+.btn-icon{
   @extend %btn;
   @include button-size(0, 0, 1em, 2.2em, 50%);
   color: $secondary-light;
@@ -123,14 +126,4 @@ button{
     text-decoration: none;
     opacity: 1;
   }
-}
-
-.btn-facebook {
-  @include button(white,#286B99);
-  @extend .btn-block;
-}
-
-.btn-twitter{
-  @include button(white,#3CB1E7);
-  @extend .btn-block;
 }
