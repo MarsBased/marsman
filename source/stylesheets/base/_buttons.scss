@@ -2,7 +2,7 @@ $buttons--fs: $fs-base;
 
 @mixin button($color, $bg, $border: transparent, $color--active: $color,
  $bg--active: darken($bg, 15%), $border--active: $border) {
-  @extend .btn;
+  @extend %btn;
   color: $color;
   background-color: $bg;
   border-color: $border;
@@ -72,7 +72,7 @@ button{
   }
 }
 
-.btn {
+%btn {
   @include button-size(.3em, 1em, inherit, 1.4em, 3px);
   display: inline-block;
   vertical-align: middle;
@@ -89,7 +89,7 @@ button{
 }
 
 .btn{
-  @extend .btn;
+  @extend %btn;
   &:hover,
   &.active,
   &:focus{
@@ -108,7 +108,7 @@ button{
 }
 
 .btn-rounded{
-  @extend .btn;
+  @extend %btn;
   @include button-size(0, 0, 1em, 2.2em, 50%);
   color: $secondary-light;
   border: 1px solid $secondary-lighter;
