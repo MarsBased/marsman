@@ -1,88 +1,87 @@
-.icon {
-	$this: '.icon';
-
-	@extend .fa;
+%icon {
+	@include fa-icon;
 	text-decoration: none;
 	vertical-align: middle;
 
 	&:hover{
 		text-decoration: none;
 	}
+}
 
-	&-loader {
-    animation-duration: .75s;
-    color: inherit;
-    @extend #{$this};
-    @extend .fa-spin;
-    @extend .fa-spinner;
-  }
 
-	&-edit {
-		@extend #{$this};
-		@extend .fa-pencil;
+.icon-loader {
+	animation-duration: .75s;
+	color: inherit;
+	@extend %icon;
+	@extend .fa-spin;
+	@extend .fa-spinner;
+}
+
+.icon-edit {
+	@extend %icon;
+	@extend .fa-pencil;
+}
+
+.icon-cart {
+	@extend %icon;
+	@extend .fa-shopping-cart;
+}
+
+.icon-del {
+	@extend %icon;
+	@extend .fa-trash;
+}
+
+.icon-detail {
+	@extend %icon;
+	@extend .fa-chevron-right;
+}
+
+.icon-actions {
+	@extend %icon;
+	@extend .fa-ellipsis-v;
+}
+
+.icon-close {
+	@extend %icon;
+	@extend .fa-times;
+}
+
+.icon-search {
+	@extend %icon;
+	@extend .fa-search;
+}
+
+.icon-filter {
+	@extend %icon;
+	@extend .fa-filter;
+}
+
+.icon-add {
+	@extend %icon;
+	@extend .fa-plus;
+}
+
+.icon-logout {
+	@extend %icon;
+	@extend .fa-sign-out;
+}
+
+.icon-caret {
+	@extend %icon;
+	@extend .fa-caret-down;
+
+	.dropdown.open .icon {
+		@extend .fa-caret-up;
 	}
+}
 
-	&-cart {
-		@extend #{$this};
-		@extend .fa-shopping-cart;
-	}
+.icon-on {
+	@extend %icon;
+	@extend .fa-toggle-on;
+}
 
-	&-del {
-		@extend #{$this};
-		@extend .fa-trash;
-	}
-
-	&-detail {
-		@extend #{$this};
-		@extend .fa-chevron-right;
-	}
-
-	&-actions {
-		@extend #{$this};
-		@extend .fa-ellipsis-v;
-	}
-
-	&-close {
-		@extend #{$this};
-		@extend .fa-times;
-	}
-
-	&-search {
-		@extend #{$this};
-		@extend .fa-search;
-	}
-
-	&-filter {
-		@extend #{$this};
-		@extend .fa-filter;
-	}
-
-	&-add {
-		@extend #{$this};
-		@extend .fa-plus;
-	}
-
-	&-logout {
-		@extend #{$this};
-		@extend .fa-sign-out;
-	}
-
-	&-caret {
-		@extend #{$this};
-		@extend .fa-caret-down;
-
-		.dropdown.open & {
-			@extend .fa-caret-up;
-		}
-	}
-
-	&-on {
-		@extend #{$this};
-		@extend .fa-toggle-on;
-	}
-
-	&-off {
-		@extend #{$this};
-		@extend .fa-toggle-off;
-	}
+.icon-off {
+	@extend %icon;
+	@extend .fa-toggle-off;
 }
