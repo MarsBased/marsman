@@ -150,7 +150,6 @@ input[disabled]{
 
 input:not([type="submit"]) {
   @extend %form-item;
-  height: 2em;
 
   &.search {
     @extend %input-bg;
