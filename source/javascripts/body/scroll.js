@@ -5,11 +5,18 @@
       $scrollers = $('html,body,.wrapper');
 
   function scrollTo($e){
-    $scrollers.animate({
-        scrollTop: $e.offset().top - $('.wrapper').offset().top},
-        'slow');
-  }
+    var header_position = $('header.header').css('position');
 
+    if(header_position == 'fixed'){
+      $scrollers.animate({
+          scrollTop: $e.offset().top - $('.wrapper').offset().top},
+          'slow');
+    }else{
+      $scrollers.animate({
+          scrollTop: $e.offset().top},
+          'slow');
+    }
+  }
 
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
