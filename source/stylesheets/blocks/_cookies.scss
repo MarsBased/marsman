@@ -1,0 +1,117 @@
+// Cookies frame
+
+.cookies-container {
+  display: none;
+
+  .cookies-show & {
+    display: block;
+  }
+}
+
+.cookies {
+  background-color: white;
+  padding: 15px 0px;
+  text-align: center;
+  position: fixed;
+  width: 90%;
+  max-width: 420px;
+  z-index: 1000;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: auto;
+  transform: none;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: 0 0 6px 0 rgba(black, 0.1);
+
+  div {
+    @media (min-width: $screen-sm) {
+      display: inline-block;
+    }
+  }
+  .container {
+    margin: auto;
+    display: block;
+  }
+  .icon {
+    text-align: center;
+    margin-top: 25px;
+    display: none;
+    vertical-align: middle;
+    margin-bottom: 15px;
+
+    @media (min-width: $screen-sm) {
+      margin-top: auto;
+      margin-bottom: auto;
+      width: 10%;
+      display: inline-block;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 7%;
+    }
+  }
+  img {
+    width: 60px;
+    height: auto;
+    display: inline-block;
+
+    @media (min-width: $screen-sm) {
+      width: 50px;
+    }
+  }
+  .message {
+    margin-bottom: 30px;
+    padding: 0 20px;
+    vertical-align: middle;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: auto;
+      padding: 0 1rem;
+      width: 70%;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 73%;
+    }
+
+    p {
+      margin-bottom: 0px;
+      text-align: justify;
+    }
+  }
+  .understood {
+    text-align: center;
+    border-top: 1px solid #EEEEEE;
+
+    @media (min-width: $screen-sm) {
+      padding-top: 10px;
+      border-top: 0;
+      width: 19%;
+      text-align: right;
+    }
+
+    a {
+      margin: 10px auto;
+
+      @media (min-width: $screen-sm) {
+        margin: auto;
+      }
+    }
+  }
+}
+
+.btn-outline {
+  @media (min-width: $screen-sm) {
+    border: 2px solid $primary;
+    border-radius: 4px;
+  }
+}
+
+.btn-outline:hover {
+  @media (min-width: $screen-sm) {
+    color: white;
+    background: $primary;
+  }
+}

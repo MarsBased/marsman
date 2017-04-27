@@ -1,0 +1,19 @@
+<section class="cookies-container">
+  <div class="overlay"></div>
+  <div class="cookies">
+    <div class="container">
+      <div class="icon">
+        <%= image_tag 'cookies-icon.svg', alt: 'Cookies icon', title: 'Cookies icon', class: 'center-block' %>
+      </div>
+      <div class="message">
+        <p><%= data.cookies.message_en %></p>
+      </div>
+      <div class="understood">
+        <a href="#" class="btn btn-primary btn-sm" title="Understood"
+          role="button" id="acceptCookies">
+          <%= data.cookies.button_en %>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
