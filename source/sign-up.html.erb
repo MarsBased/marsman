@@ -5,33 +5,33 @@ versions: error
 body: sign-in
 ---
 
-<div class="box--form">
-	<hgroup class="box__header">
-		<h1>Sign up</h1>
-		<h4>Log in to your account</h4>
-	</hgroup>
-	<div class="box__content">
-		<form action="_error">
+<div class="container-xs">
+	<div class="box">
+		<div class="box__header is-center">
+			<h1>Sign up</h1>
+			<h4>Log in to your account</h4>
+		</div>
+		<form class="box__content" action="_error">
 			<div class="form-group">
 				<input type="text" class="required <%= version('error','success') %>"
-				 name="email" placeholder="Pick a username"
-				  value="<%= version('error','javier.artero') %>">
+				name="email" placeholder="Pick a username"
+					value="<%= version('error','javier.artero') %>">
 			</div>
 			<div class="form-group">
 				<input type="email" class="required <%= version('error','success') %>"
-				 name="email" placeholder="Your email address"
-				  value="<%= version('error','javier.artero@marsbased.com') %>">
+				name="email" placeholder="Your email address"
+					value="<%= version('error','javier.artero@marsbased.com') %>">
 			</div>
 			<div class="form-group">
 				<input type="password" class="required <%= version('error','warning') %>"
-				 name="password" placeholder="Create a password" >
+				name="password" placeholder="Create a password" >
 				<div class="info-field">Password must be at least eight characters</div>
 			</div>
 			<div class="form-group">
 				<input type="checkbox" name="termsandconditions" id="terms" value="terms"
 						class="<%= version('error','warning')%>">
 				<label for="terms">I agree to the
-				 <a href="/terms-and-conditions" target="_blank">terms and conditions</a>
+				<a href="/terms-and-conditions" target="_blank">terms and conditions</a>
 				</label>
 				<% if version('error') %>
 				<div class="info-field">You have to accept the terms and conditions</div>
@@ -41,11 +41,10 @@ body: sign-in
 				Sign up
 			</button>
 		</form>
-	</div>
-	<div class="box__footer align-center">
-		<a class="btn-primary-light is-wide" href="/sign-in/">
-			Sign in
-		</a>
+		<div class="box__footer align-center">
+			<a class="btn-primary-light is-wide" href="/sign-in/">
+				Sign in
+			</a>
+		</div>
 	</div>
 </div>
-

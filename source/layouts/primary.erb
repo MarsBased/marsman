@@ -1,16 +1,18 @@
 <% wrap_layout :layout do %>
-	<div class="main-content">
-		<div class="main-content__container">
-		<header class="main-content__header">
-			<h1 class="sr-only">marsman-template</h1>
-			<a href="/">
-		  <%= svg('marsman-template-negative') %>
-		  </a>
-		</header>
-		<%= yield %>
+	<div class="wrapper">
+		<div class="main-content">
+			<div class="main-content__container">
+			<header class="main-content__header">
+				<h1 class="sr-only">marsman-template</h1>
+				<a href="/">
+				<%= svg('marsman-template-negative') %>
+				</a>
+			</header>
+			<%= yield %>
+			</div>
+			<i class="scroll-down active" data-scroll=".footer"></i>
 		</div>
-		<i class="scroll-down active" data-scroll=".footer"></i>
+		<%= partial 'partials/footer' %>
 	</div>
-	<%= partial 'partials/footer' %>
 <% end %>
 

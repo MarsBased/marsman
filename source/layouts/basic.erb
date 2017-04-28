@@ -1,14 +1,14 @@
 <% wrap_layout :layout do %>
-<%= partial 'partials/nav-responsive' %>
-<%= partial 'partials/header' %>
-<div class="wrapper">
-	<div class="main-content">
-		<div class="main-content__container">
-      <%= yield %>
-    </div>
-		<i class="scroll-down active" data-scroll=".footer"></i>
+	<%= partial 'partials/nav-responsive' %>
+	<%= partial 'partials/header' %>
+	<div class="wrapper">
+		<div class="main-content">
+			<div class="main-content__container">
+				<%= yield %>
+			</div>
+			<i class="scroll-down active" data-scroll=".footer"></i>
+		</div>
+		<%= partial 'partials/footer' %>
 	</div>
-	<%= partial 'partials/footer' %>
- </div>
 <% end %>
 

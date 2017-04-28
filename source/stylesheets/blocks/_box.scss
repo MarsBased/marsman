@@ -1,8 +1,6 @@
 .box {
-	$this: '.box';
 	$padding: $gutter;
 	$border-color: $secondary-lighter;
-	$header-bkg-color: $background-primary;
 	$border-radius: 8px;
 
 	padding: $padding;
@@ -15,19 +13,26 @@
 
 	& > *:first-child {
  		margin: -#{$padding} -#{$padding} 0;
-		min-height: 7rem;
 	}
 
 	&__header {
 		min-height: 7rem;
 		padding: $padding/2 $padding;
-		background-color: $header-bkg-color;
+		background-color: $background-primary;
 		border-bottom: 1px solid $border-color;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
+
+		&.is-center{
+			justify-content: center;
+			text-align: center;
+			> *{
+				width: 100%;
+			}
+		}
 	}
 
 	&__title {
@@ -65,8 +70,7 @@
 		margin-right: auto;
 	}
 
-	&--transparent {
-		@extend .box;
+	&.is-transparent {
 		background-color: transparent;
 		border-color: transparent;
 		box-shadow: none;
@@ -74,58 +78,13 @@
 		padding-top: 0;
 		padding-bottom: 0;
 
-		#{$this}__header {
+		.box__header {
 			padding-bottom: 0;
 			border-color: transparent;
 		}
 
-		#{$this}__footer {
+		.box__footer {
 			border-color: transparent;
-		}
-	}
-
-	&--primary {
-		@extend .box;
-		#{$this}__header {
-			color: white;
-			background-color: $primary;
-		}
-	}
-
-	&--secondary {
-		@extend .box;
-		#{$this}__header {
-			color: white;
-			background-color: $secondary;
-		}
-	}
-
-	&--secondary-light {
-		@extend .box;
-		#{$this}__header {
-			color: white;
-			background-color: $secondary-light;
-		}
-	}
-
-	&--form {
-		@extend .box;
-		max-width: 460px;
-		margin-left: auto;
-		margin-right: auto;
-		box-shadow: 0 16px 33px rgba(black, .28);
-
-		.box__header {
-			display: block;
-			text-align: center;
-		}
-
-		.box__content {
-			max-width: 308px;
-			padding-left: 0;
-			padding-right: 0;
-			margin-left: auto;
-			margin-right: auto;
 		}
 	}
 

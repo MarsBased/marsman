@@ -6,7 +6,7 @@ $screen-sm:           768px;
 $screen-md:           992px;
 $screen-lg:           1140px;
 
-$container-sm:        768px;
+$container-xs:        460px;
 $container-sm:        768px;
 $container-md:        990px;
 $container-lg:        1240px;
@@ -276,6 +276,23 @@ $grid-breakpoint:     $screen-md;
   @media (min-width: $screen-lg) {
     max-width: $container-lg;
   }
+}
+
+.container-xs {
+  @include container-fixed;
+  max-width: $container-xs;
+}
+.container-sm {
+  @include container-fixed;
+  max-width: $container-sm;
+}
+.container-md {
+  @include container-fixed;
+  max-width: $container-md;
+}
+.container-lg {
+  @include container-fixed;
+  max-width: $container-lg;
 }
 
 .container-fluid {

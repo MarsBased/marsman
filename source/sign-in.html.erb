@@ -5,20 +5,20 @@ versions: error
 body: sign-in
 ---
 
-<div class="box--form">
-	<hgroup class="box__header">
-		<h1>Sign in</h1>
-		<h4>Log in to your account</h4>
-	</hgroup>
-	<div class="box__content">
-		<form action="_error">
+<div class="container-xs">
+	<div class="box">
+		<hgroup class="box__header is-center">
+			<h1>Sign in</h1>
+			<h4>Log in to your account</h4>
+		</hgroup>
+		<form class="box__content" action="_error">
 			<div class="form-group">
 				<input type="email" class="required <%= version('error','success') %>"
-				 name="email" placeholder="Your email address" value="<%= version('error','javier.artero@marsbased.com') %>">
+					name="email" placeholder="Your email address" value="<%= version('error','javier.artero@marsbased.com') %>">
 			</div>
 			<div class="form-group">
 				<input type="password" class="required <%= version('error','warning') %>"
-				 name="password" placeholder="Your password" >
+					name="password" placeholder="Your password" >
 				<% if version('error') %>
 				<div class="info-field">Wrong password.</div>
 				<% end %>
@@ -34,11 +34,10 @@ body: sign-in
 				</a>
 			</p>
 		</form>
-	</div>
-	<div class="box__footer align-center">
-		<a class="btn-primary-light is-wide" href="/sign-up/">
-			Create an account
-		</a>
+		<div class="box__footer align-center">
+			<a class="btn-primary-light is-wide" href="/sign-up/">
+				Create an account
+			</a>
+		</div>
 	</div>
 </div>
-
