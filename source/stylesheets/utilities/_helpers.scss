@@ -97,54 +97,25 @@
   white-space: nowrap;
 }
 
-.text-primary {
-  color: $primary;
-}
-
-.text-primary-light{
-  color: $primary-light;
-}
-
-.text-secondary {
-  color: $secondary;
-}
-
-.text-secondary-light{
-  color: $secondary-light;
-}
-
 .vertical-relative{
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.bg-primary {
-  background-color: $background-primary;
-}
-
-.bg-secondary {
-  background-color: $background-secondary;
-}
-
-.bg-warning {
-  background-color: $warning;
-  color: white;
-}
-
-.bg-success {
-  background-color: $success;
-  color: white;
-}
-
-.text-warning{
-  color: $warning;
-}
-
-.text-success{
-  color: $success;
-}
-
 .hidden{
   display: none;
+}
+
+@each $color in $colors {
+  .bg-#{nth($color, 1)} {
+    background-color: nth($color, 2);
+    @if(nth($color, 3)){
+      color: nth($color, 3);
+    }
+  }
+
+  .text-#{nth($color, 1)} {
+    color: nth($color, 2);
+  }
 }
