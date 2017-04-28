@@ -1,11 +1,10 @@
 .dropdown {
-  $this:                  '.dropdown';
   $zindex:                1000;
   $bkg:                   #fff;
   $border:                lighten($primary,10%);
   $padding-top:           .4em;
   $padding:               $padding-top 1em;
-  $bkg-divider:           $border;
+  $bg-divider:            $border;
   $link-color:            $secondary;
   $link-hover-color:      $primary;
   $link-hover-bkg:        lighten($secondary-lighter,5%);
@@ -79,7 +78,7 @@
       height: 1px;
       margin-top: $padding-top;
       margin-bottom: $padding-top;
-      background-color: $bkg-divider;
+      background-color: $bg-divider;
     }
 
     li{

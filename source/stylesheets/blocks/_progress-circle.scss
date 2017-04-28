@@ -47,7 +47,6 @@
 @include progress-circle;
 
 .progress-circle {
-  $this: '.progress-circle';
   $font-size: $fs-h1;
   $value--font-size: $fs-h3;
   $item--size: 11.4rem; //add 2 borders
@@ -101,7 +100,7 @@
       color: black;
     }
 
-    #{$this}__item.active & {
+    .progress-circle__item.active & {
       opacity: 1;
       transform: scale(1.2);
     }

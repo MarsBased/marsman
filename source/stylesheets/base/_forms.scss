@@ -6,7 +6,6 @@ $input--margin: .5em;
 $input--placeholder: rgba($secondary-light,.4);
 $input--success: $success;
 $input--warning: $warning;
-
 $info-field--fs: $fs-small;
 
 form{
@@ -137,7 +136,6 @@ label {
   font-size: $info-field--fs;
   margin-bottom: $input--margin;
 }
-
 
 input[disabled]{
   opacity: $input--disabled;

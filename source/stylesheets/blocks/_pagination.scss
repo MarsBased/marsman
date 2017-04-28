@@ -1,15 +1,14 @@
-$pagination--color: $font-base-color;
-$pagination--radius: $border-radius;
-$pagination--border: $background-primary;
-$pagination--hover-bg: $primary;
-$pagination--hover-color: white;
-$pagination--active-bg: $primary-light;
-$pagination--active-color: white;
-
 .pagination {
+  $color: $font-base-color;
+  $border-color: $background-primary;
+  $hover-bg: $primary;
+  $hover-color: white;
+  $active-bg: $primary-light;
+  $active-color: white;
+
   display: inline-block;
   padding-left: 0;
-  border-radius: $pagination--radius;
+  border-radius: $border-radius;
   background-color: $background-secondary;
 
   > li {
@@ -19,25 +18,25 @@ $pagination--active-color: white;
       position: relative;
       float: left; // Collapse white-space
       padding: .5em 1em;
-      color: $pagination--color;
+      color: $color;
       line-height: 1.2;
       text-decoration: none;
-      border: 1px solid $pagination--border;
+      border: 1px solid $border-color;
       transition: all .2s ease-out;
       margin-left: -1px;
 
       &:hover,
       &:focus {
-        background-color: $pagination--hover-bg;
-        color: $pagination--hover-color;
+        background-color: $hover-bg;
+        color: $hover-color;
       }
 
       &.active{
-        background-color: $pagination--active-bg;
-        color: $pagination--active-color;
+        background-color: $active-bg;
+        color: $active-color;
         &:hover, &:focus{
-          background-color: $pagination--hover-bg;
-          color: $pagination--hover-color;
+          background-color: $hover-bg;
+          color: $hover-color;
         }
       }
 
@@ -48,13 +47,13 @@ $pagination--active-color: white;
 
     &:first-child a {
       margin-left: 0;
-      border-top-left-radius: $pagination--radius;
-      border-bottom-left-radius: $pagination--radius;
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
     }
 
     &:last-child a {
-      border-top-right-radius: $pagination--radius;
-      border-bottom-right-radius: $pagination--radius;
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
     }
   }
 }

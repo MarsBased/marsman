@@ -1,5 +1,4 @@
 .header {
-	$this: '.header';
 	$height: $header-height;
 	$height-bp: $header-height-breakpoint;
   $gutter: $gutter;
@@ -72,7 +71,7 @@
 			margin-right: $spacing;
 		}
 
-		> *:not(#{$this}__user-info){
+		> *:not(.header__user-info){
 			@media (max-width: $grid-breakpoint - 1){
 				display: none;
 			}
