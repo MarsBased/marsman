@@ -1,7 +1,9 @@
 //grid bootstrap based
 $grid-gutter-width:   $gutter;
-$grid-columns:             12;
+$grid-columns:        12;
 
+$breakpoints:         'xxs','xs','sm','md','lg';
+$screen-xs:           460px;
 $screen-sm:           768px;
 $screen-md:           992px;
 $screen-lg:           1140px;
@@ -64,20 +66,57 @@ $grid-breakpoint:     $screen-md;
   @include make-clear($columns, $clean);
 }
 
-@mixin make-xs-column($columns, $gutter: $grid-gutter-width) {
+@mixin make-xxs-column($columns, $gutter: $grid-gutter-width) {
   @include make-column ($columns, $gutter);
 }
 
-@mixin make-xs-column-offset($columns) {
+@mixin make-xxs-column-offset($columns) {
   margin-left: percentage(($columns / $grid-columns));
 }
 
-@mixin make-xs-column-push($columns) {
+@mixin make-xxs-column-push($columns) {
   left: percentage(($columns / $grid-columns));
 }
 
-@mixin make-xs-column-pull($columns) {
+@mixin make-xxs-column-pull($columns) {
   right: percentage(($columns / $grid-columns));
+}
+
+@mixin make-xs-column($columns, $gutter: $grid-gutter-width) {
+  position: relative;
+  min-height: 1px;
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+
+  @media (min-width: $screen-xs) {
+    float: left;
+    width: percentage(($columns / $grid-columns));
+    @include last-margin;
+  }
+}
+
+@mixin make-xs-clear($columns, $clean: 0){
+  @media (min-width: $screen-xs) {
+    @include make-clear($columns, $clean);
+  }
+}
+
+@mixin make-xs-column-offset($columns) {
+  @media (min-width: $screen-xs) {
+    margin-left: percentage(($columns / $grid-columns));
+  }
+}
+
+@mixin make-xs-column-push($columns) {
+  @media (min-width: $screen-xs) {
+    left: percentage(($columns / $grid-columns));
+  }
+}
+
+@mixin make-xs-column-pull($columns) {
+  @media (min-width: $screen-xs) {
+    right: percentage(($columns / $grid-columns));
+  }
 }
 
 @mixin make-sm-column($columns, $gutter: $grid-gutter-width) {
@@ -191,17 +230,22 @@ $grid-breakpoint:     $screen-md;
   }
 }
 
-@mixin make-grid-columns($i: 1, $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}") {
-  @for $i from (1 + 1) through $grid-columns {
-    $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
-  }
-  #{$list} {
+@mixin make-grid-columns {
+  %make-grid-column{
     position: relative;
     // Prevent columns from collapsing when empty
     min-height: 1px;
     // Inner gutter via padding
     padding-left:  ($grid-gutter-width / 2);
     padding-right: ($grid-gutter-width / 2);
+  }
+
+  @each $bp in $breakpoints {
+    @for $i from 1 through $grid-columns {
+      .col-#{$bp}-#{$i}{
+        @extend %make-grid-column;
+      }
+    }
   }
 }
 
@@ -267,6 +311,9 @@ $grid-breakpoint:     $screen-md;
   @include container-fixed;
   max-width: 100%;
 
+  @media (min-width: $screen-xs) {
+    max-width: $container-sm;
+  }
   @media (min-width: $screen-sm) {
     max-width: $container-md;
   }
@@ -307,8 +354,13 @@ $grid-breakpoint:     $screen-md;
 // Columns
 @include make-grid-columns;
 
+// Extra Extra small grid
+@include make-grid(xxs);
+
 // Extra small grid
-@include make-grid(xs);
+@media (min-width: $screen-xs) {
+  @include make-grid(xs);
+}
 
 // Small grid
 @media (min-width: $screen-sm) {
@@ -325,23 +377,21 @@ $grid-breakpoint:     $screen-md;
   @include make-grid(lg);
 }
 
-//.columns
 .columns {
-  @media (min-width: $screen-sm) {
-    display: table;
-    width: 100%;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
 
-    & > * {
-      display: table-cell;
-      vertical-align: top;
-      padding-right: $gutter/2;
-      padding-left: $gutter/2;
-      &:first-child {
-        padding-left: 0
-      }
-      &:last-child {
-        padding-right: 0;
-      }
+  & > * {
+    display: table-cell;
+    vertical-align: top;
+    padding-right: $gutter/2;
+    padding-left: $gutter/2;
+    &:first-child {
+      padding-left: 0
+    }
+    &:last-child {
+      padding-right: 0;
     }
   }
 }
