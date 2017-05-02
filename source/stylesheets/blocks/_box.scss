@@ -19,6 +19,7 @@
 		min-height: 7rem;
 		padding: $padding/2 $padding;
 		background-color: $background-primary;
+		border-radius: $border-radius $border-radius 0 0;
 		border-bottom: 1px solid $border-color;
 		display: flex;
 		flex-direction: row;
@@ -54,6 +55,7 @@
 		margin-left: -#{$padding};
 		margin-right: -#{$padding};
 		margin-bottom: -#{$padding} !important;
+		border-radius: 0 0 $border-radius $border-radius;
 		@include last-margin;
 	}
 
@@ -86,13 +88,5 @@
 		.box__footer {
 			border-color: transparent;
 		}
-	}
-
-	&--form-m {
-		@extend .box;
-		max-width: 600px;
-		margin-left: auto;
-		margin-right: auto;
-		box-shadow: 0 16px 33px rgba(black, .28);
 	}
 }
