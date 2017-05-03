@@ -262,6 +262,18 @@ body: toolkit
 				<div class="toolkit__item">
 					<div class="toolkit__block">
 						<h2>Uploader</h2>
+						<form role="form" action="/toolkit/_error">     
+							<div class="form-group <%= version('error', 'warning') %>">
+								<input type="file" id="file" class="input-file">
+								<label for="file" class="">
+									<%= version('error', 'Invalid file', 'Add a file') %>
+								</label>
+								<% if version('error') %>
+								<div class="info-field">Information about this success.</div>
+								<% end %>
+								<input class="btn-primary is-block" type="submit" value="UPLOAD">
+							</div>
+						</form>
 					</div>
 					<div class="row">
 						<div class="col-sm-8">
