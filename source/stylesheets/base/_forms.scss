@@ -170,6 +170,9 @@ select {
   background-position: calc(100% - .7em) center;
   padding-right: 2em;
   background-image: image-url("icon-caret-down.svg") !important;
+  &::-ms-expand {
+    display: none;
+  }
 }
 
 textarea {
