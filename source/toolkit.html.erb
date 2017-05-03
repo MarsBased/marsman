@@ -23,37 +23,37 @@ body: toolkit
 			<div class="row">
 				<div class="col-xs-4">
 					<h2>Normal</h2>
-					<p><button class="btn-block btn-primary">
+					<p><button class="is-block btn-primary">
 					Primary</button></p>
-					<p><button class="btn-block btn-primary-light">
+					<p><button class="is-block btn-primary-light">
 					Primary Light</button></p>
-					<p><button class="btn-block btn-secondary">
+					<p><button class="is-block btn-secondary">
 					Secondary</button></p>
-					<p><button class="btn-block btn-secondary-light">
+					<p><button class="is-block btn-secondary-light">
 					Secondary Light</button></p>
 					<p><button class="link">Link Something</button></p>
 				</div>
 				<div class="col-xs-4">
 					<h2>Hover/Active</h2>
-					<p><button class="active btn-block btn-primary">
+					<p><button class="active is-block btn-primary">
 					Primary</button></p>
-					<p><button class="active btn-block btn-primary-light">
+					<p><button class="active is-block btn-primary-light">
 					Primary Light</button></p>
-					<p><button class="active btn-block btn-secondary">
+					<p><button class="active is-block btn-secondary">
 					Secondary</button></p>
-					<p><button class="active btn-block btn-secondary-light">
+					<p><button class="active is-block btn-secondary-light">
 					Secondary Light</button></p>
 					<p><button class="link active">Link (Active/Hover)</button></p>
 				</div>
 				<div class="col-xs-4">
 					<h2>Disabled</h2>
-					<p><button disabled class="btn-block btn-primary">
+					<p><button disabled class="is-block btn-primary">
 					Primary</button></p>
-					<p><button disabled class="btn-block btn-primary-light">
+					<p><button disabled class="is-block btn-primary-light">
 					Primary</button></p>
-					<p><button class="disabled btn-block btn-secondary">
+					<p><button class="disabled is-block btn-secondary">
 					Secondary</button></p>
-					<p><button class="disabled btn-block btn-secondary-light">
+					<p><button class="disabled is-block btn-secondary-light">
 					Secondary Light</button></p>
 				</div>
 			</div>
@@ -64,7 +64,7 @@ body: toolkit
 				<div class="col-xs-4">
           <h2>Right-sided</h2>
           <p>
-            <button class="active btn-block btn-primary">
+            <button class="active is-block btn-primary">
               Button <i class="icon-loader"></i>
             </button>
           </p>
@@ -73,7 +73,7 @@ body: toolkit
         <div class="col-xs-4">
           <h2>Left-sided</h2>
           <p>
-            <button class="active btn-block btn-primary">
+            <button class="active is-block btn-primary">
               <i class="icon-loader"></i> Button
             </button>
           </p>
@@ -134,7 +134,8 @@ body: toolkit
 						</li>
 						<% else %>
 						<li class="pills__item">
-							<a href="#" class="pills__link active">
+							<a href="#" class="pills__link active" 
+							data-badge="<%= rand(1..200)%>">
 								Element active
 							</a>
 						</li>
@@ -190,8 +191,10 @@ body: toolkit
 	</div>
 </div>
 <div class="toolkit__container">
-	<h1>Forms</h1>
 	<div class="box">
+		<h1 class="box__header">
+			Forms
+		</h1>
 		<div class="box__content">
 			<div class="toolkit__row">
 				<div class="toolkit__item">
@@ -240,6 +243,7 @@ body: toolkit
 						<div class="row">
 							<div class="col-sm-6">
 								<h2>Profile picture</h2>
+								<%= image_tag('avatar.png')%>
 							</div>
 							<div class="col-sm-6">
 								<h2>Alerts</h2>
@@ -259,6 +263,18 @@ body: toolkit
 				<div class="toolkit__item">
 					<div class="toolkit__block">
 						<h2>Uploader</h2>
+						<form role="form" action="/toolkit/_error">     
+							<div class="form-group <%= version('error', 'warning') %>">
+								<input type="file" id="file" class="input-file">
+								<label for="file" class="">
+									<%= version('error', 'Invalid file', 'Add a file') %>
+								</label>
+								<% if version('error') %>
+								<div class="info-field">Information about this success.</div>
+								<% end %>
+								<input class="btn-primary is-block" type="submit" value="UPLOAD">
+							</div>
+						</form>
 					</div>
 					<div class="row">
 						<div class="col-sm-8">
@@ -280,6 +296,46 @@ body: toolkit
 						</div>
 						<div class="col-sm-4">
 							<h2>Dropdown</h2>
+							<p>
+							<div class="dropdown open">
+								<button class="btn-primary" data-toggle="dropdown">
+									User info
+								</button>
+								<ul class="dropdown-menu is-right" aria-labelledby="dropdown-user">
+									<li class="dropdown-header">
+										Signed in as <br>
+										<strong><%= Faker::GameOfThrones.character %></strong>
+									</li>
+									<li role="separator" class="divider"></li>
+									<li>
+										<%= link_to('Your profile', 'whole-page-text') %>
+									</li>
+									<li>
+										<%= link_to('<i class="icon-logout"></i> Sign out', 'sign-in') %>
+									</li>
+								</ul>
+							</div>
+							</p>
+							<p>
+							<div class="dropdown no-icon">
+								<a href="javascript:void(0)" data-toggle="dropdown">
+									Link with no-icon align center
+								</a>
+								<ul class="dropdown-menu is-center is-top" aria-labelledby="dropdown-user">
+									<li class="dropdown-header">
+										Signed in as <br>
+										<strong><%= Faker::GameOfThrones.character %></strong>
+									</li>
+									<li role="separator" class="divider"></li>
+									<li>
+										<%= link_to('Your profile', 'whole-page-text') %>
+									</li>
+									<li>
+										<%= link_to('<i class="icon-logout"></i> Sign out', 'sign-in') %>
+									</li>
+								</ul>
+							</div>
+							</p>
 						</div>
 					</div>
 				</div>
@@ -324,88 +380,5 @@ body: toolkit
         </div>
       </div>
     </div>
-	</div>
-</div>
-
-<div class="toolkit__container" id="boxes">
-	<h1>Boxes</h1>
-	<div class="toolkit__row">
-		<div class="col-xs-4">
-			<div class="box">
-				<div class="box__header">
-					<h2 class="box__title">Box</h2>
-				</div>
-				<div class="box__content">
-					<%= Faker::ChuckNorris.fact %>
-				</div>
-			</div>
-			<div class="box">
-				<div class="box__content">
-					<h1>Boxes without title</h1>
-					<%= Faker::ChuckNorris.fact %>
-				</div>
-			</div>
-			<div class="box">
-				Boxes without box__content</br>
-				<%= Faker::ChuckNorris.fact %>
-			</div>
-		</div>
-
-		<div class="col-xs-4">
-			<div class="box--primary">
-				<div class="box__header">
-					<h2 class="box__title">Box</h2>
-				</div>
-				<div class="box__content">
-					<%= Faker::ChuckNorris.fact %>
-				</div>
-			</div>
-			<div class="box--secondary">
-				<div class="box__header">
-					<h2 class="box__title">Box</h2>
-				</div>
-				<div class="box__content">
-					<%= Faker::ChuckNorris.fact %>
-				</div>
-			</div>
-			<div class="box--secondary-light">
-				<div class="box__header">
-					<h2 class="box__title">Box</h2>
-				</div>
-				<div class="box__content">
-					<%= Faker::ChuckNorris.fact %>
-				</div>
-			</div>
-		</div>
-		<div class="toolkit__row">
-			<div class="col-xs-4">
-				<div class="box--transparent">
-					<div class="box__header">
-						<h2 class="box__title">Box</h2>
-					</div>
-					<div class="box__content">
-						<%= Faker::ChuckNorris.fact %>
-					</div>
-				</div>
-
-				<div class="box--form">
-					<div class="box__header">
-						<h2 class="box__title">Box Form</h2>
-					</div>
-					<div class="box__content">
-						<%= Faker::ChuckNorris.fact %>
-					</div>
-				</div>
-
-				<div class="box--form-m">
-					<div class="box__header">
-						<h2 class="box__title">Box form-m</h2>
-					</div>
-					<div class="box__content">
-						<%= Faker::ChuckNorris.fact %>
-					</div>
-				</div>
-			</div>
-		</div>
 	</div>
 </div>

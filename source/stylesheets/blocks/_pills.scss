@@ -1,8 +1,4 @@
-$pills--padding: 1em 2em;
-$pills--radius: $border-radius;
-$pills--border: 1px solid $secondary-lighter;
-$pills--bg: white;
-$pills--active: $primary;
+
 
 %pills-state{
   background-repeat: no-repeat;
@@ -12,13 +8,18 @@ $pills--active: $primary;
 }
 
 .pills {
+	$padding: 1em 2em;
+	$border: 1px solid $secondary-lighter;
+	$bg: white;
+	$active: $primary;
+
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
-	border-radius: $pills--radius;
+	border-radius: $border-radius;
 	overflow: hidden;
-	border: $pills--border;
-	background-color: $pills--bg;
+	border: $border;
+	background-color: $bg;
 
 	a {
 		@extend .reset-link;
@@ -31,8 +32,8 @@ $pills--active: $primary;
 
 	&__link {
 		display: block;
-		padding: $pills--padding;
-		border-bottom: $pills--border;
+		padding: $padding;
+		border-bottom: $border;
 		position: relative;
 		transition:  color .4s ease-out;
 
@@ -69,10 +70,10 @@ $pills--active: $primary;
 		}
 
 		&.active {
-			color: $pills--active;
+			color: $active;
 			&::before{
 				left: 0;
-				background-color: $pills--active;
+				background-color: $active;
 			}
 		}
 

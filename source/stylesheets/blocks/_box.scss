@@ -1,37 +1,39 @@
 .box {
-	$this: '.box';
-	$this--padding: $gutter;
-	$this--border-color: $secondary-lighter;
-	$this__header--bg-color: $background-primary;
-	$this--border-radius: 8px;
+	$padding: $gutter;
+	$border-color: $secondary-lighter;
+	$border-radius: 8px;
 
-	padding: $this--padding;
+	padding: $padding;
 	background: white;
-	border: 1px solid $this--border-color;
-	border-radius: $this--border-radius;
-	overflow: hidden;
-	max-width: 940px;
-	margin-left: auto;
-	margin-right: auto;
+	border: 1px solid $border-color;
+	border-radius: $border-radius;
 	margin-bottom: $gutter;
 
 	@include last-margin;
 
 	& > *:first-child {
- 		margin: -#{$this--padding} -#{$this--padding} 0;
-		min-height: 7rem;
+ 		margin: -#{$padding} -#{$padding} 0;
 	}
 
 	&__header {
 		min-height: 7rem;
-		padding: $this--padding/2 $this--padding;
-		background-color: $this__header--bg-color;
-		border-bottom: 1px solid $this--border-color;
+		padding: $padding/2 $padding;
+		background-color: $background-primary;
+		border-radius: $border-radius $border-radius 0 0;
+		border-bottom: 1px solid $border-color;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
+
+		&.is-center{
+			justify-content: center;
+			text-align: center;
+			> *{
+				width: 100%;
+			}
+		}
 	}
 
 	&__title {
@@ -39,20 +41,21 @@
 	}
 
 	&__content {
-		padding: $this--padding $this--padding 0;
-		margin-left: -$this--padding;
-		margin-right: -$this--padding;
-		margin-bottom: $this--padding;
+		padding: $padding $padding 0;
+		margin-left: -$padding;
+		margin-right: -$padding;
+		margin-bottom: $padding;
 		position: relative;
 		@include last-margin;
 	}
 
 	&__footer {
 		border-top: 1px solid $secondary-lighter;
-		padding: $this--padding;
-		margin-left: -#{$this--padding};
-		margin-right: -#{$this--padding};
-		margin-bottom: -#{$this--padding} !important;
+		padding: $padding;
+		margin-left: -#{$padding};
+		margin-right: -#{$padding};
+		margin-bottom: -#{$padding} !important;
+		border-radius: 0 0 $border-radius $border-radius;
 		@include last-margin;
 	}
 
@@ -63,8 +66,13 @@
 		}
 	}
 
-	&--transparent {
-		@extend .box;
+	&.is-wide{
+		max-width: 940px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&.is-transparent {
 		background-color: transparent;
 		border-color: transparent;
 		box-shadow: none;
@@ -72,66 +80,13 @@
 		padding-top: 0;
 		padding-bottom: 0;
 
-		#{$this}__header {
+		.box__header {
 			padding-bottom: 0;
 			border-color: transparent;
 		}
 
-		#{$this}__footer {
+		.box__footer {
 			border-color: transparent;
 		}
-	}
-
-	&--primary {
-		@extend .box;
-		#{$this}__header {
-			color: white;
-			background-color: $primary;
-		}
-	}
-
-	&--secondary {
-		@extend .box;
-		#{$this}__header {
-			color: white;
-			background-color: $secondary;
-		}
-	}
-
-	&--secondary-light {
-		@extend .box;
-		#{$this}__header {
-			color: white;
-			background-color: $secondary-light;
-		}
-	}
-
-	&--form {
-		@extend .box;
-		max-width: 460px;
-		margin-left: auto;
-		margin-right: auto;
-		box-shadow: 0 16px 33px rgba(black, .28);
-
-		.box__header {
-			display: block;
-			text-align: center;
-		}
-
-		.box__content {
-			max-width: 308px;
-			padding-left: 0;
-			padding-right: 0;
-			margin-left: auto;
-			margin-right: auto;
-		}
-	}
-
-	&--form-m {
-		@extend .box;
-		max-width: 600px;
-		margin-left: auto;
-		margin-right: auto;
-		box-shadow: 0 16px 33px rgba(black, .28);
 	}
 }

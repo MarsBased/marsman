@@ -1,0 +1,39 @@
+.input-file {
+  $icon-color: $secondary;
+
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+
+  &:focus + label,
+  & + label:hover{
+    @include focus;
+  }
+
+  & + label{
+    @extend %form-item;
+    @include ellipsis;
+    color: $input--placeholder;
+
+    &.active{
+      color: $icon-color;
+    }
+
+    &::before {
+      @extend %icon;
+      content: $fa-var-paperclip;
+      color: $icon-color;
+      font-size: 1.5em;
+      margin-right: .25em;
+      vertical-align: baseline;
+      display: inline-block;
+    }
+
+    * {
+      pointer-events: none;
+    }
+  }
+}

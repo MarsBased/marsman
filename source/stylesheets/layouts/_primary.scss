@@ -1,14 +1,29 @@
 body.primary{
-  background-repeat: repeat-x;
-  background-color: $primary;
-  background-image: linear-gradient(to bottom, $primary 30%,
-   lighten($primary, 10%) 100%);
-
+  .wrapper{
+    height: 100%;
+    top: 0;
+  }
   .main-content {
 		color: white;
+    min-height: 100%;
+    background-repeat: repeat-x;
+    background-color: $primary;
+    background-image: linear-gradient(to bottom, $primary 30%,
+    lighten($primary, 10%) 100%);
   }
 
   .box {
+    box-shadow: 0 1.6rem 3.3rem rgba(black, .28);
 		color: $font-base-color;
+  }
+
+  .container-xs{
+    .box__content{
+      max-width: 30rem;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }

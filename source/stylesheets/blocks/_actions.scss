@@ -1,32 +1,29 @@
 .actions {
-	$this: '.actions';
-	$this--margin: .5em;
-
+	$margin: .5em;
 
 	text-align: right;
-	margin-right: -$this--margin;
-	margin-left: -$this--margin;
+	margin-right: -$margin;
+	margin-left: -$margin;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: center;
-	margin-bottom: -$this--margin;
+	margin-bottom: -$margin;
 	position: relative;
 
 	> * {
 		@include last-margin;
-		margin-left: $this--margin;
-		margin-right: $this--margin;
-		margin-bottom: $this--margin;
+		margin-left: $margin;
+		margin-right: $margin;
+		margin-bottom: $margin;
 	}
 
-	&--buttons {
-		@extend .actions;
+	&.has-buttons {
 		margin-top: -.25em;
 	}
 
-	&__item{
+	&__item {
 		display: inline-block;
 	}
 }

@@ -48,12 +48,13 @@
 	}
 
 	&__icon {
-		$icons: 'github','instagram','envelope','medium','linkedin','facebook','google-plus','twitter';
+		$icons: 'github','instagram','envelope','medium','linkedin',
+		'facebook','google-plus','twitter';
 
 		@each $icon in $icons {
 		  &--#{$icon} {
-		  	@extend .btn-rounded;
-				@extend .fa;
+		  	@extend .btn-icon;
+				@extend %icon;
 				@extend .fa-#{$icon};
 		  }
 		}

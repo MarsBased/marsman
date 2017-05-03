@@ -1,15 +1,15 @@
-$scroll--fs: $fs-h1;
-
 .scroll {
-	@extend .fa;
+	$fs: $fs-h1;
+
+	@extend %icon;
 	position: absolute;
 	bottom: 10px;
 	left: 50%;
-	margin-left: -($scroll--fs/2);
+	margin-left: -($fs/2);
 	text-align: center;
 	opacity: 0;
 	cursor: pointer;
-	font-size: $fs-h1;
+	font-size: $fs;
 	transition: all .5s ease-out;
 	pointer-events: none;
 

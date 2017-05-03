@@ -6,7 +6,6 @@ $input--margin: .5em;
 $input--placeholder: rgba($secondary-light,.4);
 $input--success: $success;
 $input--warning: $warning;
-
 $info-field--fs: $fs-small;
 
 form{
@@ -138,7 +137,6 @@ label {
   margin-bottom: $input--margin;
 }
 
-
 input[disabled]{
   opacity: $input--disabled;
   pointer-events: none;
@@ -150,7 +148,6 @@ input[disabled]{
 
 input:not([type="submit"]) {
   @extend %form-item;
-  height: 2em;
 
   &.search {
     @extend %input-bg;
@@ -173,6 +170,9 @@ select {
   background-position: calc(100% - .7em) center;
   padding-right: 2em;
   background-image: image-url("icon-caret-down.svg") !important;
+  &::-ms-expand {
+    display: none;
+  }
 }
 
 textarea {

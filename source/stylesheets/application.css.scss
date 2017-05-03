@@ -12,16 +12,18 @@
 @import 'base/forms';
 @import 'base/forms__checkbox';
 @import 'base/forms__radio';
+@import 'base/forms__input-file';
 @import 'base/tables';
 @import 'base/icons';
-@import 'base/images';
 @import 'base/general';
 
 @import 'blocks/actions';
 @import 'blocks/alert';
+@import 'blocks/badge';
 @import 'blocks/box';
 @import 'blocks/btn-collapse';
 @import 'blocks/card-css';
+@import 'blocks/dropdown';
 @import 'blocks/footer';
 @import 'blocks/header';
 @import 'blocks/hero';
@@ -38,7 +40,6 @@
 @import 'blocks/scroll';
 @import 'blocks/select2';
 @import 'blocks/separator';
-@import 'blocks/type';
 @import 'blocks/user-info';
 
 @import 'layouts/home';

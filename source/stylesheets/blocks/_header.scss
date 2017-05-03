@@ -1,5 +1,4 @@
 .header {
-	$this: '.header';
 	$height: $header-height;
 	$height-bp: $header-height-breakpoint;
   $gutter: $gutter;
@@ -19,7 +18,6 @@
 			position: static;
 		}
 	}
-
 
 	&__container {
 		@include container-fixed;
@@ -47,7 +45,7 @@
 		}
 	}
 
-	&__nav{
+	&__nav {
 		flex: 1;
 		display: flex;
 		flex-wrap: nowrap;
@@ -73,7 +71,7 @@
 			margin-right: $spacing;
 		}
 
-		> *:not(#{$this}__user-info){
+		> *:not(.header__user-info){
 			@media (max-width: $grid-breakpoint - 1){
 				display: none;
 			}
@@ -89,13 +87,6 @@
 		$size: 3.2rem;
 
 		min-width: 5rem;
-
-		&::after{
-			@include fa-icon;
-			margin-left: .25em;
-			content: $fa-var-caret-down;
-			color: $primary;
-		}
 
 		img{
 			height: $size;

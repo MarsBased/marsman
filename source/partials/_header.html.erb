@@ -4,7 +4,7 @@
       <span>menu</span>
     </button>
     <div class="header__logo">
-      <%= svg('marsman-template') %>
+      <%= link_to svg('marsman-template'), '/' %>
     </div>
     <nav class="header__nav">
       <div class="header__lenguages">
@@ -21,9 +21,27 @@
     <div class="header__actions">
       <input type="text" class="search" placeholder="Search..." >
       <button class="btn-primary">Upload</button>
-      <button class="header__user-info">
-        <%= image_tag('avatar.png')%>
+      <button class="btn-secondary-light">
+        <i class="icon-cart"></i> <span class="badge">3</span>
       </button>
+      <div class="header__user-info dropdown">
+        <button data-toggle="dropdown">
+          <%= image_tag('avatar.png')%>
+        </button>
+        <ul class="dropdown-menu is-right" aria-labelledby="dropdown-usuarios">
+          <li class="dropdown-header">
+            Signed in as <br>
+            <strong><%= Faker::GameOfThrones.character %></strong>
+          </li>
+          <li role="separator" class="divider"></li>
+          <li>
+            <%= link_to('Your profile', 'whole-page-text') %>
+          </li>
+          <li>
+            <%= link_to('<i class="icon-logout"></i> Sign out', 'sign-in') %>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </header>

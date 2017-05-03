@@ -11,10 +11,15 @@ module Helpers
     end
   end
 
-  def version(name, return_value = true )
+  def version(name, return_value = true, else_value = false )
+    names = Array(name)
     @c = current_page
     @versions = "#{@c.data.version} #{@c.metadata[:locals][:versions]}"
-    return_value if(@versions.split(/[\s,']/).include?(name))
+    if(names.any? { |n| @versions.split(/[\s,']/).include?(n) })
+      return_value
+    else
+      else_value if(else_value)
+    end
   end
 
   def full_url(path)

@@ -1,12 +1,11 @@
-$alert--padding: .5em 1em;
-$alert--radius: $border-radius;
-
 .alert{
+	$padding: .5em 1em;
+
 	border: 1px solid $warning;
 	background-color: rgba($warning, .04);
 	color: $warning;
-	padding: $alert--padding;
-	border-radius: $alert--radius;
+	padding: $padding;
+	border-radius: $border-radius;
 	margin-bottom: 1em;
 
 	&.dismissible{
@@ -29,7 +28,7 @@ $alert--radius: $border-radius;
 		position: absolute;
 		top: 0;
 		right: 0;
-		padding: $alert--padding;
+		padding: $padding;
 		color: inherit;
 	}
 }
