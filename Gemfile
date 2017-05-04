@@ -14,6 +14,8 @@ gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 gem 'middleman-pry'
 # gem 'middleman-email', git: "git@github.com:MarsBased/middleman-email.git"
 
+gem 'middleman-unpublished_pages', git: 'git://github.com/MarsBased/middleman-unpublished_pages.git', branch: 'master'
+
 source 'https://rails-assets.org' do
 	gem 'rails-assets-jquery'
 	gem 'rails-assets-lodash'

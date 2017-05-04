@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/MarsBased/middleman-unpublished_pages.git
+  revision: 81fde67967910353f5d3d8282dbc791ec844ea9d
+  branch: master
+  specs:
+    middleman-unpublished_pages (0.0.1)
+      middleman-core (>= 3.3.12)
+
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -207,6 +215,7 @@ DEPENDENCIES
   middleman-livereload
   middleman-pry
   middleman-sprockets (>= 4.1.0)
+  middleman-unpublished_pages!
   middleman4-sprockets3-sassc (~> 0.0.4)
   rails-assets-bootstrap!
   rails-assets-jquery!
@@ -216,4 +225,4 @@ DEPENDENCIES
   sassc
 
 BUNDLED WITH
-   1.14.4
+   1.14.6

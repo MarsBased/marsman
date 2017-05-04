@@ -30,6 +30,7 @@ end
 configure :build do
   ignore 'shapes/*'
   activate :asset_hash
+  activate :unpublished_pages
   set :environment, 'production'
 end
 
