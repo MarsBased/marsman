@@ -12,12 +12,14 @@ gem 'middleman4-sprockets3-sassc', '~> 0.0.4'
 gem 'middleman-autoprefixer'
 gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 gem 'middleman-pry'
+gem 'middleman-unpublished_pages', git: 'https://github.com/MarsBased/middleman-unpublished_pages.git', branch: 'middleman-4'
 # gem 'middleman-email', git: "git@github.com:MarsBased/middleman-email.git"
 
+
 source 'https://rails-assets.org' do
-	gem 'rails-assets-jquery'
-	gem 'rails-assets-lodash'
-	gem 'rails-assets-modernizr', '2.8.3'
-	gem 'rails-assets-select2'
-	gem 'rails-assets-bootstrap'
+  gem 'rails-assets-jquery'
+  gem 'rails-assets-lodash'
+  gem 'rails-assets-modernizr', '2.8.3'
+  gem 'rails-assets-select2'
+  gem 'rails-assets-bootstrap'
 end
