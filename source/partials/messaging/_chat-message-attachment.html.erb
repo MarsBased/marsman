@@ -1,0 +1,21 @@
+<% attachment = defined?(type) ? type : 'file' %>
+<% file_url = defined?(url) ? url : false %>
+<% message_align = defined?(align) ? align : ['right','left'].sample %>
+
+<div class="chat-message attachment <%= attachment %> <%= message_align %>" >
+  <a class="chat-message-content" href="<%= "/images/#{file_url}" if file_url %>"
+    target="_blank">
+    <div class="content">
+      <div class="preview">
+        <% if attachment == "image" &&  file_url %>
+        <%= image_tag file_url %>
+        <% else %>
+        <i class="icon"></i>
+        <% end %>
+      </div>
+      <div class="text">
+        Exemple-file-name.ext
+      </div>
+    </div>
+  </a>
+</div>

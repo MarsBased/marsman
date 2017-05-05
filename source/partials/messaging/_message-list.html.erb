@@ -1,0 +1,32 @@
+<section class="message-list">
+    <header class="messaging-header">
+      <h1 class="title">Messages</h1>
+      <input type="text" id="message-search" placeholder="Filter messages">
+    </header>
+    <div class="content">
+      <%= partial 'partials/messaging/message-list-message',
+        :locals => {
+          :active => true,
+          :unread => 10,
+          :date => '00:10',
+        }
+      %>
+
+      <%= partial 'partials/messaging/message-list-message',
+        :locals => {
+          :unread => 3,
+          :date => '23:10',
+        }
+      %>
+
+      <%= partial 'partials/messaging/message-list-message',
+        :locals => {
+          :date => 'Yesterday',
+        }
+      %>
+
+      <% for i in (0..5) %>
+        <%= partial 'partials/messaging/message-list-message' %>
+      <% end %>
+    </div>
+  </section>

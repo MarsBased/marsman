@@ -1,0 +1,82 @@
+<section class="chat-container">
+  <header class="messaging-header">
+    <h1 class="title">
+      <a href="#" class="btn-back-to-messages">
+        <span class="sr-only">Back</span>
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+      </a>
+      <% if current_page.data.messaging_title_link %>
+      <a class="message-title" href="<%= current_page.data.messaging_title_link %>">
+        ORDER #12412
+      </a>
+      <% end %>
+      <a class="message-user" href="<%= current_page.data.messaging_user_link %>">
+        <%= lorem.name %>
+      </a>
+    </h1>
+    <% if current_page.data.messaging_attachment %>
+    <div class="attachment">
+      <i class="icon"></i>
+      <input type="file" class="upload">
+    </div>
+    <% end %>
+  </header>
+  <div class="content">
+    <div class="wrapper">
+      <% if current_page.data.empty == true %>
+        <div class="alert alert-info" role="alert">
+          Para contratar a este usuario solicita una propuesta a través del
+            chat, indicando el servicio que quieres contratar y describiendo
+            los requisitos del trabajo.
+        </div>
+      <% else %>
+        <% if current_page.data.messaging_attachment %>
+        <%= partial "partials/messaging/chat-message-attachment",
+          :locals => {
+            :align => 'left'
+          } %>
+        <%= partial "partials/messaging/chat-message-attachment",
+          :locals => {
+            :align => 'right',
+            :type => 'image',
+            :url => 'example1.jpg'
+          }  %>
+        <% end %>
+        <% for i in 1..rand(2..4) %>
+        <%= partial "partials/messaging/chat-message" %>
+        <% end %>
+        <div class="chat-message-time unread">
+          <time>Unread</time>
+        </div>
+        <% for i in 1..rand(2..6) %>
+        <%= partial "partials/messaging/chat-message" %>
+        <% end %>
+        <div class="chat-message-time">
+          <time>Today</time>
+        </div>
+        <% for i in 1..rand(2..6) %>
+        <%= partial "partials/messaging/chat-message" %>
+        <% end %>
+        <div class="chat-message-time">
+          <time><%= lorem.date %></time>
+        </div>
+        <% for i in 1..rand(2..6) %>
+        <%= partial "partials/messaging/chat-message" %>
+        <% end %>
+        <div class="chat-message-time">
+          <time><%= lorem.date %></time>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <footer class="messaging-footer messaging-footer-input">
+    <div class="input-wrapper">
+      <input type="text" class="form-control" placeholder="Say something">
+    </div>
+    <div class="buttons-wrapper">
+      <button class="btn btn-primary">
+        Send
+      </button>
+    </div>
+  </footer>
+</section>
