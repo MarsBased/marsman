@@ -4,7 +4,7 @@
       <span>menu</span>
     </button>
     <div class="header__logo">
-      <%= link_to svg('marsman-template'), '/' %>
+      <%= link_to svg('marsman-template'), '/index.html' %>
     </div>
     <nav class="header__nav">
       <div class="header__lenguages">
@@ -13,9 +13,11 @@
         </button>
       </div>
       <ul class="nav-inline">
-        <li class="active"><a href="/">Shop</a></li>
-        <li><a href="/">Company</a></li>
-        <li><a href="/">Platform</a></li>
+        <li class="active"><%= link_to 'Shop', '/index.html'  %></li>
+        <li><%= link_to 'Company', '/index.html'  %>
+        </li>
+        <li><%= link_to 'Platform', '/index.html'  %>
+        </li>
       </ul>
     </nav>
     <div class="header__actions">
@@ -35,10 +37,10 @@
           </li>
           <li role="separator" class="divider"></li>
           <li>
-            <%= link_to('Your profile', 'whole-page-text') %>
+            <%= link_to 'Your profile', '/whole-page-text.html' %>
           </li>
           <li>
-            <%= link_to('<i class="icon-logout"></i> Sign out', 'sign-in') %>
+            <%= link_to '<i class="icon-logout"></i> Sign out', '/sign-in.html' %>
           </li>
         </ul>
       </div>

@@ -31,7 +31,7 @@ body: sign-in
 				<input type="checkbox" name="termsandconditions" id="terms" value="terms"
 						class="<%= version('error','warning')%>">
 				<label for="terms">I agree to the
-				<a href="/terms-and-conditions" target="_blank">terms and conditions</a>
+				<%= link_to 'terms and conditions', '/terms-and-conditions.html', target:'_blank' %>
 				</label>
 				<% if version('error') %>
 				<div class="info-field">You have to accept the terms and conditions</div>
@@ -41,10 +41,8 @@ body: sign-in
 				Sign up
 			</button>
 		</form>
-		<div class="box__footer align-center">
-			<a class="btn-primary-light is-wide" href="/sign-in/">
-				Sign in
-			</a>
+		<div class="box__footer align-center"> 
+			<%= link_to 'Sign in', '/sign-in.html', class:'btn-primary-light is-wide' %>
 		</div>
 	</div>
 </div>
