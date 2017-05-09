@@ -1,11 +1,14 @@
 require "lib/helpers"
 helpers Helpers
 
+set :relative_links, true
+
 activate :sprockets
 activate :autoprefixer
 activate :pry
 activate :directory_indexes
 activate :sprockets3_sassc
+activate :relative_assets
 
 configure :development do
   activate :livereload, no_swf: true
@@ -29,8 +32,9 @@ end
 
 configure :build do
   ignore 'shapes/*'
-  activate :asset_hash
+  activate :asset_hash, ignore: /assets/
   set :environment, 'production'
+  #set :http_prefix, '/marsman'
 end
 
 activate :deploy do |deploy|

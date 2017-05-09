@@ -29,15 +29,12 @@ body: sign-in
 				</button>
 			</p>
 			<p class="align-center">
-				<a href="/reset-password/">
-					I forgot my password
-				</a>
+				<%= link_to 'I forgot my password', '/reset-password.html' %>
 			</p>
 		</form>
 		<div class="box__footer align-center">
-			<a class="btn-primary-light is-wide" href="/sign-up/">
-				Create an account
-			</a>
+			<%= link_to 'Create an account', '/sign-up.html',
+			 class:'btn-primary-light is-wide' %>
 		</div>
 	</div>
 </div>
