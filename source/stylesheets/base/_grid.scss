@@ -13,6 +13,12 @@ $container-sm:        768px;
 $container-md:        990px;
 $container-lg:        1240px;
 
+$screens: "xxs" false,
+          "xs" $screen-xs,
+          "sm" $screen-sm,
+          "md" $screen-md,
+          "lg" $screen-lg,
+
 $grid-breakpoint:     $screen-md;
 
 @mixin clearfix() {
@@ -393,5 +399,58 @@ $grid-breakpoint:     $screen-md;
     &:last-child {
       padding-right: 0;
     }
+  }
+}
+
+.clear{
+  clear: both;
+}
+
+.clearfix{
+  @include clearfix;
+}
+
+@media (max-width: $screen-xs - 1){
+  .is-hidden-xxs{
+    display: none !important;
+  }
+  [class*=is-visible]:not(.is-visible-xxs){
+    display: none !important;
+  }
+}
+
+@media (min-width: $screen-xs) and (max-width: $screen-sm - 1){
+  .is-hidden-xs{
+    display: none !important;
+  }
+  [class*=is-visible]:not(.is-visible-xs){
+    display: none !important;
+  }
+}
+
+@media (min-width: $screen-sm) and (max-width: $screen-md - 1){
+  .is-hidden-sm{
+    display: none !important;
+  }
+  [class*=is-visible]:not(.is-visible-sm){
+    display: none !important;
+  }
+}
+
+@media (min-width: $screen-md) and (max-width: $screen-lg - 1){
+  .is-hidden-md{
+    display: none !important;
+  }
+  [class*=is-visible]:not(.is-visible-md){
+    display: none !important;
+  }
+}
+
+@media (min-width: $screen-lg) {
+  .is-hidden-lg{
+    display: none !important;
+  }
+  [class*=is-visible]:not(.is-visible-lg){
+    display: none !important;
   }
 }
