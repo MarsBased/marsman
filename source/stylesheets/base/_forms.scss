@@ -1,32 +1,34 @@
-$input--disabled: .3;
-$input--border: 1px solid $secondary-lighter;
-$input--border-radius: $border-radius;
-$input--padding: .4em 1em;
-$input--margin: .5em;
-$input--placeholder: rgba($secondary-light,.4);
-$input--success: $success;
-$input--warning: $warning;
-$info-field--fs: $fs-small;
+$input-disabled: .3;
+$input-border: 1px solid $secondary-lighter;
+$input-border-readonly: 1px solid #f8f8fa;
+$input-border-radius: $border-radius;
+$input-padding: .4em 1em;
+$input-margin: .5em;
+$input-placeholder: rgba($secondary-light, .4);
+$input-success: $success;
+$input-warning: $warning;
+$input-line-height: $components-line-height;
+$info-field-fs: $fs-small;
 
-form{
+form {
   @include last-margin;
 }
 
-.form-inline{
+.form-inline {
   @extend .columns;
   margin-bottom: 1.5em;
 
   > * {
-    @media (min-width: $screen-sm){
+    @media (min-width: $screen-sm) {
       margin-bottom: 0;
     }
   }
 
   &__title {
-    @media (min-width: $screen-md){
+    @media (min-width: $screen-md) {
       width: 50%;
     }
-    @media (min-width: $screen-sm){
+    @media (min-width: $screen-sm) {
       text-align: right;
       padding-top: .5em;
     }
@@ -38,27 +40,28 @@ form{
   @include last-margin;
 }
 
-%input-bg{
+%input-bg {
   background-repeat: no-repeat;
   background-size: 1em;
   background-position: calc(100% - .5em) center;
   padding-right: 2em;
 }
 
-
-%form-item{
+%form-item {
   width: 100%;
   max-width: 100%;
   display: block;
   color: $font-base-color;
-  border: $input--border;
-  border-radius: $input--border-radius;
-  padding: $input--padding;
+  border: $input-border;
+  border-radius: $input-border-radius;
+  padding: $input-padding;
   transition: background .2s ease-out, border .2s ease-out;
   background-image: none;
   background-color: white;
-  margin-bottom: $input--margin;
-  &:last-child{
+  margin-bottom: $input-margin;
+  line-height: $input-line-height;
+
+  &:last-child {
     margin-bottom: 0;
   }
 
@@ -67,7 +70,7 @@ form{
   }
 
   &::placeholder {
-    color: $input--placeholder;
+    color: $input-placeholder;
     opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
   }
 
@@ -80,7 +83,7 @@ form{
   }
 
   &:required,
-  &.required{
+  &.required {
     @extend %input-bg;
     background-image: image-url("icon-required.svg");
   }
@@ -89,31 +92,31 @@ form{
   .form-group.success & {
     @extend %input-bg;
     animation: escale10 .5s ease-out;
-    border: 1px solid $input--success;
+    border: 1px solid $input-success;
     background-image: image-url("icon-success.svg");
 
-    &:focus{
-      @include focus(rgba($input--success,.4));
+    &:focus {
+      @include focus(rgba($input-success, .4));
     }
 
-    + .info-field{
-      color: $input--success
+    + .info-field {
+      color: $input-success
     }
   }
 
   &.warning,
-  .form-group.warning &{
+  .form-group.warning & {
     @extend %input-bg;
     animation: escale10 .5s ease-out;
-    border: 1px solid $input--warning;
+    border: 1px solid $input-warning;
     background-image: image-url("icon-warning.svg");
 
-    &:focus{
-      @include focus(rgba($input--warning,.4));
+    &:focus {
+      @include focus(rgba($input-warning, .4));
     }
 
-    + .info-field{
-      color: $input--warning
+    + .info-field {
+      color: $input-warning
     }
   }
 }
@@ -122,27 +125,37 @@ label {
   display: block;
   max-width: 100%;
   line-height: 1.5em;
-  margin-bottom: $input--margin;
+  margin-bottom: $input-margin;
 
-  &.required::after{
+  &.required::after {
     content: "*";
     margin-left: .25em;
   }
 }
 
-.info-field{
+.info-field {
   width: 100%;
   display: block;
-  font-size: $info-field--fs;
-  margin-bottom: $input--margin;
+  font-size: $info-field-fs;
+  margin-bottom: $input-margin;
 }
 
-input[disabled]{
-  opacity: $input--disabled;
+input[disabled] {
+  opacity: $input-disabled;
   pointer-events: none;
-  + label{
+
+  + label {
     pointer-events: none;
-    opacity: $input--disabled;
+    opacity: $input-disabled;
+  }
+}
+
+input[readonly] {
+  border: $input-border-readonly;
+  pointer-events: none;
+
+  + label {
+    pointer-events: none;
   }
 }
 
@@ -156,7 +169,7 @@ input:not([type="submit"]) {
     background-image: image-url("icon-search.svg");
     margin-bottom: 0;
 
-    &:focus{
+    &:focus {
       background-color: white;
     }
   }
@@ -170,6 +183,7 @@ select {
   background-position: calc(100% - .7em) center;
   padding-right: 2em;
   background-image: image-url("icon-caret-down.svg") !important;
+
   &::-ms-expand {
     display: none;
   }
@@ -184,18 +198,18 @@ textarea {
   }
 }
 
-.character-counter{
+.character-counter {
   position: absolute;
-  transform: translate(-100%,-100%);
+  transform: translate(-100%, -100%);
   display: inline-block;
   pointer-events: none;
   padding: .5em;
 
-  &.success{
-    color: $input--success;
+  &.success {
+    color: $input-success;
   }
-  &.warning{
-    color: $input--warning;
+  &.warning {
+    color: $input-warning;
   }
 }
 

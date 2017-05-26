@@ -1,3 +1,6 @@
+$btn-line-height: $components-line-height;
+$btn-components-padding: $components-padding;
+
 %btn {
   display: inline-block;
   vertical-align: middle;
@@ -52,9 +55,9 @@
   }
 }
 
-@mixin button-size($padding-vertical, $padding-horizontal, $font-size,
+@mixin button-size($padding, $font-size,
  $line-height, $border-radius) {
-  padding: $padding-vertical $padding-horizontal;
+  padding: $padding;
   font-size: $font-size;
   line-height: $line-height;
   border-radius: $border-radius;
@@ -87,32 +90,32 @@ button{
 .btn-primary{
   @extend %btn;
   @include button-color(white,$primary);
-  @include button-size(.3em, 1em, inherit, 1.4em, 3px);
+  @include button-size($btn-components-padding, inherit, $btn-line-height, 3px);
 }
 
 .btn-primary-light{
   @extend %btn;
   @include button-color($primary,$primary-lighter, transparent,
     $primary, lighten($primary, 30%), $primary);
-  @include button-size(.3em, 1em, inherit, 1.4em, 3px);
+  @include button-size($btn-components-padding, inherit, $btn-line-height, 3px);
 }
 
 .btn-secondary{
   @extend %btn;
   @include button-color(white, $secondary-light);
-  @include button-size(.3em, 1em, inherit, 1.4em, 3px);
+  @include button-size($btn-components-padding, inherit, $btn-line-height, 3px);
 }
 
 .btn-secondary-light{
   @extend %btn;
   @include button-color($secondary-light, $secondary-lighter, transparent,
     $secondary-light, lighten($secondary-light, 45%), $secondary-light);
-  @include button-size(.3em, 1em, inherit, 1.4em, 3px);
+  @include button-size($btn-components-padding, inherit, $btn-line-height, 3px);
 }
 
 .btn-icon{
   @extend %btn;
-  @include button-size(0, 0, 1em, 2.2em, 50%);
+  @include button-size($btn-components-padding, 1em, 2.2em, 50%);
   color: $secondary-light;
   border: 1px solid $secondary-lighter;
   width: 2.3em;
@@ -122,7 +125,7 @@ button{
   transition: all .2s ease-out;
   position: relative;
 
-  //fix position icon 
+  //fix position icon
   &::before {
     position: absolute;
     top: 50%;

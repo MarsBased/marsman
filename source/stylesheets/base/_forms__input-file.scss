@@ -16,7 +16,7 @@
   & + label{
     @extend %form-item;
     @include ellipsis;
-    color: $input--placeholder;
+    color: $input-placeholder;
 
     &.active{
       color: $icon-color;
