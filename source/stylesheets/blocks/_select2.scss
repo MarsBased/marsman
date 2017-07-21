@@ -165,9 +165,11 @@ $select2-border-readonly: 1px solid #f8f8fa;
     li {
       cursor: pointer;
       padding: $select2-padding;
+
       &:last-of-type {
         margin-bottom: .5em;
       }
+
       &:first-of-type {
         margin-top: .5em;
       }

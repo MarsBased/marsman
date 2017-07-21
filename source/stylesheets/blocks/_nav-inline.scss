@@ -1,6 +1,6 @@
 .nav-inline {
   $padding: .5em;
-  $width-line: calc(100% - #{$padding * 2});
+  $line-width: calc(100% - #{$padding * 2});
 
   @extend .list-reset;
   @extend .list-inline;
@@ -26,13 +26,13 @@
     }
 
     &:hover::after {
-      width: $width-line;
+      width: $line-width;
     }
   }
   .active {
     color: $primary;
     a::after {
-      width: $width-line;
+      width: $line-width;
     }
   }
 }

@@ -10,8 +10,8 @@
   $link-hover-bkg:        $font-color-light;
   $link-active-color:     $primary;
   $link-active-bkg:       $bkg ;
-  $link-disabled-color:   $secondary-light ;
-  $header-color:          $secondary-light ;
+  $link-disabled-color:   $font-color ;
+  $header-color:          $font-color ;
   $caret-color:           #000 ;
 
   position: relative;
@@ -28,7 +28,7 @@
 
     &:hover{
       &::after{
-        opacity: 1
+        opacity: 1;
       }
     }
   }

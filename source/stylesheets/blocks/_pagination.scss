@@ -31,7 +31,7 @@
         color: $hover-color;
       }
 
-      &.active{
+      &.is-active{
         background-color: $active-bg;
         color: $active-color;
         &:hover, &:focus{
@@ -40,7 +40,7 @@
         }
       }
 
-      &.disabled{
+      &.is-disabled{
         opacity: .5;
       }
     }
