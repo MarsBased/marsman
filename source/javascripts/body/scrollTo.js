@@ -1,8 +1,7 @@
 (function () {
   'use strict';
 
-  var $element = $('[data-scroll]'),
-      $scrollers = $('html,body,.wrapper');
+  var $scrollers = $('html,body,.wrapper');
 
   function scrollTo($e){
     var header_position = $('header.header').css('position');
@@ -28,33 +27,5 @@
       }
     }
   });
-
-  function scrollVisible($window) {
-    $element.each(function(){
-      var $target = $($(this).data("scroll"));
-      if (($window.scrollTop() + window.innerHeight) > $target.offset().top) {
-        $(this).removeClass('active');
-      }else{
-        $(this).addClass('active');
-      }
-    })
-  }
-
-  if($element.length) {
-    $element.click(function(e) {
-      e.preventDefault();
-      scrollTo($($(this).data("scroll")));
-    });
-
-    $scrollers.scroll(function(){
-      scrollVisible($(this))
-    });
-
-    $(window).scroll(function(){
-      scrollVisible($(this));
-    })
-
-    scrollVisible($(window))
-  }
 
 })();

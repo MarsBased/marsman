@@ -1,9 +1,9 @@
-$radio--scale: 0.9;
-$radio--size: 1.2em;
-$radio--padding: 2px;
-$radio__dot--color: $secondary;
-$radio--warning: $warning;
-$radio--success: $success;
+$radio-scale: 0.9;
+$radio-size: 1.2em;
+$radio-padding: 2px;
+$radio-dot-color: $font-color;
+$radio-warning: $warning;
+$radio-success: $success;
 
 input[type="radio"] {
   @extend .sr-only;
@@ -25,9 +25,9 @@ input[type="radio"] {
     &::before {
       content: '';
       display: inline-block;
-      padding: $radio--padding;
-      width: $radio--size;
-      height: $radio--size;
+      padding: $radio-padding;
+      width: $radio-size;
+      height: $radio-size;
       margin-right: .5em;
       vertical-align: middle;
       border: 1px solid;
@@ -43,14 +43,14 @@ input[type="radio"] {
 
     &:hover::before {
       border-width: 2px;
-      transform: scale($radio--scale);
+      transform: scale($radio-scale);
     }
   }
 
   &:focus {
     + label::before {
       border-width: 2px;
-      transform: scale($radio--scale);
+      transform: scale($radio-scale);
     }
   }
 
@@ -58,25 +58,25 @@ input[type="radio"] {
     + label::before {
       transform: scale(1);
       border-width: 2px;
-      background-color: $radio__dot--color;
+      background-color: $radio-dot-color;
     }
   }
 
   &.success,
   .form-group.success & {
     &:checked + label::before {
-      background-color: $radio--success;
+      background-color: $radio-success;
     }
 
     + label{
-      color: $radio--success;
+      color: $radio-success;
 
       &::before {
-        background-color: $radio--success;
+        background-color: $radio-success;
       }
 
       & + .info-field{
-        color: $radio--success;
+        color: $radio-success;
       }
     }
   }
@@ -84,14 +84,14 @@ input[type="radio"] {
   &.warning,
   .form-group.warning & {
     &:checked + label::before {
-      background-color: $radio--warning;
+      background-color: $radio-warning;
     }
 
     + label{
-      color: $radio--warning;
+      color: $radio-warning;
 
       & + .info-field{
-        color: $radio--warning;
+        color: $radio-warning;
       }
     }
   }

@@ -1,5 +1,5 @@
 .input-file {
-  $icon-color: $secondary;
+  $icon-color: $font-color;
 
   width: 0.1px;
   height: 0.1px;
@@ -16,7 +16,7 @@
   & + label{
     @extend %form-item;
     @include ellipsis;
-    color: $input--placeholder;
+    color: $input-placeholder;
 
     &.active{
       color: $icon-color;

@@ -1,12 +1,15 @@
 //COLORS
+$font-color:          #22252A;
+$font-color-light:    #555A63;
+$background-primary:  #F9F9F9;
+$background-secondary:#FFFFFF;
 $primary:             #E74C3C;
 $primary-light:       #F1C3BF;
 $primary-lighter:     #F9F2F2;
 $secondary:           #22252A;
 $secondary-light:     #555A63;
 $secondary-lighter:   #E6E9EE;
-$background-primary:  #F9F9F9;
-$background-secondary:#FFFFFF;
+$border-color:        #E6E9EE;
 $success:             #57BC27;
 $warning:             #F9B13D;
 $text-negative:       white;
@@ -18,6 +21,8 @@ $colors:  "primary" $primary $text-negative,
           "secondary" $secondary $text-negative,
           "secondary-light" $secondary-light $text-negative,
           "secondary-lighter" $secondary-lighter false,
+          "font-color" $font-color $text-negative,
+          "font-color-light" $font-color-light $text-negative,
           "background-primary" $background-primary false,
           "background-secondary" $background-secondary false,
           "white" white false,
@@ -29,6 +34,9 @@ $gutter: 									  2.4rem;
 $header-height:             7rem;
 $header-height-breakpoint:  5rem;
 $nav-responsive-width:      26rem;
+
+$components-line-height:    normal;
+$components-padding:        .4em 1em;
 
 $border-radius: 					  3px;
 $shadow:									  0 2px 4px rgba(black, .08);

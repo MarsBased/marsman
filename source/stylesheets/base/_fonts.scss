@@ -1,6 +1,5 @@
-@import 'https://fonts.googleapis.com/css?family=Karla:400,700';
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
 
-$font-base-color:             $secondary-light;
 $font-family-base:            'Karla', sans-serif;
 $line-height-base:            1.5;
 $fs-base:                     1.6rem;
@@ -22,7 +21,7 @@ html {
 body {
   font-family: $font-family-base;
   font-size: $fs-base;
-  color: $font-base-color;
+  color: $font-color;
   line-height: $line-height-base;
 }
 

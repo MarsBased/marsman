@@ -46,7 +46,7 @@
     @extend .popover;
     background-color: $this--bg;
     border: 1px solid $this--outer-color;
-    color: $font-base-color;
+    color: $font-color;
 
     &.top > .arrow {
       left: 50%;

@@ -3,9 +3,9 @@ body.primary{
     height: 100%;
     top: 0;
   }
+
   .main-content {
 		color: white;
-    min-height: 100%;
     background-repeat: repeat-x;
     background-color: $primary;
     background-image: linear-gradient(to bottom, $primary 30%,
@@ -14,7 +14,7 @@ body.primary{
 
   .box {
     box-shadow: 0 1.6rem 3.3rem rgba(black, .28);
-		color: $font-base-color;
+		color: $font-color;
   }
 
   .container-xs{

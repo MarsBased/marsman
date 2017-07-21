@@ -1,6 +1,5 @@
 .box {
 	$padding: $gutter;
-	$border-color: $secondary-lighter;
 	$border-radius: 8px;
 
 	padding: $padding;
@@ -50,7 +49,7 @@
 	}
 
 	&__footer {
-		border-top: 1px solid $secondary-lighter;
+		border-top: 1px solid $border-color;
 		padding: $padding;
 		margin-left: -#{$padding};
 		margin-right: -#{$padding};
