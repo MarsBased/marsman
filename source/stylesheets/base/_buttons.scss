@@ -116,8 +116,8 @@ button{
 .btn-icon{
   @extend %btn;
   @include button-size($btn-components-padding, 1em, 2.2em, 50%);
-  color: $secondary-light;
-  border: 1px solid $secondary-lighter;
+  color: $font-color;
+  border: 1px solid $border-color;
   width: 2.3em;
   height: 2.3em;
   opacity: .7;
@@ -139,3 +139,67 @@ button{
     opacity: 1;
   }
 }
+
+.btn-collapse{
+  $size: 30px;
+  $color: $secondary-light;
+
+  color: $color;
+  width: $size + 10px;
+  height: $size;
+  cursor: pointer;
+  outline: 0;
+  overflow: hidden;
+  transition: transform ease-in-out 250ms;
+  top: 20px;
+
+  @media screen and (min-width: $grid-breakpoint){
+    display: none;
+  }
+
+  &.active{
+    span{
+      border-color: transparent;
+      transform: translateY(-4px) translateX(-8px);
+
+      &::before{
+        transform: rotate(405deg) translateY(-1px) translateX(1px);
+      }
+      &::after{
+        transform: rotate(315deg) translateY(12px) translateX(-13px);
+      }
+    }
+  }
+
+  span{
+    display: block;
+    width: 25px;
+    position: relative;
+    top: 3px;
+    left: 50%;
+    border-top: 3px solid;
+    text-indent: 99999px;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: transform ease-in-out 250ms,border ease-in-out 250ms;
+    transform: translateX(-50%);
+
+    &::before,
+    &::after{
+      position: absolute;
+      content: "";
+      display: block;
+      height: 3px;
+      width: 25px;
+      background: $color;
+      transform-origin: 0 0;
+      top: 0;
+      transition: transform ease-in-out 450ms;
+      transform: translateY(5px);
+    }
+    &:after{
+      transform: translateY(13px);
+    }
+  }
+}
+
