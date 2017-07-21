@@ -1,10 +1,10 @@
 $input-disabled: .3;
-$input-border: 1px solid $secondary-lighter;
+$input-border: 1px solid $border-color;
 $input-border-readonly: 1px solid #f8f8fa;
 $input-border-radius: $border-radius;
 $input-padding: .4em 1em;
 $input-margin: .5em;
-$input-placeholder: rgba($secondary-light, .4);
+$input-placeholder: $font-color-light;
 $input-success: $success;
 $input-warning: $warning;
 $input-line-height: $components-line-height;
@@ -51,7 +51,7 @@ form {
   width: 100%;
   max-width: 100%;
   display: block;
-  color: $font-base-color;
+  color: $font-color;
   border: $input-border;
   border-radius: $input-border-radius;
   padding: $input-padding;

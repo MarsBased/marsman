@@ -1,14 +1,15 @@
 //COLORS
+$font-color:          #22252A;
+$font-color-light:    #555A63;
+$background-primary:  #F9F9F9;
+$background-secondary:#FFFFFF;
 $primary:             #E74C3C;
 $primary-light:       #F1C3BF;
 $primary-lighter:     #F9F2F2;
 $secondary:           #22252A;
 $secondary-light:     #555A63;
 $secondary-lighter:   #E6E9EE;
-$font-base:           #22252A;
-$font-base-light:     #555A63;
-$background-primary:  #F9F9F9;
-$background-secondary:#FFFFFF;
+$border-color:        #E6E9EE;
 $success:             #57BC27;
 $warning:             #F9B13D;
 $text-negative:       white;
@@ -20,8 +21,8 @@ $colors:  "primary" $primary $text-negative,
           "secondary" $secondary $text-negative,
           "secondary-light" $secondary-light $text-negative,
           "secondary-lighter" $secondary-lighter false,
-          "font-base" $font-base $text-negative,
-          "font-base-light" $font-base-light $text-negative,
+          "font-color" $font-color $text-negative,
+          "font-color-light" $font-color-light $text-negative,
           "background-primary" $background-primary false,
           "background-secondary" $background-secondary false,
           "white" white false,

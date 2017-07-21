@@ -5,9 +5,9 @@
   $padding-top:           .4em;
   $padding:               $padding-top 1em;
   $bg-divider:            $border;
-  $link-color:            $secondary;
+  $link-color:            $font-color;
   $link-hover-color:      $primary;
-  $link-hover-bkg:        lighten($secondary-lighter,5%);
+  $link-hover-bkg:        $font-color-light;
   $link-active-color:     $primary;
   $link-active-bkg:       $bkg ;
   $link-disabled-color:   $secondary-light ;
