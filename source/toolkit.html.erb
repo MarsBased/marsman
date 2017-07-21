@@ -263,7 +263,7 @@ body: toolkit
 				<div class="toolkit__item">
 					<div class="toolkit__block">
 						<h2>Uploader</h2>
-						<form role="form" action="/toolkit/_error">     
+						<form role="form" action="/toolkit/_error">
 							<div class="form-group <%= version('error', 'warning') %>">
 								<input type="file" id="file" class="input-file">
 								<label for="file" class="">
@@ -296,27 +296,27 @@ body: toolkit
 						</div>
 						<div class="col-sm-4">
 							<h2>Dropdown</h2>
-							<p>
-							<div class="dropdown open">
-								<button class="btn-primary" data-toggle="dropdown">
-									User info
-								</button>
-								<ul class="dropdown-menu is-right" aria-labelledby="dropdown-user">
-									<li class="dropdown-header">
-										Signed in as <br>
-										<strong><%= Faker::GameOfThrones.character %></strong>
-									</li>
-									<li role="separator" class="divider"></li>
-									<li>
-										<%= link_to 'Your profile', '/whole-page-text.html' %>
-									</li>
-									<li>
-										<%= link_to '<i class="icon-logout"></i> Sign out', '/sign-in.html' %>
-									</li>
-								</ul>
+							<div class="content-block">
+								<div class="dropdown open">
+									<button class="btn-primary" data-toggle="dropdown">
+										User info
+									</button>
+									<ul class="dropdown-menu is-right" aria-labelledby="dropdown-user">
+										<li class="dropdown-header">
+											Signed in as <br>
+											<strong><%= Faker::GameOfThrones.character %></strong>
+										</li>
+										<li role="separator" class="divider"></li>
+										<li>
+											<%= link_to 'Your profile', '/whole-page-text.html' %>
+										</li>
+										<li>
+											<%= link_to '<i class="icon-logout"></i> Sign out', '/sign-in.html' %>
+										</li>
+									</ul>
+								</div>
 							</div>
-							</p>
-							<p>
+							<div class=".content-block">
 							<div class="dropdown no-icon">
 								<a href="javascript:void(0)" data-toggle="dropdown">
 									Link with no-icon align center
@@ -335,50 +335,11 @@ body: toolkit
 									</li>
 								</ul>
 							</div>
-							</p>
+							</div class=".content-block">
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
-
-<div class="toolkit__container" id="progress-circle">
-	<div class="toolkit__row">
-		<div class="toolkit__item">
-      <h1>Progress Circles</h1>
-      <div class="progress-circle__container">
-        <div class="progress-circle__item">
-          <div class="progress-circle__graph">
-            <div class="progress-circle__radial progress-circle--84
-             text-primary"></div>
-            <div class="progress-circle__content">
-              <p class="progress-circle__score">84%</p>
-            </div>
-          </div>
-        </div>
-        <div class="progress-circle__item">
-          <div class="progress-circle__graph">
-            <div class="progress-circle__radial progress-circle--10
-             text-primary-light"></div>
-            <div class="progress-circle__content">
-              <p class="progress-circle__score">10%</p>
-            </div>
-          </div>
-        </div>
-        <div class="progress-circle__item">
-          <div class="progress-circle__graph">
-            <div class="progress-circle__radial progress-circle--50
-             text-secondary"></div>
-            <div class="progress-circle__content">
-              <p class="progress-circle__score">50%</p>
-              <p class="progress-circle__value">Value</p>
-              <p class="progress-circle__description">Description</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 	</div>
 </div>
