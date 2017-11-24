@@ -21,3 +21,6 @@
 
 # Ignore Project Files
 /project_files
+
+# Webpack output directory
+dist

@@ -8,13 +8,19 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>marsman template | <%= current_page.data.title %></title>
-    <%= stylesheet_link_tag :application %>
-    <%= javascript_include_tag  :head %>
+
+    <%= stylesheet_pack_tag 'application' %>
+
+    <%= javascript_pack_tag 'manifest' %>
+    <%= javascript_pack_tag 'head' %>
+    <%= javascript_pack_tag 'vendor' %>
   </head>
   <body class="<%= current_page.data.body %> <%= current_page.options[:layout] %>">
     <a id="top" class="sr-only" aria-hidden="true">Top page</a>
     <%= partial "partials/shapes" %>
+
     <%= yield %>
-    <%= javascript_include_tag  :body %>
+
+    <%= javascript_pack_tag 'body' %>
   </body>
 </html>

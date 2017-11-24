@@ -1,5 +1,7 @@
-//= require jquery
-//= require lodash
-//= require bootstrap
-//= require select2/select2.full
-//= require_tree ./body
+import './body/jquery.custom-file-input';
+import './body/maxlength';
+import './body/modals';
+import './body/open-menu';
+import './body/popover';
+import './body/scrollTo';
+import './body/select2';

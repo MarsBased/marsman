@@ -23,7 +23,7 @@ middleman init new_project -T marsbased/marsman
 ## Development
 
 ```
-npm install
+yarn install
 bundle install
 bundle exec middleman server
 ```
@@ -34,3 +34,15 @@ call:
 ```
 grunt svg
 ```
+
+## Common Errors
+
+**Q: Webpack compilation fails with an error similar to `Error: ENOENT: no such file or directory, scandir '/Users/cooluser/Documents/middleman-webpack-sample/node_modules/node-sass/vendor'`**
+
+A: run `npm rebuild node-sass`
+
+## TODO
+
+* Add modernizr to JS template
+* Test Select2
+* Add/Test bootstrap

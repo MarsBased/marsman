@@ -1,10 +1,12 @@
+$fa-font-path: '~font-awesome/fonts';
+
+@import "~font-awesome/scss/font-awesome";
 @import 'utilities/variables';
+
+@import 'utilities/mixins';
 @import 'utilities/helpers';
 @import 'utilities/keyframes';
 @import 'utilities/normalize';
-
-@import "font-awesome-sprockets";
-@import "font-awesome";
 
 @import 'base/grid';
 @import 'base/fonts';
