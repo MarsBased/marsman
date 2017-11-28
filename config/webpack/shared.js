@@ -13,7 +13,7 @@ module.exports = {
     body: './source/javascripts/body.js',
     head: './source/javascripts/head.js',
     application: './source/stylesheets/application.scss',
-    images: sync('./source/images/*'),
+    images: sync('./source/images/**/*', { nodir: true }),
     vendor: ['lodash', 'jquery', 'bootstrap-loader', 'select2']
   },
 
@@ -84,9 +84,11 @@ module.exports = {
         use: [{
           loader: 'file-loader',
           options: {
-            publicPath: '',
+            publicPath: 'img/',
+            outputPath: 'img/',
+            context: 'source/images/',
             // can't use 'images' because it conflicts with Middleman
-            name: isProduction ? 'img/[name]-[hash].[ext]' : 'img/[name].[ext]'
+            name: isProduction ? '[path][name]-[hash].[ext]' : '[path][name].[ext]'
           }
         }]
       },
