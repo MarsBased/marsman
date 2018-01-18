@@ -1,4 +1,4 @@
-function $_GET(param) {
+export function $_GET(param) {
 	var vars = {};
 	window.location.href.replace( location.hash, '' ).replace(
 		/[?&]+([^=&]+)=?([^&]*)?/gi, // regexp

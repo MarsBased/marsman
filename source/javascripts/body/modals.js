@@ -1,3 +1,5 @@
+import { $_GET } from './$_get';
+
 (function () {
   'use strict';
 
