@@ -61,14 +61,12 @@
 	}
 
 	&__actions {
-		$spacing: $gutter/2;
-
 		text-align: right;
 		display: flex;
 		align-items: center;
 
 		> *:not(:last-child) {
-			margin-right: $spacing;
+			margin-right: $gutter/2;
 		}
 
 		> *:not(.header__user-info){
