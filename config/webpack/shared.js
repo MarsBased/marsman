@@ -30,9 +30,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [
-              ["env"]
-            ]
+            presets: [['env']]
           }
         }
       },
@@ -70,27 +68,31 @@ module.exports = {
       },
       {
         test: /fonts\/.*\.(svg|eot|ttf|woff|woff2)(\?v=\d+\.\d+\.\d+)?$/i,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            publicPath: '',
-            // can't use 'fonts' because it conflicts with Middleman
-            name: isProduction ? 'fnt/[name]-[hash].[ext]' : 'fnt/[name].[ext]'
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              publicPath: '',
+              // can't use 'fonts' because it conflicts with Middleman
+              name: isProduction ? 'fnt/[name]-[hash].[ext]' : 'fnt/[name].[ext]'
+            }
           }
-        }]
+        ]
       },
       {
         test: /images\/.*\.(jpg|jpeg|png|gif|svg)$/i,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            publicPath: 'img/',
-            outputPath: 'img/',
-            context: 'source/images/',
-            // can't use 'images' because it conflicts with Middleman
-            name: isProduction ? '[path][name]-[hash].[ext]' : '[path][name].[ext]'
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              publicPath: '',
+              outputPath: 'img/',
+              context: 'source/images/',
+              // can't use 'images' because it conflicts with Middleman
+              name: isProduction ? '[path][name]-[hash].[ext]' : '[path][name].[ext]'
+            }
           }
-        }]
+        ]
       },
       {
         test: require.resolve('jquery'),
@@ -109,10 +111,7 @@ module.exports = {
 
   resolve: {
     extensions: ['.js', '.ts', '.sass', '.scss', '.css', '.png', '.svg', '.gif', '.jpeg'],
-    modules: [
-      resolve('source/javascripts'),
-      'node_modules'
-    ],
+    modules: [resolve('source/javascripts'), 'node_modules'],
     alias: {
       assets: resolve('source/'),
       modernizr$: resolve('.modernizrrc')
@@ -128,7 +127,9 @@ module.exports = {
     new Clean([publicPath], {
       root: resolve()
     }),
-    new ExtractTextPlugin(isProduction ? '[name].bundle-[hash].css' : '[name].bundle.css'),
+    new ExtractTextPlugin(
+      isProduction ? '[name].bundle-[hash].css' : '[name].bundle.css'
+    ),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
