@@ -79,6 +79,10 @@ input[type="radio"] {
         color: $radio-success;
       }
     }
+
+    &.success + label + .info-field {
+      color: $radio-success;
+    }
   }
 
   &.warning,
@@ -89,11 +93,11 @@ input[type="radio"] {
 
     + label{
       color: $radio-warning;
-
-      & + .info-field{
-        color: $radio-warning;
-      }
     }
+  }
+
+  &.warning + label + .info-field {
+    color: $radio-warning;
   }
 }
 

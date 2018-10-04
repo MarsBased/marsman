@@ -35,10 +35,25 @@ form {
   }
 }
 
-.form-group,
-.form-group__item {
+.form-group {
   margin-bottom: 1.2em;
   @include last-margin;
+
+  &__item {
+    @include margin-bottom(.5em);
+  }
+
+  &.warning {
+    .info-field {
+      color: $input-warning;
+    }
+  }
+
+  &.success {
+    .info-field {
+      color: $input-success;
+    }
+  }
 }
 
 %input-bg {
@@ -100,10 +115,10 @@ form {
     &:focus {
       @include focus(rgba($input-success, .4));
     }
+  }
 
-    + .info-field {
-      color: $input-success
-    }
+  &.warning + .info-field {
+    color: $input-success
   }
 
   &.warning,
@@ -116,10 +131,10 @@ form {
     &:focus {
       @include focus(rgba($input-warning, .4));
     }
+  }
 
-    + .info-field {
-      color: $input-warning
-    }
+  &.warning + .info-field {
+    color: $input-warning
   }
 }
 

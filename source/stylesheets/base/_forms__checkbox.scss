@@ -75,6 +75,10 @@ input[type="checkbox"]{
     }
   }
 
+  &.warning + label + .info-field {
+    color: $checkbox--warning;
+  }
+
   &.success,
   .form-group.success & {
     + label {
@@ -84,5 +88,9 @@ input[type="checkbox"]{
         color: $checkbox--success;
       }
     }
+  }
+
+  &.success + label + .info-field {
+    color: $checkbox--success;
   }
 }

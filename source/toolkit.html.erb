@@ -208,18 +208,25 @@ body: toolkit
 						<h2>Checkboxes</h2>
 						<div class="form-group <%= version('error','success')%>">
 							<label class="required">Select one element</label>
-							<input type="checkbox" name="checkgroup" id="check1" value="check1"
-							class="">
-							<label for="check1">Checkbox OFF</label>
-							<input type="checkbox" name="checkgroup" id="check2" value="check2"
-							class="" checked>
-							<label for="check2">Checkbox ON</label>
-							<input type="checkbox" name="checkgroup" id="check3" value="check3"
-							class="" checked disabled>
-							<label for="check3">Checkbox Disabled</label>
+              <small>With .form-group__item</small>
+              <div class="form-group__item">
+                <input type="checkbox" name="checkgroup" id="check1" value="check1">
+                <label for="check1">Checkbox OFF</label>
+              </div>
+              <div class="form-group__item">
+                <input type="checkbox" name="checkgroup" id="check2" value="check2" checked>
+							  <label for="check2">Checkbox ON</label>
+              </div>
+							<div class="form-group__item">
+                <input type="checkbox" name="checkgroup" id="check3" value="check3"
+							  checked disabled>
+							  <label for="check3">Checkbox Disabled</label>
+              </div>
+              <p>
 							<% if version('error')%>
 							<span class="info-field">Correct !!</span>
 							<% end %>
+              </p>
 						</div>
 						<div class="form-group <%= version('error','warning')%>">
 							<label class="required">Select one element</label>
