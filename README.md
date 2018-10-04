@@ -43,6 +43,13 @@ bundle install
 bundle exec middleman server
 ```
 
+or
+
+```
+yarn install
+yarn start
+```
+
 To update the SVG shapes, place the needed SVG files inside source/shapes and
 call:
 

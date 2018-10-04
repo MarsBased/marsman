@@ -1,6 +1,10 @@
 {
   "name": "marsman-template",
   "version": "0.1.0",
+  "scripts": {
+    "start": "bundle exec middleman server",
+    "postinstall": "bundle install"
+  },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^0.26.1",
