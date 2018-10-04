@@ -35,7 +35,8 @@ form {
   }
 }
 
-.form-group {
+.form-group,
+.form-group__item {
   margin-bottom: 1.2em;
   @include last-margin;
 }
