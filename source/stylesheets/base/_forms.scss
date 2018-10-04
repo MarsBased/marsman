@@ -48,6 +48,7 @@ form {
 }
 
 %form-item {
+  appearance: none;
   width: 100%;
   max-width: 100%;
   display: block;
@@ -177,7 +178,6 @@ input:not([type="submit"]) {
 
 select {
   @extend %form-item;
-  appearance: none;
   background-repeat: no-repeat;
   background-size: 1em;
   background-position: calc(100% - .7em) center;
