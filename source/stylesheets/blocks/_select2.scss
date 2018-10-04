@@ -90,12 +90,14 @@ $select2-border-readonly: 1px solid #f8f8fa;
     }
   }
 
+  .form-group.success &,
   &.success {
     .selection {
       border-color: $success;
     }
   }
 
+  .form-group.warning &,
   &.warning {
     .selection {
       border-color: $warning;

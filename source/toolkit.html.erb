@@ -150,41 +150,47 @@ body: toolkit
 					</ul>
 				</div>
 				<div class="toolkit__item">
-					<select class="select2" id="select2_demo">
-						<% @select = [1992,1993,1994,1995,1996,1997,1998] %>
-		        <% @select.each_with_index do |s,index| %>
-		        <option value="<%= s %>" <%= 'selected' if index == 2 %> >
-		          <%= s %>
-		        </option>
-		        <% end %>
-		      </select>
-		      <% if version('error') %>
-		      <div class="info-field">About select2_demo.</div>
-		      <% end %>
-		      <select class="select2 search <%= version('error', 'success') %>"
-		       id="select2_demo_search" data-placeholder="Select an option"
-		        data-allow-clear="true">
-		       	<option></option>
-		        <% @select.each_with_index do |s,index| %>
-		        <option value="<%= s %>" >
-		          <%= s %>
-		        </option>
-		        <% end %>
-		      </select>
-		      <% if version('error') %>
-		      <div class="info-field">About select2_demo_search</div>
-		      <% end %>
-		      <select id="select_demo_default" class="<%= version('error', 'warning') %>">
-		       	<option></option>
-		        <% @select.each_with_index do |s,index| %>
-		        <option value="<%= s %>" <%= 'selected' if index == 2 %>>
-		          <%= s %>
-		        </option>
-		        <% end %>
-		      </select>
-		      <% if version('error') %>
-		      <div class="info-field">Information about this error.</div>
-		      <% end %>
+          <div class="form-group <%= version('error', 'warning') %>">
+            <select class="select2" id="select2_demo">
+              <% @select = [1992,1993,1994,1995,1996,1997,1998] %>
+              <% @select.each_with_index do |s,index| %>
+              <option value="<%= s %>" <%= 'selected' if index == 2 %> >
+                <%= s %>
+              </option>
+              <% end %>
+            </select>
+            <% if version('error') %>
+            <div class="info-field">About select2_demo.</div>
+            <% end %>
+          </div>
+          <div class="form-group <%= version('error', 'success') %>">
+            <select class="select2 search"
+            id="select2_demo_search" data-placeholder="Select an option"
+              data-allow-clear="true">
+              <option></option>
+              <% @select.each_with_index do |s,index| %>
+              <option value="<%= s %>" >
+                <%= s %>
+              </option>
+              <% end %>
+            </select>
+            <% if version('error') %>
+              <div class="info-field">About select2_demo_search</div>
+            <% end %>
+          </div>
+          <div class="form-group">
+            <select id="select_demo_default" class="<%= version('error', 'warning') %>">
+              <option></option>
+              <% @select.each_with_index do |s,index| %>
+              <option value="<%= s %>" <%= 'selected' if index == 2 %>>
+                <%= s %>
+              </option>
+              <% end %>
+            </select>
+            <% if version('error') %>
+            <div class="info-field">Information about this error.</div>
+            <% end %>
+          </div>
 				</div>
 			</div>
 		</div>
@@ -279,6 +285,21 @@ body: toolkit
 					<div class="row">
 						<div class="col-sm-8">
 							<h2>Inputs</h2>
+							<div class="form-group">
+								<label for="without-text">Label</label>
+								<input type="text" id="without-text" name="i1" placeholder="Placeholder text" required>
+							</div>
+							<div class="form-group success">
+								<input type="text" name="i1"
+								placeholder="Placeholder text" value="Input success">
+								<div class="info-field">Information about this success.</div>
+							</div>
+							<div class="form-group warning">
+								<input type="text" id="without-text"
+								name="i1" placeholder="Placeholder text" value="Input error">
+								<div class="info-field">Information about this error.</div>
+							</div>
+              <h2>Select2</h2>
 							<div class="form-group">
 								<label for="without-text">Label</label>
 								<input type="text" id="without-text" name="i1" placeholder="Placeholder text" required>
