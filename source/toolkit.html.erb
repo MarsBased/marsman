@@ -312,8 +312,19 @@ body: toolkit
 								<input type="text" id="without-text" name="i1" placeholder="Placeholder text" required>
 							</div>
 							<div class="form-group success">
-								<input type="text" name="i1"
-								placeholder="Placeholder text" value="Input success">
+                <div class="tooltip-wrapper-mobile">
+                  <label class="string required" for="personal-address">
+                    City of birth
+                  </label>
+                  <a class="tooltip"
+                      data-tippy="Please specify the city where the birth occurred.">
+                  </a>
+                </div>
+								<div class="tooltip-wrapper">
+                  <input type="text" id="personal-address" name="personal-address" required>
+                  <a class="tooltip"
+                     data-tippy="Please specify the city where the birth occurred."></a>
+                </div>
 								<div class="info-field">Information about this success.</div>
 							</div>
 							<div class="form-group warning">

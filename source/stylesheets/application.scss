@@ -19,6 +19,8 @@ $fa-font-path: '~font-awesome/fonts';
 @import 'base/icons';
 @import 'base/general';
 
+@import 'plugins/tippy';
+
 @import 'blocks/actions';
 @import 'blocks/alert';
 @import 'blocks/badge';
@@ -39,6 +41,7 @@ $fa-font-path: '~font-awesome/fonts';
 @import 'blocks/select2';
 @import 'blocks/separator';
 @import 'blocks/user-info';
+@import 'blocks/tooltip';
 
 @import 'layouts/home';
 @import 'layouts/primary';
