@@ -42,6 +42,7 @@
     "precss": "^1.4.0",
     "resolve-url-loader": "^2.1.0",
     "select2": "^4.0.3",
+    "tippy.js": "^3.0.3",
     "webpack-manifest-plugin": "^1.1.0",
     "webpack-merge": "^4.1.0"
   }

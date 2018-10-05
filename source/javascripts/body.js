@@ -5,3 +5,4 @@ import './body/open-menu';
 import './body/popover';
 import './body/scrollTo';
 import './body/select2';
+import './body/tippy';

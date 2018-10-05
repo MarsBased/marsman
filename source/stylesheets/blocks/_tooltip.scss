@@ -1,0 +1,51 @@
+.tooltip {
+  font-size: 2.4rem;
+  position: relative;
+  transition: 0.3s;
+  height: 0.85em;
+  width: 0.85em;
+  &::before {
+    background-image: image-url('icon-tooltip.svg');
+    background-repeat: no-repeat;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &-wrapper {
+    @media (min-width: $screen-sm) {
+      padding-right: 2em;
+      position: relative;
+    }
+
+    .tooltip {
+      position: absolute;
+      top: .2em;
+      right: .1em;
+      @media (max-width: $screen-sm - 1) {
+        display: none;
+      }
+    }
+  }
+
+  &-wrapper-mobile {
+    position: relative;
+    margin-bottom: 0.5em;
+
+    label {
+      display: inline !important;
+    }
+
+    .tooltip {
+      display: inline-block;
+      vertical-align: -.25rem;
+      margin-left: 1rem;
+      @media (min-width: $screen-sm) {
+        display: none;
+      }
+    }
+  }
+}
