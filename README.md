@@ -1,6 +1,7 @@
 # MarsMan
 
 <a href="https://waffle.io/MarsBased/marsman"><img src="https://img.shields.io/badge/Waffle-marsman-blue.svg?colorB=78bdf2" /></a>
+<img src="https://img.shields.io/github/license/mashape/apistatus.svg" />
 
 Frontend framework for starting new projects.
 
