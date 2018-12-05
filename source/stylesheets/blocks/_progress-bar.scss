@@ -1,0 +1,50 @@
+$progress-bar-bg: $secondary-lighter !default;
+$progress-bar-border: rgba(#000, .05) !default;
+$progress-bar-border-radius: 4px !default;
+$progress-bar-color: $primary !default;
+$progress-bar-animation: fadeIn !default;
+$progress-bar-width: 100% !default;
+$progress-bar-max-width: false !default;
+$progress-bar-barbershop-color: '%23ffffff' !default;
+$progress-bar-barbershop-opacity: 0.2 !default;
+
+@keyframes progressBarBarber {
+  0% {
+    background-position-x: -40px;
+  }
+  100% {
+    background-position-x: 0;
+  }
+}
+
+.progress-bar {
+  position: relative;
+  overflow: hidden;
+  animation: $progress-bar-animation .4s ease-out;
+  @if $progress-bar-border {
+    border: 1px solid $progress-bar-border;
+  }
+  background-color: $progress-bar-bg;
+  color: $primary;
+  height: 1em;
+  margin: auto;
+  @if $progress-bar-border-radius {
+    border-radius: $progress-bar-border-radius;
+  }
+  width: $progress-bar-width;
+  @if $progress-bar-max-width {
+    max-width: $progress-bar-max-width;
+  }
+
+  &__loaded {
+    background-color: currentColor;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    transition: width .4s ease-out;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='"+$progress-bar-barbershop-color+"' fill-opacity='"+$progress-bar-barbershop-opacity+"' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+    animation: progressBarBarber 1s linear infinite;
+  }
+}
